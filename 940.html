@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payroll Tax Trainer · EA Exam Prep — Form 940 (FUTA)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:#08111f;
+    --bg-2:#111827;
+    --card:rgba(255,255,255,.14);
+    --card-strong:rgba(255,255,255,.22);
+    --card-solid:rgba(8,17,31,.72);
+    --ink:#ffffff;
+    --ink-soft:rgba(255,255,255,.76);
+    --ink-faint:rgba(255,255,255,.52);
+    --blue:#4f8cff;
+    --purple:#9b5cff;
+    --pink:#ff5fa2;
+    --green:#38d996;
+    --green-2:#57efad;
+    --green-wash:rgba(56,217,150,.16);
+    --amber:#ffd166;
+    --hl:rgba(255,209,102,.22);
+    --hl-edge:rgba(255,209,102,.92);
+    --red:#ff7a68;
+    --red-wash:rgba(255,122,104,.16);
+    --line:rgba(255,255,255,.22);
+    --line-soft:rgba(255,255,255,.14);
+    --shadow:0 24px 70px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;padding:0}
+  body{font-family:Inter,"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 12% 18%,rgba(79,140,255,.52),transparent 34%),radial-gradient(circle at 82% 12%,rgba(255,95,162,.42),transparent 30%),radial-gradient(circle at 70% 82%,rgba(56,217,150,.34),transparent 34%),linear-gradient(135deg,#07111f 0%,#111827 44%,#261447 100%);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 85%);z-index:-1}
+  body::after{content:"";position:fixed;width:420px;height:420px;right:-140px;top:18%;border-radius:50%;background:radial-gradient(circle,rgba(255,209,102,.28),transparent 68%);filter:blur(2px);pointer-events:none;z-index:-1}
+  .sparkle{position:fixed;border-radius:999px;background:rgba(255,255,255,.72);filter:blur(.2px);animation:sparkle 4s ease-in-out infinite;pointer-events:none;z-index:0}.sparkle.one{width:7px;height:7px;top:18%;left:5%}.sparkle.two{width:5px;height:5px;top:36%;right:12%;animation-delay:1.1s}.sparkle.three{width:9px;height:9px;bottom:18%;left:44%;animation-delay:2s}@keyframes sparkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:.9;transform:scale(1.2)}}
+  .wrap{position:relative;max-width:1180px;margin:0 auto;padding:0 20px 80px;z-index:1}
+  header.top{position:relative;padding:46px 0 26px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;margin-bottom:14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);font-weight:750}.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(56,217,150,.7);animation:pulse 1.8s infinite}@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(56,217,150,0)}100%{box-shadow:0 0 0 0 rgba(56,217,150,0)}}
+  h1.title{font-weight:900;font-size:clamp(46px,8vw,88px);line-height:.92;margin:0 0 16px;letter-spacing:-.08em;max-width:860px;background:linear-gradient(90deg,#fff 0%,#b9d3ff 32%,#ffd6e8 64%,#d8fff0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}h1.title em{font-style:normal;color:transparent}.sub{color:var(--ink-soft);font-size:clamp(17px,2vw,22px);line-height:1.55;max-width:760px}.rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:26px 0 0}
+  .controls{position:sticky;top:0;z-index:40;background:rgba(8,17,31,.74);backdrop-filter:blur(18px);border-bottom:1px solid var(--line-soft);margin:0;padding:10px 0}.controls-inner{max-width:1180px;margin:0 auto;display:flex;gap:14px 22px;align-items:center;flex-wrap:wrap;padding:0 20px}.ctl-group{display:flex;align-items:center;gap:9px}.ctl-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:800}.toggle{appearance:none;width:48px;height:26px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid var(--line);position:relative;cursor:pointer;transition:.2s;flex:none}.toggle:checked{background:linear-gradient(135deg,var(--blue),var(--pink))}.toggle::after{content:"";position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 8px rgba(0,0,0,.35)}.toggle:checked::after{transform:translateX(21px)}input[type=range]{-webkit-appearance:none;appearance:none;height:5px;border-radius:5px;width:150px;background:linear-gradient(90deg,var(--green) var(--fill,33%),rgba(255,255,255,.18) var(--fill,33%));cursor:pointer}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--green);box-shadow:0 1px 8px rgba(0,0,0,.4);cursor:pointer}input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--green);cursor:pointer}.speed-val{font-weight:800;font-size:13px;min-width:34px;color:#fff}
+  nav.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);width:max-content;max-width:100%}.tab{font-weight:800;font-size:14px;border:0;background:transparent;color:var(--ink-soft);padding:10px 16px;border-radius:999px;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:8px}.tab .ico{width:7px;height:7px;border-radius:50%;background:var(--ink-faint);transition:.15s}.tab:hover{color:#fff;background:rgba(255,255,255,.14)}.tab.active{background:#fff;color:#101828}.tab.active .ico{background:var(--pink)}.view{display:none;animation:fade .35s ease}.view.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .lesson,.q,.scenario,.field,.fc-face,.pick,.study-glass{background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(20px)}.lesson{padding:26px 28px 20px;margin-bottom:20px;position:relative;overflow:hidden;transition:.22s}.lesson:hover{background:var(--card-strong);border-color:rgba(255,255,255,.36);transform:translateY(-2px)}.lesson::before{content:"";position:absolute;right:-70px;bottom:-90px;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle,rgba(79,140,255,.55),transparent 64%);opacity:.75}.lesson.corr::before{background:radial-gradient(circle,rgba(255,95,162,.58),transparent 64%)}.lesson.found::before{background:radial-gradient(circle,rgba(56,217,150,.55),transparent 64%)}.lesson>*{position:relative;z-index:1}.lesson-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}.lesson.corr .lesson-tag{color:var(--pink)}.lesson.found .lesson-tag{color:var(--green)}.lesson-tag .num{background:rgba(255,255,255,.14);padding:3px 9px;border-radius:999px}.lesson-tag .lvl{margin-left:auto;color:var(--ink-faint);background:rgba(255,255,255,.08);padding:2px 8px;border-radius:20px;border:1px solid var(--line-soft);font-weight:700}h2.lh{font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;margin:4px 0 14px;line-height:1.1}.para{margin:0 0 4px;padding:8px 10px;border-radius:12px;cursor:pointer;transition:background .15s;position:relative;color:var(--ink-soft)}.para:hover{background:rgba(255,255,255,.1);color:#fff}.para.reading{background:var(--hl);box-shadow:inset 4px 0 0 var(--hl-edge);color:#fff}.read-hint{font-size:13px;color:var(--ink-faint);font-style:italic;margin:6px 0 18px;display:flex;align-items:center;gap:7px}.toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.toc a,.chip{font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);background:rgba(255,255,255,.08);padding:7px 11px;border-radius:999px;color:var(--ink-soft);text-decoration:none;transition:.15s;font-weight:800}.toc a:hover,.chip:hover{background:rgba(255,255,255,.14);color:#fff}.chip{cursor:pointer}.chip.active{background:#fff;color:#101828;border-color:#fff}
+  .playbar,.fc-controls,.prac-actions{display:flex;align-items:center;gap:12px;margin:0 0 20px;flex-wrap:wrap}.btn{font-weight:850;font-size:14px;cursor:pointer;border-radius:16px;padding:12px 18px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.95);color:#111827;transition:.22s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 18px 45px rgba(0,0,0,.12)}.btn:hover{transform:translateY(-3px)}.btn:active{transform:translateY(0)}.btn.green{background:linear-gradient(135deg,var(--green),#8fffd0);border-color:transparent;color:#07111f}.btn.amber{background:linear-gradient(135deg,var(--amber),#fff0b8);border-color:transparent;color:#111827}.btn.ghost{background:rgba(255,255,255,.08);color:#fff;border-color:var(--line);backdrop-filter:blur(16px);box-shadow:none}.btn.ghost:hover{background:rgba(255,255,255,.14)}.btn.sm{padding:8px 13px;font-size:13px}.btn.red{background:linear-gradient(135deg,var(--red),var(--pink));border-color:transparent;color:#fff}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+  .fc-stage{perspective:1600px;margin:8px auto 18px;max-width:620px}.fc{position:relative;width:100%;min-height:300px;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,.1,.2,1);cursor:pointer}.fc.flipped{transform:rotateY(180deg)}.fc-face{position:absolute;inset:0;backface-visibility:hidden;padding:34px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden}.fc-face::before{content:"";position:absolute;width:220px;height:220px;right:-70px;bottom:-90px;border-radius:50%;background:radial-gradient(circle,rgba(56,217,150,.58),transparent 64%)}.fc-face.back{transform:rotateY(180deg);background:linear-gradient(135deg,rgba(79,140,255,.28),rgba(155,92,255,.22)),rgba(255,255,255,.14)}.fc-face.back::before{background:radial-gradient(circle,rgba(255,95,162,.7),transparent 64%)}.fc-cat{position:absolute;top:18px;left:22px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);font-weight:800}.fc-side{font-size:11px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:14px;color:var(--green);font-weight:800}.fc-face.back .fc-side{color:var(--amber)}.fc-q{position:relative;z-index:1;font-size:clamp(22px,3vw,32px);font-weight:850;line-height:1.22;letter-spacing:-.035em}.fc-face.back .fc-q{color:#fff;font-size:18px;font-weight:650;line-height:1.55;letter-spacing:0}.fc-meta{display:flex;justify-content:space-between;align-items:center;max-width:620px;margin:0 auto 12px;font-size:12px;color:var(--ink-soft);font-weight:800}.progress{height:7px;background:rgba(255,255,255,.14);border-radius:999px;max-width:620px;margin:0 auto 14px;overflow:hidden}.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--pink),var(--green));border-radius:999px;transition:width .3s}.deck-filter{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:0 auto 16px;max-width:860px}
+  .picker{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:22px}.pick{text-align:left;cursor:pointer;padding:18px 20px;transition:.22s;color:#fff}.pick:hover{transform:translateY(-5px);background:var(--card-strong);border-color:rgba(255,255,255,.38)}.pick.active{border-color:rgba(255,255,255,.6);background:linear-gradient(135deg,rgba(79,140,255,.28),rgba(255,95,162,.16)),var(--card)}.pick .pk-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800}.pick .pk-name{font-size:20px;font-weight:900;margin-top:3px;letter-spacing:-.04em}.pick .pk-desc{font-size:13px;color:var(--ink-soft);margin-top:2px}.scorebar{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.12);border:1px solid var(--line);color:#fff;border-radius:24px;padding:14px 18px;margin-bottom:18px;gap:14px;flex-wrap:wrap;backdrop-filter:blur(18px)}.scorebar .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:800}.scorebar .val{font-size:28px;font-weight:950;letter-spacing:-.05em}.scorebar .val .amber{color:var(--amber)}.reroll{margin-left:auto}.q{padding:22px 24px;margin-bottom:16px}.q-num{font-size:11px;letter-spacing:.18em;color:var(--ink-faint);text-transform:uppercase;font-weight:800}.q-text{font-size:21px;font-weight:850;margin:7px 0 15px;line-height:1.35;letter-spacing:-.035em}.opts{display:flex;flex-direction:column;gap:10px}.opt{text-align:left;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:16px;padding:13px 15px;cursor:pointer;font-size:14.5px;transition:.13s;display:flex;align-items:center;gap:12px;color:#fff}.opt .key{font-weight:900;width:28px;height:28px;border-radius:10px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:12px;flex:none}.opt:hover:not(.locked){border-color:rgba(255,255,255,.42);background:rgba(255,255,255,.14);transform:translateX(3px)}.opt.correct{border-color:var(--green-2);background:var(--green-wash)}.opt.correct .key{background:var(--green);color:#07111f}.opt.wrong{border-color:var(--red);background:var(--red-wash)}.opt.wrong .key{background:var(--red);color:#fff}.opt.locked{cursor:default}.opt.dim{opacity:.5}.explain{margin-top:13px;padding:13px 15px;border-radius:16px;background:rgba(255,255,255,.1);font-size:14px;color:var(--ink-soft);display:none;border-left:3px solid var(--green)}.explain.show{display:block;animation:fade .3s}.explain b{color:#fff}
+  .scenario{padding:24px 26px;margin-bottom:18px}.scn-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800}.scn-title{font-size:26px;font-weight:900;letter-spacing:-.045em;margin:3px 0 8px}.scn-text{font-size:15px;color:var(--ink-soft);margin-bottom:16px}.given{border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:8px;background:rgba(255,255,255,.08)}.given .grow{display:flex;justify-content:space-between;gap:14px;padding:10px 15px;border-bottom:1px solid var(--line-soft);font-size:14px}.given .grow:last-child{border-bottom:none}.given .gk{color:var(--ink-soft)}.given .gv{font-weight:850;text-align:right}.given-cap{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);padding:9px 15px 2px;font-weight:800}.field{margin:14px 0;padding:16px 18px}.field-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}.field-label{font-weight:850;font-size:15px}.field-label .ln{font-size:11px;color:#07111f;background:var(--green);padding:2px 8px;border-radius:999px;margin-right:7px;font-weight:900}.inwrap{display:flex;align-items:center;gap:6px;margin-top:10px}.pfx{color:var(--ink-soft);font-size:15px}.field input{font-size:15px;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.1);color:#fff;width:220px;transition:.15s}.field input::placeholder{color:rgba(255,255,255,.42)}.field input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(56,217,150,.16)}.field.ok input{border-color:var(--green-2);background:var(--green-wash)}.field.no input{border-color:var(--red);background:var(--red-wash)}.mark{font-weight:900;font-size:14px}.mark.ok{color:var(--green-2)}.mark.no{color:var(--red)}.hint{margin-top:10px;font-size:13.5px;color:var(--ink-soft);background:rgba(255,255,255,.1);border-radius:14px;padding:10px 13px;display:none;border-left:3px solid var(--amber)}.hint.show{display:block;animation:fade .25s}.hint-btn{background:none;border:none;color:var(--green);font-weight:850;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:4px;padding:8px 0 0}.solution{margin-top:16px;padding:18px 20px;border-radius:22px;background:var(--green-wash);border:1px solid rgba(56,217,150,.32);display:none}.solution.show{display:block;animation:fade .3s}.solution h4{margin:0 0 7px;font-size:20px;color:#fff}.solution p{margin:0 0 7px;font-size:14px;color:var(--ink-soft)}.solution code{background:rgba(255,255,255,.14);padding:2px 7px;border-radius:8px;font-size:13px;color:#fff}
+  footer{margin-top:46px;padding-top:20px;border-top:1px solid var(--line-soft);text-align:center}.disc{font-size:13px;color:var(--ink-faint);line-height:1.6}.disc b{color:#fff}
+  @media(max-width:880px){nav.tabs{border-radius:24px;width:100%}.tab{flex:1;justify-content:center}.lesson{padding:22px 20px}.picker{grid-template-columns:1fr}.controls-inner{align-items:flex-start}.ctl-group[style]{margin-left:0!important}}
+  @media(max-width:560px){.wrap{padding:0 14px 70px}.lesson{border-radius:24px;padding:20px 16px}.fc-face{padding:30px 20px}.field input{width:160px}.scorebar .reroll{margin-left:0}.given .grow{flex-direction:column;gap:2px}.given .gv{text-align:left}}
+
+
+  .site-nav{position:relative;z-index:45;max-width:1180px;margin:18px auto 0;padding:0 20px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .site-brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em;color:#fff;text-decoration:none}
+  .site-brand .brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--pink));box-shadow:0 12px 30px rgba(79,140,255,.34)}
+  .site-links{display:flex;align-items:center;gap:8px;padding:7px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);flex-wrap:wrap}
+  .site-links a{padding:8px 12px;border-radius:999px;color:var(--ink-soft);font-size:13px;text-decoration:none;font-weight:750}
+  .site-links a:hover{color:#fff;background:rgba(255,255,255,.14)}
+  @media(max-width:720px){.site-nav{align-items:flex-start;flex-direction:column}.site-links{width:100%;border-radius:22px}.site-links a{flex:1;text-align:center}}
+</style>
+</head>
+<body>
+<div class="sparkle one"></div>
+<div class="sparkle two"></div>
+<div class="sparkle three"></div>
+<nav class="site-nav" aria-label="Module navigation">
+  <a class="site-brand" href="index.html"><span class="brand-mark">✓</span><span>Payroll Tax Trainer</span></a>
+  <div class="site-links">
+    <a href="index.html">Home</a>
+    <a href="941-941x.html">941 &amp; 941-X</a>
+    <a href="w2-w2c.html">W-2 &amp; W-2c</a>
+    <a href="940.html">940</a>
+  </div>
+</nav>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="ctl-group"><span class="ctl-label">Read aloud</span><input type="checkbox" class="toggle" id="voiceToggle" checked></div>
+    <div class="ctl-group"><span class="ctl-label">Speed</span><input type="range" id="speed" min="0.5" max="1.75" step="0.05" value="1"><span class="speed-val" id="speedVal">1.0×</span></div>
+    <div class="ctl-group" style="margin-left:auto"><button class="btn ghost sm" id="stopAll">■ Stop audio</button></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">EA Exam Prep · Employment Taxes · Module 03</div>
+    <h1 class="title">Form 940 <span style="color:var(--ink-faint);font-weight:400">·</span> <em>FUTA</em></h1>
+    <p class="sub">The annual federal unemployment tax return — employer-only, $7,000 wage base, the 5.4% state credit, and Schedule A for credit-reduction states. Includes the amended Form 940 process (there is no 940-X).</p>
+    <div class="rule"></div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-view="learn"><span class="ico"></span>Learn</button>
+    <button class="tab" data-view="cards"><span class="ico"></span>Flashcards</button>
+    <button class="tab" data-view="quiz"><span class="ico"></span>Quiz</button>
+    <button class="tab" data-view="practice"><span class="ico"></span>Practice</button>
+  </nav>
+
+  <section class="view active" id="learn">
+    <div class="playbar">
+      <button class="btn green" id="learnPlay">▶ Read this module</button>
+      <button class="btn ghost sm" id="learnRestart">⟲ From the top</button>
+    </div>
+    <div class="read-hint">✦ Tip: click any paragraph to jump the narrator there. It stops what it was reading and picks up from where you clicked.</div>
+    <div class="toc" id="toc"></div>
+    <div id="lessonHost"></div>
+  </section>
+
+  <section class="view" id="cards">
+    <div class="deck-filter" id="catFilter"></div>
+    <div class="fc-meta"><span id="fcCount">Card 1 / 1</span><span id="fcMode">Manual</span></div>
+    <div class="progress"><i id="fcBar" style="width:4%"></i></div>
+    <div class="fc-stage">
+      <div class="fc" id="fcEl">
+        <div class="fc-face front"><div class="fc-cat" id="fcCatF"></div><div class="fc-side">Question · tap to flip</div><div class="fc-q" id="fcFront"></div></div>
+        <div class="fc-face back"><div class="fc-cat" id="fcCatB"></div><div class="fc-side">Answer</div><div class="fc-q" id="fcBack"></div></div>
+      </div>
+    </div>
+    <div class="fc-controls">
+      <button class="btn ghost sm" id="fcPrev">‹ Prev</button>
+      <button class="btn sm" id="fcFlip">⟳ Flip</button>
+      <button class="btn ghost sm" id="fcNext">Next ›</button>
+      <button class="btn green sm" id="fcAuto">▶ Auto-play deck</button>
+      <button class="btn ghost sm" id="fcShuffle">⤮ Shuffle</button>
+      <button class="btn amber sm" id="fcRandom">🎲 Random</button>
+    </div>
+  </section>
+
+  <section class="view" id="quiz">
+    <div class="picker" id="quizPicker"></div>
+    <div id="quizHost"></div>
+  </section>
+
+  <section class="view" id="practice">
+    <div class="picker" id="pracPicker"></div>
+    <div class="playbar" style="margin-top:-6px"><button class="btn amber sm" id="pracRandom">🎲 Pick a random scenario</button></div>
+    <div id="pracHost"></div>
+  </section>
+
+  <footer>
+    <p class="disc"><b>Learning material — not tax advice.</b> Built with current figures (FUTA rate 6.0% on first $7,000; max 5.4% state credit → 0.6% net; 2025 credit reduction states California 1.2%, U.S. Virgin Islands 4.5%; 2025 Form 940 due Feb 2, 2026 because Jan 31 falls on Saturday). Credit reduction list and dollar penalty amounts change annually — verify against the official Form 940 and Schedule A for the year you are filing.</p>
+  </footer>
+</div>
+
+<script>
+const DATA = {
+lessons:[
+{tag:"Foundations", num:"01", lvl:"Beginner", cls:"found", title:"FUTA — what it is and who pays", paras:[
+ "The Federal Unemployment Tax Act, FUTA, funds the federal share of the joint federal-state unemployment insurance system. Federal money goes to administering state UI programs and to extended benefits during high unemployment. The states themselves run the actual unemployment offices and pay regular benefits, funded by their own state unemployment tax — usually called SUTA or SUI.",
+ "FUTA is employer-only. You do NOT withhold FUTA from employee paychecks. There is no employee FUTA share. This is the single biggest mental shift coming from 941 — Social Security and Medicare are split between employer and employee; FUTA falls entirely on the employer.",
+ "FUTA is reported on Form 940, the Employer's Annual Federal Unemployment (FUTA) Tax Return. One return per year, not quarterly. Deposits, however, are quarterly when liability accumulates past a threshold — covered later in the deposit lesson.",
+ "Most employers also pay state unemployment tax — SUTA — separately on the state's return. The two systems link through the FUTA credit: pay your SUTA on time and you earn a credit against the federal FUTA rate.",
+ "A few employer types are exempt from FUTA. 501(c)(3) tax-exempt organizations are exempt by statute. Federal government employers and Indian tribal governments that meet state UI requirements are also exempt. Partners in a partnership are not employees of the partnership, so a partnership does not pay FUTA on partner draws.",
+ "FUTA is not a trust fund tax. Because nothing was withheld from the employee, there is no trust relationship. The Section 6672 Trust Fund Recovery Penalty does NOT apply to unpaid FUTA — a key contrast with unpaid Form 941 trust fund amounts."
+]},
+
+{tag:"Section", num:"02", lvl:"Beginner", cls:"", title:"Who files Form 940 — the two tests", paras:[
+ "You are subject to FUTA, and must file Form 940, if you meet either of two tests in the current OR prior calendar year. The two tests work independently — meeting either one triggers FUTA liability.",
+ "The wages test: you paid wages of $1,500 or more to employees in any calendar quarter during the year. Just one quarter at $1,500 is enough. The figure is gross wages, before any deductions.",
+ "The employees test: you had one or more employees for any part of a day in 20 or more different weeks during the year. The weeks don't need to be consecutive. The employees don't need to be the same person — one employee in week 1, a different one in week 5, and so on, all count.",
+ "Once either test is met, you're a FUTA employer for the entire year — both backward to the start of the year and forward. If you became liable mid-year because you crossed the wages threshold in your third quarter, you owe FUTA on wages from the start of the year forward.",
+ "Household employers have a separate threshold. If you paid $1,000 or more in cash wages to household workers in any calendar quarter, you owe FUTA on those workers. Household employers usually pay FUTA through Schedule H on their personal Form 1040 rather than filing Form 940 — but some choose 940.",
+ "Agricultural employers have their own rules. You're a FUTA agricultural employer if you paid $20,000 or more in cash wages to farm workers in any calendar quarter, OR you employed 10 or more farm workers for any part of a day in 20 or more different weeks. Once either threshold is met you file Form 940 and check the agricultural employer box at the top."
+]},
+
+{tag:"Section", num:"03", lvl:"Intermediate", cls:"", title:"The rate structure — 6.0% gross, 0.6% net", paras:[
+ "The statutory FUTA tax rate is 6.0 percent. It applies to the first $7,000 of wages paid to each employee in the calendar year. The $7,000 is the FUTA wage base — much lower than the Social Security wage base, and unchanged since 1983.",
+ "Almost no employer actually pays the full 6.0 percent. The Internal Revenue Code allows a credit of up to 5.4 percent of the FUTA wage base for state UI taxes paid on time. If you qualify for the full credit, your effective rate is 0.6 percent.",
+ "At 0.6 percent on $7,000, the most a typical employer pays in FUTA per employee per year is $42. That low ceiling is why FUTA gets less attention than other employment taxes — but the EA exam still tests the mechanics.",
+ "To earn the full 5.4 percent credit you need three things. You must have paid SUTA on the same wages that are subject to FUTA. You must have paid SUTA by the due date of Form 940 — generally January 31 of the following year. And the state must not be a credit reduction state.",
+ "If you paid your state UI taxes late, you lose part of the credit. The penalty on the credit is the difference between what you actually paid and what would have qualified for the full 5.4 percent. Form 940 has a worksheet on line 10 for this calculation.",
+ "Credit reduction is the third reason you might lose part of the credit, even when everything else is right. Some states borrow from the federal government to pay UI benefits during downturns. When a state's loan goes unpaid for too long, the IRS reduces the FUTA credit for employers in that state, recovering the borrowed money. We cover credit reduction in the Schedule A lesson."
+]},
+
+{tag:"Section", num:"04", lvl:"Intermediate", cls:"", title:"FUTA wages — what counts, what doesn't", paras:[
+ "FUTA wages largely match FICA wages — but the rules diverge in some places, so don't assume. Salaries, hourly pay, commissions, bonuses, vacation pay, supplemental wages, severance, and taxable fringe benefits are all FUTA wages.",
+ "Pre-tax 401(k), 403(b), and similar elective deferrals ARE FUTA wages. This is the same as the FICA treatment and the OPPOSITE of the federal income tax treatment. A pre-tax 401(k) contribution reduces Box 1 wages but it does NOT reduce FICA wages and does NOT reduce FUTA wages.",
+ "Section 125 cafeteria plan deductions — health insurance employee premiums, dependent care FSA, HSA contributions made through the cafeteria — generally reduce FUTA wages just as they reduce FICA wages. They reduce Box 1, Box 3, Box 5, and FUTA wages together.",
+ "Several items are statutorily exempt from FUTA. The employer share of certain group-term life insurance up to $50,000. Reimbursed employee business expenses that meet accountable plan rules. Payments to a child under age 21 working for a parent in a sole proprietorship. Workers compensation benefits. Most fringe benefits that are non-taxable.",
+ "The $7,000 wage base is per employee, per employer, per year. If you pay one employee $50,000 over the year, only the first $7,000 is FUTA wages — the rest goes on Form 940 line 5 as 'payments in excess of $7,000.' Total payments minus exempt payments minus over-$7,000 amounts equals your taxable FUTA wages.",
+ "A successor employer rule lets you count predecessor wages toward the $7,000 base. If you buy a business and continue employing the same workers, wages they earned with the previous employer in the same calendar year count toward your $7,000 base. Check the successor employer box in Part 1 of Form 940."
+]},
+
+{tag:"Section", num:"05", lvl:"Intermediate", cls:"", title:"Form 940 Part 1 — type of return", paras:[
+ "Part 1 of Form 940 is just the header checkboxes that describe what kind of return you're filing. Most employers leave all the boxes unchecked — that means it's a regular, current-year, original return for the same employer that filed last year.",
+ "Box a: Amended return. Check this if you're filing to correct a previously filed Form 940 for the same year. There is no separate Form 940-X — you amend by checking this box on a regular Form 940.",
+ "Box b: Successor employer. Check this if you acquired another business or its workforce mid-year and want to count the predecessor's FUTA wages toward your $7,000 wage base. The IRS will look for documentation if needed.",
+ "Box c: No payments to employees in the year. Check this if you had no wages at all this year but you previously filed and weren't told to stop. You still must file a return showing zero.",
+ "Box d: Final return. Check this if the business closed or stopped paying wages permanently. The IRS will then close your FUTA filing requirement going forward.",
+ "Above the boxes there's also a section identifying the employer type — for example, household employer or agricultural employer. Check the box that applies."
+]},
+
+{tag:"Section", num:"06", lvl:"Intermediate", cls:"", title:"Form 940 Part 2 — tax before adjustments (lines 1 through 8)", paras:[
+ "Part 2 calculates the gross FUTA tax before considering any state UI credit. Line 1a is for single-state employers — enter the two-letter state abbreviation for the state your employees worked in.",
+ "Line 1b is checked if you paid UI taxes in more than one state. Multi-state employers complete Schedule A to allocate wages by state.",
+ "Line 2 is checked if any of the states you paid UI to is a credit reduction state. You complete Schedule A to figure the credit reduction. Note: Schedule A is required for either box 1b OR box 2 — multi-state OR credit reduction — and the same Schedule A handles both.",
+ "Line 3 is total payments to all employees for the year. Include everything — wages, salaries, commissions, vacation pay, taxable fringe benefits, tips. Pre-tax 401(k) deferrals are INCLUDED here (FUTA wage treatment, remember).",
+ "Line 4 is payments exempt from FUTA. The form provides checkboxes for the common categories — fringe benefits, group-term life, retirement/pension, dependent care, other. Add up the exempt amounts.",
+ "Line 5 is total of payments made to each employee in excess of $7,000. Per-employee. If you paid one employee $25,000, the excess for them is $18,000. Sum the excesses across all employees.",
+ "Line 6 is the subtotal — line 4 plus line 5. Line 7 is total taxable FUTA wages — line 3 minus line 6. Line 8 is FUTA tax before adjustments — line 7 times 0.006 (0.6 percent). Yes, line 8 already applies the maximum credit assumption. The adjustments in Part 3 fix it up if the assumption doesn't hold."
+]},
+
+{tag:"Section", num:"07", lvl:"Advanced", cls:"", title:"Form 940 Part 3 — adjustments (lines 9, 10, 11)", paras:[
+ "Part 3 fixes the line 8 calculation when the maximum 5.4 percent credit doesn't actually apply.",
+ "Line 9: if ALL of your FUTA-taxable wages were excluded from state unemployment tax for the entire year, you get no credit at all. Multiply line 7 by 0.054 and enter the result on line 9. If line 9 applies, lines 10 and 11 don't apply.",
+ "Line 10: if SOME of your FUTA-taxable wages were excluded from state UI, OR if you paid any of your state UI taxes after the Form 940 due date, you complete the line 10 worksheet in the instructions. The worksheet figures the partial credit reduction. The amount goes here.",
+ "Line 11: if any of your wages were paid in a credit reduction state, the additional amount comes from Schedule A. The Schedule A total flows to line 11.",
+ "Watch the difference between lines 10 and 11. Line 10 is for individual employer issues — your own late SUTA payments or wages excluded from state UI for your specific situation. Line 11 is for state-wide issues — your state is on the federal credit reduction list because of its outstanding federal loans.",
+ "These are separate problems with separate fixes. An employer in California in 2025 paying on time gets hit with line 11 (the California credit reduction) but not line 10 (timely SUTA, no exclusions). An employer in a non-credit-reduction state who paid SUTA late gets hit with line 10 but not line 11."
+]},
+
+{tag:"Section", num:"08", lvl:"Intermediate", cls:"", title:"Form 940 Parts 4 through 7 — balance, liability, signature", paras:[
+ "Line 12 is total FUTA tax after adjustments — lines 8 + 9 + 10 + 11. This is your annual FUTA liability.",
+ "Line 13 is total FUTA deposits for the year. Line 14 is the balance due — line 12 minus line 13. If line 14 is more than $500 you must deposit it; if $500 or less you may pay with the return. Line 15 is the overpayment — apply to next year's return or request a refund.",
+ "Part 5 is the quarterly liability breakdown. Lines 16a, 16b, 16c, and 16d are your FUTA liability in each quarter — Q1 January-March, Q2 April-June, Q3 July-September, Q4 October-December. Line 17 totals them and must equal line 12.",
+ "You only complete Part 5 if line 12 is MORE than $500 — meaning you were required to make deposits. If line 12 was $500 or less for the year, leave Part 5 blank.",
+ "Part 6 is the third-party designee — name, phone, and a five-digit PIN for someone you authorize to discuss the return with the IRS. Part 7 is your signature. Sign both pages or the IRS treats it as unfiled."
+]},
+
+{tag:"Schedule", num:"09", lvl:"Advanced", cls:"", title:"Schedule A — multi-state and credit reduction", paras:[
+ "Schedule A (Form 940) is required in two situations: you paid wages in more than one state (multi-state employer), OR you paid wages in a credit reduction state — even if you only operate in that one state.",
+ "Schedule A lists every state and the District of Columbia, plus the U.S. Virgin Islands. For each state where you paid UI tax, you check the box. For credit reduction states where you paid taxable FUTA wages, you also enter the FUTA taxable wages for that state and multiply by the reduction rate.",
+ "For 2025, the final credit reduction states are California at 1.2 percent and the U.S. Virgin Islands at 4.5 percent. Connecticut and New York were on the preliminary list but both paid off their outstanding federal loans by the November 10, 2025 deadline and avoided credit reduction. The list is finalized in November each year, so always check Schedule A for the year you're filing.",
+ "The math is straightforward. Multiply your taxable FUTA wages paid in the credit reduction state by the reduction rate. For California in 2025, that's wages times 0.012. The result is the additional FUTA tax for that state.",
+ "If you pay wages to one employee across multiple states, the $7,000 base is allocated. Imagine an employee earned $4,000 in State A and $5,000 in State B during the year. Their first $7,000 is FUTA-taxable across both — $4,000 in A and $3,000 in B. The successor employer logic is similar: predecessor wages count toward the $7,000.",
+ "The total credit reduction across all your states flows to Form 940 line 11. Schedule A is attached to Form 940 when you file."
+]},
+
+{tag:"Section", num:"10", lvl:"Advanced", cls:"", title:"Deposit rules — quarterly trigger at $500", paras:[
+ "FUTA deposits work very differently from 941 deposits. There's no monthly versus semiweekly schedule based on a lookback period. Instead, there's a single threshold tied to accumulated quarterly liability.",
+ "Calculate your FUTA liability at the end of each quarter. If your cumulative liability for the year — through the end of that quarter and not previously deposited — is MORE than $500, you must deposit by the last day of the month following the quarter end.",
+ "Q1 deposit due by April 30. Q2 by July 31. Q3 by October 31. Q4 by January 31 of the following year.",
+ "If your cumulative liability at quarter end is $500 or LESS, you don't have to deposit. Carry it forward to the next quarter. Keep checking each quarter.",
+ "If your total FUTA liability for the entire year stays at $500 or less, you don't have to deposit at all — you just pay it with Form 940 when you file.",
+ "All deposits are made through the Electronic Federal Tax Payment System (EFTPS). No paper deposits. Schedule the deposit by 8 p.m. Eastern the day before the due date for it to count as on time.",
+ "The deposit calendar is different from the FUTA liability accrual. Your liability accrues as you pay wages. You deposit only the amount that pushed you over $500 at quarter end, but in practice most payroll systems just track total liability and deposit each quarter when the threshold is hit."
+]},
+
+{tag:"Section", num:"11", lvl:"Intermediate", cls:"", title:"Filing deadlines and the late-payment penalty curve", paras:[
+ "Form 940 is due January 31 of the year following the tax year. For tax year 2025, that's January 31, 2026 — except January 31, 2026 falls on a Saturday, which pushes the due date to Monday February 2, 2026.",
+ "If you deposited all of your FUTA tax on time and in full during the year, you get an automatic extension to February 10 (or roughly the next business day if it falls on a weekend or holiday). This rewards employers who stayed current with deposits.",
+ "E-filing is mandatory if you file 10 or more aggregate information returns of any type. For most employers with 941 obligations, this captures Form 940 too. Electronic filing for 940 goes through the IRS Modernized e-File (MeF) system, often through a payroll provider.",
+ "The failure-to-deposit penalty schedule mirrors 941: 2 percent for deposits 1-5 days late, 5 percent for 6-15 days late, 10 percent for 16+ days late or paid within 10 days of an IRS notice, and 15 percent for amounts unpaid after 10 days following IRS notice and demand.",
+ "Failure to file Form 940 is 5 percent per month or part of a month, capped at 25 percent. Failure to pay is 0.5 percent per month, capped at 25 percent. When both apply in the same month, the combined penalty is 5 percent (failure-to-file is reduced by failure-to-pay). Interest runs separately.",
+ "Critical contrast: the Section 6672 Trust Fund Recovery Penalty does NOT apply to FUTA. Because there's no employee withholding, there's no trust fund. A 100% personal assessment can't reach FUTA the way it reaches the trust fund portion of unpaid 941 taxes."
+]},
+
+{tag:"Correction Form", num:"12", lvl:"Advanced", cls:"corr", title:"Amending Form 940 — there is no 940-X", paras:[
+ "Form 940 is corrected differently from Form 941. There's no separate 940-X form. You amend by filing a new Form 940 for the year being corrected, checking the 'Amended return' box (box a in Part 1), and writing 'Amended' across the top of the form if filing on paper.",
+ "The amended Form 940 replaces the original — fill in the corrected figures throughout the entire form, not just the changed lines. The IRS treats the amended return as the new version of record.",
+ "Attach a statement explaining the changes — what was wrong, what's now right, why, and the dates the errors were discovered. Without the explanation, the IRS may treat it as a duplicate filing.",
+ "The period of limitations to claim a refund of overpaid FUTA is generally 3 years from when the original Form 940 was treated as filed. Returns filed before April 15 are deemed filed on April 15 for limitations purposes.",
+ "If you overpaid because you misidentified credit reduction states or because you paid SUTA on time but didn't claim the credit, file the amended Form 940. Attach a new Schedule A if it changes. The IRS will refund the overpayment or apply it forward, depending on which box you checked.",
+ "If you underreported FUTA — for example you missed some wages — the amended return needs to be filed promptly and the additional tax paid with it. Interest accrues from the original due date. The FTP penalty applies if you can't show reasonable cause."
+]},
+
+{tag:"Section", num:"13", lvl:"Advanced", cls:"", title:"Reconciliation and recordkeeping", paras:[
+ "Unlike 941 and W-2/W-3, Form 940 doesn't have a tight matched counterpart at the federal level. State UI returns are the parallel state filing, but the states themselves don't reconcile to Form 940. The reconciliation that matters is internal: your payroll records, total wages, exempt categories, and the $7,000 calculation.",
+ "Keep at least four years of records after the FUTA tax is paid or due, whichever is later. Records should include payroll registers, copies of Form 940 and Schedule A, state UI returns and payment confirmations, EFTPS deposit confirmations, and any worksheets used to compute exempt wages or successor wages.",
+ "If you're a multi-state employer, keep a per-state per-employee log of FUTA-taxable wages. The $7,000 allocation across states is the kind of thing the IRS will look at if Schedule A is questioned.",
+ "Watch for common errors. Putting non-FUTA wages on line 3 (everything paid goes here, even exempt). Forgetting to attach Schedule A when in a credit reduction state. Missing the line 11 entry. Calculating excess wages by total instead of per-employee. Misclassifying workers as contractors and then discovering they should have been on Form 940.",
+ "FUTA is sometimes called the easiest employment tax to file and the easiest to forget. Build the FUTA accrual into your monthly close — even if you don't deposit until quarter-end, knowing where you stand against the $500 trigger keeps the deposit calendar predictable."
+]}
+],
+
+cards:[
+ {c:"Foundations", f:"What does FUTA stand for?", b:"Federal Unemployment Tax Act."},
+ {c:"Foundations", f:"Who pays FUTA tax?", b:"The employer only — never withheld from the employee."},
+ {c:"Foundations", f:"What does FUTA fund?", b:"Federal share of unemployment insurance — admin of state UI programs and extended/emergency benefits."},
+ {c:"Foundations", f:"What form reports FUTA?", b:"Form 940 — annual."},
+ {c:"Foundations", f:"How often is Form 940 filed?", b:"Annually — one return per calendar year."},
+ {c:"Foundations", f:"Are 501(c)(3) tax-exempt orgs subject to FUTA?", b:"No — exempt by statute."},
+ {c:"Foundations", f:"Are Indian tribal governments subject to FUTA?", b:"Exempt if they meet state UI requirements."},
+ {c:"Foundations", f:"Are federal government employers subject to FUTA?", b:"No."},
+ {c:"Foundations", f:"Does the Trust Fund Recovery Penalty apply to FUTA?", b:"No — FUTA isn't a trust fund tax (nothing's withheld from employees, so no trust). Section 6672 doesn't reach FUTA."},
+
+ {c:"Who Files", f:"FUTA wages test?", b:"Paid $1,500+ in wages in any calendar quarter during the current or prior year."},
+ {c:"Who Files", f:"FUTA employees test?", b:"1+ employees for any part of a day in 20+ different weeks during current or prior year (weeks need not be consecutive)."},
+ {c:"Who Files", f:"Either test triggers FUTA?", b:"Yes — meeting either one makes you a FUTA employer."},
+ {c:"Who Files", f:"Household employer FUTA threshold?", b:"$1,000+ in cash wages to household workers in any calendar quarter."},
+ {c:"Who Files", f:"Where do household employers usually pay FUTA?", b:"Schedule H on the individual's Form 1040 (some choose 940 instead)."},
+ {c:"Who Files", f:"Agricultural FUTA wages test?", b:"$20,000+ in cash wages to farm workers in any calendar quarter."},
+ {c:"Who Files", f:"Agricultural FUTA employees test?", b:"10+ farm workers for any part of a day in 20+ different weeks."},
+ {c:"Who Files", f:"Are partners in a partnership subject to FUTA on their draws?", b:"No — partners aren't employees of the partnership."},
+ {c:"Who Files", f:"Child under 21 working for sole-proprietor parent — FUTA?", b:"Exempt from FUTA. (Different rule for S-corp or partnership employers.)"},
+ {c:"Who Files", f:"Once you meet a FUTA test mid-year, when does liability start?", b:"From the START of the calendar year — not the date you met the test."},
+
+ {c:"Rates & Base", f:"Statutory FUTA rate?", b:"6.0% on the first $7,000 of each employee's wages."},
+ {c:"Rates & Base", f:"FUTA wage base?", b:"$7,000 per employee per employer per year (unchanged since 1983)."},
+ {c:"Rates & Base", f:"Maximum FUTA credit for timely state UI?", b:"5.4%."},
+ {c:"Rates & Base", f:"Net FUTA rate with maximum credit?", b:"0.6% (6.0% − 5.4%)."},
+ {c:"Rates & Base", f:"Maximum FUTA per employee at the net 0.6% rate?", b:"$42 ($7,000 × 0.006)."},
+ {c:"Rates & Base", f:"Maximum FUTA per employee at full 6%?", b:"$420 ($7,000 × 0.06)."},
+ {c:"Rates & Base", f:"Three requirements for the full 5.4% credit?", b:"(1) Paid SUTA on same wages, (2) paid SUTA by Form 940 due date, (3) state is not a credit reduction state."},
+ {c:"Rates & Base", f:"How does the FUTA wage base compare to Social Security?", b:"Much lower — $7,000 vs. $184,500 (2026). FUTA caps after just one quarter for most full-time workers."},
+
+ {c:"FUTA Wages", f:"Are pre-tax 401(k) deferrals subject to FUTA?", b:"YES — same as FICA. Pre-tax 401(k) reduces Box 1 (FIT) only, NOT FICA or FUTA."},
+ {c:"FUTA Wages", f:"Are cafeteria plan deductions (health insurance, etc.) subject to FUTA?", b:"No — §125 cafeteria plan deductions reduce FUTA wages just like FICA wages."},
+ {c:"FUTA Wages", f:"Is group-term life insurance under $50K subject to FUTA?", b:"No — non-taxable for FUTA. (Imputed cost above $50K IS subject.)"},
+ {c:"FUTA Wages", f:"Are accountable-plan reimbursed business expenses subject to FUTA?", b:"No — exempt."},
+ {c:"FUTA Wages", f:"Are tips subject to FUTA?", b:"Yes — tips are FUTA wages."},
+ {c:"FUTA Wages", f:"S-corp 2%+ shareholder wages — FUTA?", b:"Yes — still wages for FUTA purposes."},
+ {c:"FUTA Wages", f:"Successor employer FUTA wage base rule?", b:"Predecessor's FUTA wages in the same calendar year count toward your $7,000 base per continuing employee."},
+ {c:"FUTA Wages", f:"How is the $7,000 base measured?", b:"Per employee, per employer, per calendar year."},
+
+ {c:"Form 940 Lines", f:"Part 1 box a?", b:"Amended return (no Form 940-X — you amend by checking this box)."},
+ {c:"Form 940 Lines", f:"Part 1 box b?", b:"Successor employer."},
+ {c:"Form 940 Lines", f:"Part 1 box c?", b:"No payments to employees this year."},
+ {c:"Form 940 Lines", f:"Part 1 box d?", b:"Final return (business closed)."},
+ {c:"Form 940 Lines", f:"Line 1a?", b:"State (two-letter abbreviation) for single-state employers."},
+ {c:"Form 940 Lines", f:"Line 1b checkbox?", b:"Multi-state employer — complete Schedule A."},
+ {c:"Form 940 Lines", f:"Line 2 checkbox?", b:"Paid wages in a credit reduction state — complete Schedule A."},
+ {c:"Form 940 Lines", f:"Line 3?", b:"Total payments to all employees (includes pre-tax 401(k) and everything paid)."},
+ {c:"Form 940 Lines", f:"Line 4?", b:"Payments exempt from FUTA (fringe benefits, GTL, retirement/pension, dependent care, other)."},
+ {c:"Form 940 Lines", f:"Line 5?", b:"Total per-employee payments in excess of $7,000."},
+ {c:"Form 940 Lines", f:"Line 6?", b:"Subtotal — line 4 + line 5."},
+ {c:"Form 940 Lines", f:"Line 7?", b:"Total taxable FUTA wages — line 3 − line 6."},
+ {c:"Form 940 Lines", f:"Line 8?", b:"FUTA tax before adjustments — line 7 × 0.006 (assumes full credit)."},
+ {c:"Form 940 Lines", f:"Line 9 — when?", b:"When ALL FUTA wages were excluded from state UI for the year. Multiply line 7 × 0.054."},
+ {c:"Form 940 Lines", f:"Line 10 — when?", b:"When SOME FUTA wages were excluded from state UI OR state UI paid late. Use the worksheet."},
+ {c:"Form 940 Lines", f:"Line 11?", b:"Credit reduction amount from Schedule A."},
+ {c:"Form 940 Lines", f:"Line 12?", b:"Total FUTA tax after adjustments — lines 8 + 9 + 10 + 11."},
+ {c:"Form 940 Lines", f:"Line 13?", b:"Total FUTA deposits made during the year."},
+ {c:"Form 940 Lines", f:"Line 14?", b:"Balance due (line 12 > line 13)."},
+ {c:"Form 940 Lines", f:"Line 15?", b:"Overpayment (line 13 > line 12) — refund or apply forward."},
+ {c:"Form 940 Lines", f:"When do you complete Part 5 (quarterly liability)?", b:"Only if line 12 > $500."},
+
+ {c:"Schedule A", f:"When is Schedule A required?", b:"(1) Multi-state employer OR (2) wages paid in any credit reduction state — even if single state."},
+ {c:"Schedule A", f:"2025 credit reduction states?", b:"California (1.2%) and U.S. Virgin Islands (4.5%). CT and NY paid off their loans by 11/10/2025 deadline."},
+ {c:"Schedule A", f:"How is the credit reduction calculated for a state?", b:"FUTA-taxable wages paid in that state × the state's credit reduction rate."},
+ {c:"Schedule A", f:"Where does the Schedule A total flow on Form 940?", b:"Line 11."},
+ {c:"Schedule A", f:"When are credit reduction states finalized each year?", b:"Mid-November (the U.S. Department of Labor publishes after the November 10 deadline)."},
+ {c:"Schedule A", f:"Multi-state $7,000 base — how allocated?", b:"Per employee across states — the $7,000 base is one base; allocate wages by state."},
+
+ {c:"Deposits", f:"FUTA deposit trigger?", b:"Cumulative liability > $500 at the end of a quarter."},
+ {c:"Deposits", f:"FUTA deposit due dates?", b:"April 30 (Q1), July 31 (Q2), October 31 (Q3), January 31 (Q4)."},
+ {c:"Deposits", f:"What if year-total FUTA liability stays ≤ $500?", b:"No deposits required — pay with Form 940 when you file."},
+ {c:"Deposits", f:"What if liability stays ≤ $500 at end of Q1?", b:"Don't deposit — carry forward to Q2 and recheck."},
+ {c:"Deposits", f:"How are FUTA deposits made?", b:"EFTPS — Electronic Federal Tax Payment System (electronic only)."},
+ {c:"Deposits", f:"Monthly vs. semiweekly for FUTA?", b:"Neither — FUTA uses a single $500 quarterly threshold, not 941-style schedules."},
+
+ {c:"Filing", f:"Form 940 due date for tax year 2025?", b:"February 2, 2026 (Jan 31 falls on Saturday → next business day)."},
+ {c:"Filing", f:"Extended deadline if all FUTA deposits were timely and full?", b:"February 10 (or next business day)."},
+ {c:"Filing", f:"E-file mandate threshold for Form 940?", b:"10+ aggregate information returns of any type (same threshold as W-2/1099)."},
+ {c:"Filing", f:"Where do you e-file Form 940?", b:"IRS Modernized e-File (MeF) — different from W-2s, which go to SSA BSO."},
+
+ {c:"Amendments", f:"Is there a Form 940-X?", b:"No — you amend by checking the 'Amended return' box (box a in Part 1) on a new Form 940 for the year."},
+ {c:"Amendments", f:"How do you complete an amended Form 940?", b:"Fill in CORRECTED figures throughout the entire form (not just changed lines). Replaces the original."},
+ {c:"Amendments", f:"Required when amending?", b:"Attach a statement explaining the changes — what was wrong, what's right, and why."},
+ {c:"Amendments", f:"Refund period of limitations for FUTA?", b:"Generally 3 years from the date the original return is treated as filed."},
+ {c:"Amendments", f:"Amend on paper — what to write at the top?", b:"'Amended' across the top of the form (for paper filings)."},
+
+ {c:"Penalties", f:"FTD penalty for FUTA — same as 941?", b:"Yes — same tier structure: 2%/5%/10%/15% based on days late and IRS notice timing."},
+ {c:"Penalties", f:"FTF penalty for Form 940?", b:"5% per month or part of a month, capped at 25%."},
+ {c:"Penalties", f:"FTP penalty for Form 940?", b:"0.5% per month, capped at 25%."},
+ {c:"Penalties", f:"FTF + FTP combined in same month?", b:"5% combined (FTF reduced by FTP)."},
+ {c:"Penalties", f:"Why doesn't TFRP apply to FUTA?", b:"Because FUTA is employer-only — nothing is withheld from employees, so there's no 'trust fund' to recover."},
+
+ {c:"Comparisons", f:"FUTA vs FICA — who pays each?", b:"FICA: employee + employer (split). FUTA: employer only."},
+ {c:"Comparisons", f:"401(k) treatment: Box 1 / Box 3 / FUTA wages?", b:"Reduces Box 1 only. Subject to BOTH FICA AND FUTA."},
+ {c:"Comparisons", f:"FUTA vs SUTA?", b:"FUTA = federal (6% on $7K, employer-only). SUTA = state (varies by state, sometimes employee share too, different wage bases)."},
+ {c:"Comparisons", f:"Annual vs quarterly — which is which?", b:"Form 940 = annual. Form 941 = quarterly. Both due last day of the month following the period end."},
+ {c:"Comparisons", f:"Form 940 cap per employee vs Form 941?", b:"Form 940 caps at $42 per employee per year (most cases). Form 941 has no per-employee cap — Medicare runs unlimited."}
+],
+
+quizzes:[
+ {id:"qbase", tag:"Topic Quiz", name:"FUTA Basics", desc:"Who, what, rates, wage base", sample:10, questions:[
+  {q:"FUTA is paid by:", o:["Employee only","Employer only","Split equally between employer and employee","The federal government"], a:1, e:"FUTA is employer-only — never withheld from the employee."},
+  {q:"FUTA funds:", o:["Social Security retirement benefits","Medicare hospital insurance","Federal share of unemployment insurance","Earned Income Credit"], a:2, e:"FUTA funds the federal portion of joint federal-state unemployment insurance."},
+  {q:"FUTA wage base per employee per year?", o:["$7,000","$10,000","$15,000","$176,100"], a:0, e:"$7,000 — unchanged since 1983."},
+  {q:"Statutory FUTA rate?", o:["0.6%","2.9%","6.0%","6.2%"], a:2, e:"6.0% statutory — most employers reduce to 0.6% net via the 5.4% state credit."},
+  {q:"Net FUTA rate with maximum state credit?", o:["0.6%","1.45%","5.4%","6.0%"], a:0, e:"6.0% − 5.4% credit = 0.6% net."},
+  {q:"Maximum FUTA per employee per year at 0.6%?", o:["$42","$84","$420","$510"], a:0, e:"$7,000 × 0.6% = $42 per employee."},
+  {q:"501(c)(3) tax-exempt organizations and FUTA?", o:["Pay full 6%","Pay reduced 0.6%","Exempt by statute","Pay only the employer half"], a:2, e:"Tax-exempt orgs are statutorily exempt from FUTA."},
+  {q:"Does TFRP (Section 6672) apply to unpaid FUTA?", o:["Yes — same as 941","No — FUTA isn't a trust fund tax","Only for repeat offenders","Only above $50,000"], a:1, e:"No employee withholding = no trust fund = no §6672 personal assessment."},
+  {q:"FUTA wages test?", o:["$500+ in a year","$1,500+ in any calendar quarter (current or prior year)","$5,000+ in a year","$20,000+ in a year"], a:1, e:"$1,500+ in any one calendar quarter triggers the test."},
+  {q:"FUTA employees test?", o:["1 employee for any 5 days","1+ employees for any part of a day in 20+ different weeks","2+ employees for the whole year","5+ employees year-round"], a:1, e:"20+ different weeks (need not be consecutive) with at least one employee."},
+  {q:"Are pre-tax 401(k) deferrals subject to FUTA?", o:["No","Yes — same as FICA","Only above $7,000","Only Roth"], a:1, e:"Pre-tax 401(k) reduces Box 1 (FIT) ONLY. Still fully subject to FICA AND FUTA."},
+  {q:"Are partners' draws subject to FUTA?", o:["Yes","No — partners aren't employees of the partnership","Only above $7,000","Only for general partners"], a:1, e:"No — partners aren't employees, so partnership draws aren't FUTA wages."}
+ ]},
+
+ {id:"qlines", tag:"Topic Quiz", name:"Form 940 Lines", desc:"Line-by-line mechanics", sample:10, questions:[
+  {q:"Line 3 of Form 940 reports:", o:["Federal income tax withheld","Total payments to all employees","FUTA-taxable wages only","State unemployment tax"], a:1, e:"Total payments — includes everything paid, even exempt amounts (they get subtracted later)."},
+  {q:"Line 4 of Form 940 reports:", o:["Total wages","Payments exempt from FUTA","State UI paid","Net FUTA tax"], a:1, e:"Exempt categories (fringe benefits, GTL, retirement/pension, dependent care, other)."},
+  {q:"Line 5 reports:", o:["Total wages","All wages over $7,000 in aggregate","Per-employee payments in excess of $7,000","Bonuses only"], a:2, e:"Per employee — the amount each employee earned ABOVE $7,000."},
+  {q:"Line 7 (taxable FUTA wages) is calculated as:", o:["Line 3 − line 4","Line 3 − line 5","Line 3 − line 6","Line 3 × 0.006"], a:2, e:"Line 3 (total) minus line 6 (exempt + over-$7,000 subtotal) = taxable FUTA wages."},
+  {q:"Line 8 (FUTA tax before adjustments) is:", o:["Line 7 × 0.06","Line 7 × 0.054","Line 7 × 0.006","Line 7 × 0.029"], a:2, e:"Line 7 × 0.6% (the net rate assuming full state credit)."},
+  {q:"When does line 9 apply?", o:["Always","When ALL FUTA wages were excluded from state UI","Only for credit reduction states","When deposits were late"], a:1, e:"Line 9: all wages excluded from state UI → multiply line 7 by 0.054 (lose full credit)."},
+  {q:"When does line 11 apply?", o:["Always","Multi-state employer","Wages paid in credit reduction state(s)","Late SUTA payments"], a:2, e:"Line 11 — credit reduction amount from Schedule A."},
+  {q:"Line 12 represents:", o:["Total wages","Total FUTA tax after adjustments","Total deposits","Balance due"], a:1, e:"Lines 8 + 9 + 10 + 11 = total annual FUTA tax liability."},
+  {q:"You must deposit FUTA when:", o:["Always","Cumulative quarterly liability > $500","Annual tax > $2,500","Cumulative quarterly liability > $1,000"], a:1, e:"$500 threshold per quarter — if cumulative exceeds, deposit by next month's end."},
+  {q:"Part 5 (quarterly liability) is required when:", o:["Always","Line 12 > $500","Line 14 > $0","Schedule A is filed"], a:1, e:"Only if line 12 exceeds $500 (i.e., you were required to make deposits)."},
+  {q:"Which box in Part 1 marks an amended return?", o:["Box a","Box b","Box c","Box d"], a:0, e:"Box a — amended return (no separate Form 940-X exists)."},
+  {q:"Successor employer box is checked when:", o:["You're a new employer","You acquired another business mid-year","You file late","You closed the business"], a:1, e:"Box b — counts predecessor's FUTA wages toward your $7,000 base."}
+ ]},
+
+ {id:"qsched", tag:"Topic Quiz", name:"Schedule A & Credit Reduction", desc:"Multi-state and credit reduction states", sample:8, questions:[
+  {q:"Schedule A is required when:", o:["Always","Multi-state employer OR credit reduction state","Only if you owe over $500","Only for single-state employers"], a:1, e:"Either trigger — multi-state OR any credit reduction state."},
+  {q:"2025 credit reduction states are:", o:["NY and CT only","CA and U.S. Virgin Islands","All 50 states","None"], a:1, e:"CA (1.2%) and USVI (4.5%) for 2025. CT and NY repaid before the 11/10/2025 deadline."},
+  {q:"California 2025 credit reduction rate?", o:["0.3%","0.6%","1.2%","2.7%"], a:2, e:"1.2% added to FUTA on California wages for 2025."},
+  {q:"U.S. Virgin Islands 2025 credit reduction rate?", o:["0.3%","0.6%","1.2%","4.5%"], a:3, e:"4.5% for USVI in 2025."},
+  {q:"Schedule A total flows to Form 940 line:", o:["8","9","10","11"], a:3, e:"Line 11 — credit reduction amount."},
+  {q:"Single-state employer in a credit reduction state — Schedule A required?", o:["No","Yes — credit reduction triggers it even single-state","Only if owing over $500","Only if multi-state"], a:1, e:"Schedule A is required for credit reduction states even if single-state."},
+  {q:"When does Department of Labor finalize credit reduction states?", o:["January","April","November (after 11/10 deadline)","December"], a:2, e:"Final list mid-November, after the November 10 loan repayment deadline."},
+  {q:"Credit reduction = $50,000 wages × 1.2%. The result of:", o:["$60","$600","$6,000","$60,000"], a:1, e:"$50,000 × 0.012 = $600 additional FUTA via line 11."}
+ ]},
+
+ {id:"qdep", tag:"Topic Quiz", name:"Deposits & Filing", desc:"When to deposit, when to file", sample:8, questions:[
+  {q:"FUTA deposit trigger?", o:["$100 quarterly liability","$500 cumulative quarterly liability","$2,500 annual","Always monthly"], a:1, e:"> $500 cumulative at quarter end triggers deposit."},
+  {q:"Q1 FUTA deposit due by:", o:["March 31","April 15","April 30","May 31"], a:2, e:"Last day of month following quarter end → April 30."},
+  {q:"Q4 FUTA deposit due by:", o:["December 31","January 15","January 31","February 28"], a:2, e:"January 31 (same as Form 940 standard due date)."},
+  {q:"If full-year FUTA liability stays at or below $500?", o:["Must still deposit quarterly","No deposits — pay with Form 940","File Form 944 instead","Skip filing"], a:1, e:"≤ $500 for the year means no deposits required — pay with the return."},
+  {q:"Method of FUTA deposit?", o:["Paper coupon","Mail check","EFTPS (electronic)","Cash"], a:2, e:"EFTPS — electronic only."},
+  {q:"Form 940 standard due date?", o:["January 31","February 28","March 15","April 15"], a:0, e:"January 31 of the year following the tax year (next business day if weekend/holiday)."},
+  {q:"If all FUTA deposits were timely and full?", o:["Standard Jan 31 due date","Automatic extension to about February 10","Extension to April 15","No extension"], a:1, e:"~Feb 10 extension as a reward for timely full deposits."},
+  {q:"E-file mandate for Form 940 — same threshold as W-2/1099?", o:["No — different","Yes — 10+ aggregate information returns","50+ returns","250+ returns"], a:1, e:"Same aggregate threshold — 10+ effective 2024."}
+ ]},
+
+ {id:"qamend", tag:"Topic Quiz", name:"Amendments & Penalties", desc:"Amended 940, penalties, comparisons", sample:8, questions:[
+  {q:"How do you amend Form 940?", o:["File Form 940-X","Check 'Amended return' box on a new Form 940","Call the IRS","No way to amend"], a:1, e:"No 940-X. Check Part 1 box a on a new Form 940 for that year."},
+  {q:"Amended Form 940 figures:", o:["Only the changed lines","ALL figures (corrected, not delta)","Just the difference","Schedule A only"], a:1, e:"Fill in corrected figures throughout — replaces the original."},
+  {q:"Required attachment when amending Form 940?", o:["Schedule A only","Statement explaining the changes","Original 940 copy","Nothing"], a:1, e:"Attach a statement explaining what changed and why."},
+  {q:"Period of limitations for FUTA refund claim?", o:["1 year","2 years","Generally 3 years","No limit"], a:2, e:"3 years generally from when the original return is deemed filed."},
+  {q:"FTD penalty for deposit 1–5 days late?", o:["1%","2%","5%","10%"], a:1, e:"2% — same tier structure as 941."},
+  {q:"Failure-to-file Form 940 penalty?", o:["1% per month","5% per month, capped at 25%","10% per month, capped at 50%","Flat $500"], a:1, e:"Same FTF as 941 — 5% per month, capped at 25%."},
+  {q:"Failure-to-pay penalty?", o:["0.5% per month, capped at 25%","1% per month","5% per month","10% per month"], a:0, e:"0.5% per month, capped at 25%."},
+  {q:"TFRP (Section 6672) and unpaid FUTA?", o:["Applies — same as 941","Does NOT apply — FUTA isn't a trust fund tax","Applies only for repeat offenders","Applies above $50,000"], a:1, e:"FUTA is employer-only — no withholding from employees, no trust fund, no §6672."}
+ ]},
+
+ {id:"qmix", tag:"Random Mix", name:"EA Mixed (random pull)", desc:"Random questions across all topics", sample:12, questions:[]}
+],
+
+practice:[
+ {id:"p1", tag:"Practice · Basic FUTA", title:"Three employees, none over $7,000",
+  scn:"Bramble Cafe had three employees in 2025, each paid less than $7,000 for the year. All wages were paid in Oregon, a non-credit-reduction state, and SUTA was paid on time.",
+  given:[
+   {k:"Year", v:"2025"},
+   {k:"Employee 1 total wages", v:"$5,500.00"},
+   {k:"Employee 2 total wages", v:"$6,200.00"},
+   {k:"Employee 3 total wages", v:"$4,800.00"},
+   {k:"State", v:"Oregon (non-credit-reduction)"}
+  ],
+  fields:[
+   {id:"f1", ln:"3", label:"Line 3 — Total payments to employees", pfx:"$", type:"money", ans:16500, hint:"Sum all three: 5,500 + 6,200 + 4,800."},
+   {id:"f2", ln:"5", label:"Line 5 — Excess over $7,000 per employee", pfx:"$", type:"money", ans:0, hint:"Each is under $7,000, so excess is zero."},
+   {id:"f3", ln:"7", label:"Line 7 — Total taxable FUTA wages", pfx:"$", type:"money", ans:16500, hint:"Line 3 minus line 6 (which is 0 here)."},
+   {id:"f4", ln:"8", label:"Line 8 — FUTA tax before adjustments", pfx:"$", type:"money", ans:99, hint:"Line 7 × 0.006."},
+   {id:"f5", ln:"12", label:"Line 12 — Total FUTA tax (no credit reduction, timely SUTA)", pfx:"$", type:"money", ans:99, hint:"No adjustments needed → equals line 8."},
+   {id:"f6", ln:"deposit", label:"Required to deposit during the year? (yes/no)", pfx:"", type:"text", accept:["no","n"], hint:"Compare line 12 to the $500 threshold."}
+  ],
+  sol:"<p><b>Line 3:</b> 5,500 + 6,200 + 4,800 = <code>$16,500.00</code></p><p><b>Line 5:</b> <code>$0.00</code> — every employee under the $7,000 base.</p><p><b>Line 7:</b> <code>$16,500.00</code> &nbsp; <b>Line 8:</b> 16,500 × 0.6% = <code>$99.00</code></p><p><b>Line 12:</b> <code>$99.00</code> (no adjustments — Oregon is not a credit reduction state and SUTA was timely)</p><p><b>Deposit:</b> <code>No</code> — line 12 is under $500, so just pay $99 with Form 940 when you file.</p>"},
+
+ {id:"p2", tag:"Practice · Basic FUTA", title:"Three employees, all over $7,000",
+  scn:"Vista Press had three full-time employees in 2025, all paid well above $7,000. Single-state (Texas, no credit reduction), SUTA paid on time.",
+  given:[
+   {k:"Employee 1 wages", v:"$48,000.00"},
+   {k:"Employee 2 wages", v:"$52,000.00"},
+   {k:"Employee 3 wages", v:"$36,500.00"},
+   {k:"State", v:"Texas (non-credit-reduction)"}
+  ],
+  fields:[
+   {id:"f1", ln:"3", label:"Line 3 — Total payments", pfx:"$", type:"money", ans:136500, hint:"Sum all three."},
+   {id:"f2", ln:"5", label:"Line 5 — Excess over $7,000 per employee (sum)", pfx:"$", type:"money", ans:115500, hint:"Each excess = wages − 7,000. Sum: (48-7) + (52-7) + (36.5-7) = 41 + 45 + 29.5 thousand."},
+   {id:"f3", ln:"7", label:"Line 7 — Taxable FUTA wages", pfx:"$", type:"money", ans:21000, hint:"3 employees × $7,000 each. Or line 3 − line 5."},
+   {id:"f4", ln:"8", label:"Line 8 — FUTA tax", pfx:"$", type:"money", ans:126, hint:"21,000 × 0.6%."},
+   {id:"f5", ln:"deposit", label:"Required to deposit during the year? (yes/no)", pfx:"", type:"text", accept:["no","n"], hint:"Compare $126 to the $500 trigger."}
+  ],
+  sol:"<p><b>Line 3:</b> 48,000 + 52,000 + 36,500 = <code>$136,500.00</code></p><p><b>Line 5:</b> (48,000 − 7,000) + (52,000 − 7,000) + (36,500 − 7,000) = 41,000 + 45,000 + 29,500 = <code>$115,500.00</code></p><p><b>Line 7:</b> 136,500 − 115,500 = <code>$21,000.00</code> — equivalent to 3 employees × $7,000 base.</p><p><b>Line 8:</b> 21,000 × 0.6% = <code>$126.00</code></p><p><b>Deposit:</b> <code>No</code> — $126 is below the $500 trigger.</p>"},
+
+ {id:"p3", tag:"Practice · Schedule A", title:"California credit reduction (2025)",
+  scn:"Pacific Bloom is a single-state California employer with 8 employees in 2025, all paid above $7,000. SUTA was paid on time. California is a 2025 credit reduction state at 1.2%.",
+  given:[
+   {k:"Employees", v:"8 (all over $7,000)"},
+   {k:"FUTA-taxable wages per employee", v:"$7,000 each"},
+   {k:"State", v:"California"},
+   {k:"CA 2025 credit reduction rate", v:"1.2%"}
+  ],
+  fields:[
+   {id:"f1", ln:"7", label:"Line 7 — Total taxable FUTA wages", pfx:"$", type:"money", ans:56000, hint:"8 employees × $7,000 base."},
+   {id:"f2", ln:"8", label:"Line 8 — FUTA tax before adjustments", pfx:"$", type:"money", ans:336, hint:"56,000 × 0.6% (assumes full credit before line 11)."},
+   {id:"f3", ln:"11", label:"Line 11 — Credit reduction from Schedule A", pfx:"$", type:"money", ans:672, hint:"56,000 × 1.2% (the CA reduction rate)."},
+   {id:"f4", ln:"12", label:"Line 12 — Total FUTA tax", pfx:"$", type:"money", ans:1008, hint:"Line 8 + line 11."},
+   {id:"f5", ln:"deposit", label:"Required to deposit during the year? (yes/no)", pfx:"", type:"text", accept:["yes","y"], hint:"$1,008 vs $500 threshold."}
+  ],
+  sol:"<p><b>Line 7:</b> 8 × $7,000 = <code>$56,000.00</code></p><p><b>Line 8:</b> 56,000 × 0.6% = <code>$336.00</code></p><p><b>Line 11 (Schedule A — CA reduction):</b> 56,000 × 1.2% = <code>$672.00</code></p><p><b>Line 12:</b> 336 + 672 = <code>$1,008.00</code></p><p><b>Effective rate:</b> 1.8% (0.6% normal + 1.2% reduction) on CA FUTA wages — about $126 per employee instead of $42.</p><p><b>Deposit required:</b> <code>Yes</code> — line 12 exceeds $500, so quarterly deposits required (whichever quarter pushes cumulative over $500)."},
+
+ {id:"p4", tag:"Practice · Schedule A", title:"Multi-state employer",
+  scn:"Junction Logistics has employees in three states. For 2025, each state had one employee paid over $7,000. State allocations are simple: each employee worked in only one state. None of these states is a credit reduction state for 2025.",
+  given:[
+   {k:"Employee in Texas — wages", v:"$45,000.00"},
+   {k:"Employee in Colorado — wages", v:"$52,000.00"},
+   {k:"Employee in Arizona — wages", v:"$38,000.00"},
+   {k:"All SUTA paid on time"},
+   {k:"None are credit reduction states"}
+  ],
+  fields:[
+   {id:"f1", ln:"box", label:"Which Part 2 checkbox? (1a, 1b, or 2)", pfx:"", type:"text", accept:["1b","line 1b","box 1b"], hint:"Multi-state employer trigger."},
+   {id:"f2", ln:"Sched A", label:"Is Schedule A required? (yes/no)", pfx:"", type:"text", accept:["yes","y"], hint:"What does multi-state employer status trigger?"},
+   {id:"f3", ln:"7", label:"Line 7 — Total taxable FUTA wages", pfx:"$", type:"money", ans:21000, hint:"3 employees × $7,000 base each."},
+   {id:"f4", ln:"8", label:"Line 8 — FUTA tax", pfx:"$", type:"money", ans:126, hint:"21,000 × 0.6%."},
+   {id:"f5", ln:"11", label:"Line 11 — Credit reduction amount", pfx:"$", type:"money", ans:0, hint:"None of these states is a credit reduction state, so the Schedule A total is 0."},
+   {id:"f6", ln:"12", label:"Line 12 — Total FUTA tax", pfx:"$", type:"money", ans:126, hint:"Line 8 + line 11."}
+  ],
+  sol:"<p><b>Checkbox:</b> <code>1b</code> (multi-state employer).</p><p><b>Schedule A:</b> <code>Yes</code> — required even without credit reduction, because of multi-state status. Check the boxes for TX, CO, and AZ on Schedule A.</p><p><b>Line 7:</b> 3 × $7,000 = <code>$21,000.00</code></p><p><b>Line 8:</b> <code>$126.00</code></p><p><b>Line 11:</b> <code>$0.00</code> — no credit reduction states.</p><p><b>Line 12:</b> <code>$126.00</code></p>"},
+
+ {id:"p5", tag:"Practice · Deposits", title:"Quarterly deposit trigger",
+  scn:"Lantern Goods accrues FUTA throughout 2025. At each quarter-end, here's the cumulative liability NOT yet deposited. Determine which quarters require a deposit and the deposit amounts.",
+  given:[
+   {k:"End of Q1 cumulative liability", v:"$210.00"},
+   {k:"End of Q2 cumulative liability (additional + Q1 carryforward)", v:"$420.00"},
+   {k:"End of Q3 cumulative liability", v:"$610.00"},
+   {k:"End of Q4 (full year) total liability", v:"$820.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"Q1", label:"Q1 deposit amount", pfx:"$", type:"money", ans:0, hint:"Compare $210 to the $500 threshold."},
+   {id:"f2", ln:"Q2", label:"Q2 deposit amount", pfx:"$", type:"money", ans:0, hint:"Cumulative still under $500."},
+   {id:"f3", ln:"Q3", label:"Q3 deposit amount (by Oct 31)", pfx:"$", type:"money", ans:610, hint:"Cumulative crossed $500 — deposit the full accumulated amount."},
+   {id:"f4", ln:"Q4", label:"Q4 final amount (paid with return or by Jan 31)", pfx:"$", type:"money", ans:210, hint:"Year total $820 − $610 already deposited = remaining."},
+   {id:"f5", ln:"date1", label:"Q3 deposit due date", pfx:"", type:"text", accept:["october 31","oct 31","10/31","10-31"], hint:"Last day of month following Q3 end."}
+  ],
+  sol:"<p><b>Q1 ($210):</b> under $500 → <code>No deposit</code>, carry forward.</p><p><b>Q2 ($420 cumulative):</b> still under $500 → <code>No deposit</code>, carry forward.</p><p><b>Q3 ($610 cumulative):</b> crossed $500 → deposit <code>$610</code> by <code>October 31</code>.</p><p><b>Q4:</b> Year total $820 − $610 already deposited = <code>$210</code> remaining. Pay with Form 940 by Feb 2, 2026 (since Jan 31 is Saturday).</p>"},
+
+ {id:"p6", tag:"Practice · Adjustments", title:"Late state UI — partial credit lost",
+  scn:"Halcyon Press paid its state UI for 2025 on March 15, 2026 — about six weeks after the Form 940 due date of February 2, 2026. The employer doesn't qualify for the full 5.4% credit on the late portion. Assume the line 10 worksheet result for the late payment is $315.",
+  given:[
+   {k:"Line 7 (taxable FUTA wages)", v:"$50,000.00"},
+   {k:"State", v:"Nevada (non-credit-reduction)"},
+   {k:"SUTA paid March 15, 2026 (late)", v:"After Form 940 due date"},
+   {k:"Line 10 worksheet result (lost credit)", v:"$315.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"8", label:"Line 8 — FUTA tax before adjustments", pfx:"$", type:"money", ans:300, hint:"50,000 × 0.6%."},
+   {id:"f2", ln:"10", label:"Line 10 — Adjustment for late SUTA", pfx:"$", type:"money", ans:315, hint:"As given by the worksheet."},
+   {id:"f3", ln:"11", label:"Line 11 — Credit reduction", pfx:"$", type:"money", ans:0, hint:"Nevada isn't a credit reduction state."},
+   {id:"f4", ln:"12", label:"Line 12 — Total FUTA tax", pfx:"$", type:"money", ans:615, hint:"Lines 8 + 9 + 10 + 11."},
+   {id:"f5", ln:"sched", label:"Is Schedule A required here? (yes/no)", pfx:"", type:"text", accept:["no","n"], hint:"Single-state, non-credit-reduction. What triggers Schedule A?"}
+  ],
+  sol:"<p><b>Line 8:</b> 50,000 × 0.6% = <code>$300.00</code></p><p><b>Line 10:</b> <code>$315.00</code> (from the worksheet — the amount of credit lost due to late SUTA)</p><p><b>Line 11:</b> <code>$0.00</code> — NV not a credit reduction state.</p><p><b>Line 12:</b> 300 + 0 + 315 + 0 = <code>$615.00</code></p><p><b>Schedule A:</b> <code>No</code> — single-state and not a credit reduction state. Line 10 (individual late SUTA) handles the credit reduction without Schedule A.</p><p><b>Key distinction:</b> Line 10 is for your own late payments. Line 11 is for state-wide credit reduction. Different problems, different fixes.</p>"},
+
+ {id:"p7", tag:"Practice · Amended 940", title:"Amending Form 940 — missed exemption",
+  scn:"You filed Maple Co's 2024 Form 940 in early 2025 and paid $480 in FUTA. You then realized you forgot to subtract $25,000 in S-corp 2% shareholder health insurance — which ISN'T a FUTA exemption, so actually it should have been INCLUDED. Wait — actually you over-claimed an exemption that didn't exist. Revised correctly: original line 7 was $80,000, but should have been $80,000 (unchanged). Let's flip the scenario: you OVER-reported wages by including $10,000 in tax-exempt group-term life insurance under $50K that shouldn't have been on line 3. Corrected line 3 is $90,000 instead of $100,000. Walk through the amended return.",
+  given:[
+   {k:"Year being amended", v:"2024"},
+   {k:"Original line 3 (total payments)", v:"$100,000.00"},
+   {k:"Correct line 3", v:"$90,000.00 (GTL ≤ $50K excluded)"},
+   {k:"Original line 7 (taxable FUTA wages)", v:"$60,000.00"},
+   {k:"Correct line 7", v:"$50,000.00"},
+   {k:"Original line 12 (FUTA tax paid)", v:"$360.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"box", label:"Which Part 1 box do you check on the amended return? (a, b, c, or d)", pfx:"", type:"text", accept:["a","box a","amended"], hint:"Amended return — there is no Form 940-X."},
+   {id:"f2", ln:"form", label:"What form do you use to amend? ('940-X' or '940')", pfx:"", type:"text", accept:["940","form 940","new 940"], hint:"There is no separate amendment form."},
+   {id:"f3", ln:"8 new", label:"Amended line 8 (corrected FUTA tax)", pfx:"$", type:"money", ans:300, hint:"Corrected line 7 ($50,000) × 0.6%."},
+   {id:"f4", ln:"refund", label:"Refund amount", pfx:"$", type:"money", ans:60, hint:"Originally paid $360 − corrected $300."},
+   {id:"f5", ln:"limit", label:"Years to claim a refund (generally)", pfx:"", type:"text", accept:["3","three","3 years","three years"], hint:"Standard period of limitations."}
+  ],
+  sol:"<p><b>Checkbox:</b> <code>a</code> — Amended return.</p><p><b>Form used:</b> <code>Form 940</code> (no separate 940-X exists). Write 'Amended' at the top if paper-filing.</p><p><b>Amended line 8:</b> 50,000 × 0.6% = <code>$300.00</code></p><p><b>Refund:</b> 360 − 300 = <code>$60.00</code></p><p><b>Refund period:</b> <code>3 years</code> generally from when original return was treated as filed.</p><p><b>Attach:</b> a statement explaining the error (GTL ≤ $50K was incorrectly included in line 3 originally; it's exempt from FUTA).</p>"},
+
+ {id:"p8", tag:"Practice · Penalties", title:"Failure-to-deposit penalty on FUTA",
+  scn:"Driftwood Co's Q3 2025 FUTA deposit of $800 was due October 31, 2025. It was actually paid November 18, 2025 — 18 days late.",
+  given:[
+   {k:"Deposit amount", v:"$800.00"},
+   {k:"Due date", v:"October 31, 2025"},
+   {k:"Date paid", v:"November 18, 2025"},
+   {k:"Days late", v:"18"}
+  ],
+  fields:[
+   {id:"f1", ln:"rate", label:"FTD penalty rate", pfx:"", type:"text", accept:["10%","10","ten percent","ten"], hint:"16+ days late tier."},
+   {id:"f2", ln:"penalty", label:"FTD penalty amount", pfx:"$", type:"money", ans:80, hint:"$800 × rate."},
+   {id:"f3", ln:"tfrp", label:"Does Section 6672 (TFRP) apply to this unpaid FUTA? (yes/no)", pfx:"", type:"text", accept:["no","n"], hint:"FUTA is employer-only — there's no trust fund."}
+  ],
+  sol:"<p>18 days late → 16+ days tier → <code>10%</code> FTD penalty.</p><p><b>Penalty:</b> 800 × 10% = <code>$80.00</code>. Interest also accrues separately from the original due date.</p><p><b>TFRP:</b> <code>No</code> — Section 6672 doesn't apply to FUTA because FUTA isn't a trust fund tax (no employee withholding, no trust). Personal liability under §6672 only reaches the trust fund portion of unpaid 941 taxes.</p>"},
+
+ {id:"p9", tag:"Practice · Who Files", title:"Does this employer have to file?",
+  scn:"Riverbend LLC opened in October 2025 and had one part-time employee for 8 different weeks (October through mid-December). The employee earned a total of $4,200 in those 8 weeks (about $525/week). Riverbend paid no other workers.",
+  given:[
+   {k:"Number of employees", v:"1"},
+   {k:"Weeks employee worked", v:"8 different weeks (Oct–Dec)"},
+   {k:"Total wages 2025", v:"$4,200"},
+   {k:"Largest single-quarter wages (Q4)", v:"$4,200 (the only quarter with payments)"}
+  ],
+  fields:[
+   {id:"f1", ln:"test1", label:"Does the WAGES test trigger FUTA? (yes/no)", pfx:"", type:"text", accept:["yes","y"], hint:"$1,500+ in any single quarter."},
+   {id:"f2", ln:"test2", label:"Does the EMPLOYEES test trigger FUTA? (yes/no)", pfx:"", type:"text", accept:["no","n"], hint:"20+ different weeks required."},
+   {id:"f3", ln:"file", label:"Does Riverbend have to file Form 940 for 2025? (yes/no)", pfx:"", type:"text", accept:["yes","y"], hint:"Meeting EITHER test triggers FUTA."},
+   {id:"f4", ln:"wages", label:"Taxable FUTA wages on line 7", pfx:"$", type:"money", ans:4200, hint:"Employee earned less than the $7,000 base, so all wages are taxable."},
+   {id:"f5", ln:"tax", label:"FUTA tax (line 8, assuming 0.6%)", pfx:"$", type:"money", ans:25.20, hint:"4,200 × 0.006."}
+  ],
+  sol:"<p><b>Wages test:</b> <code>Yes</code> — $4,200 in Q4 exceeds the $1,500 single-quarter threshold.</p><p><b>Employees test:</b> <code>No</code> — only 8 different weeks (need 20+).</p><p><b>Must file?</b> <code>Yes</code> — meeting EITHER test triggers FUTA liability for the entire year.</p><p><b>Line 7:</b> <code>$4,200.00</code> &nbsp; <b>Line 8:</b> 4,200 × 0.6% = <code>$25.20</code></p><p><b>Deposit:</b> Not required — under $500. Pay with the return.</p>"}
+]
+};
+
+const state = { rate:1, voiceOn:true, tab:"learn" };
+let voices=[], pendingTimer=null, keepAlive=null, currentUtter=null;
+function loadVoices(){ try{ voices = window.speechSynthesis ? speechSynthesis.getVoices() : []; }catch(e){ voices=[]; } }
+if(window.speechSynthesis){ speechSynthesis.onvoiceschanged = loadVoices; loadVoices(); }
+function pickVoice(){
+  if(!voices.length) loadVoices();
+  return voices.find(v=>/en[-_]US/i.test(v.lang) && /(samantha|jenny|aria|zira|natural|female)/i.test(v.name))
+      || voices.find(v=>/en[-_]US/i.test(v.lang))
+      || voices.find(v=>/^en/i.test(v.lang))
+      || voices[0] || null;
+}
+function stopSpeech(){
+  if(keepAlive){clearInterval(keepAlive);keepAlive=null;}
+  try{ if(window.speechSynthesis) speechSynthesis.cancel(); }catch(e){}
+  currentUtter=null;
+}
+function cancelNarration(){ stopSpeech(); if(pendingTimer){clearTimeout(pendingTimer);pendingTimer=null;} }
+function narrate(text, onend){
+  cancelNarration();
+  if(state.voiceOn && window.speechSynthesis){
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = state.rate; u.pitch = 1; const v = pickVoice(); if(v) u.voice = v;
+    u.onend = ()=>{ if(keepAlive){clearInterval(keepAlive);keepAlive=null;} if(onend) onend(); };
+    u.onerror = ()=>{ if(keepAlive){clearInterval(keepAlive);keepAlive=null;} };
+    currentUtter = u;
+    speechSynthesis.speak(u);
+    keepAlive = setInterval(()=>{
+      if(!speechSynthesis.speaking){clearInterval(keepAlive);keepAlive=null;return;}
+      try{ speechSynthesis.pause(); speechSynthesis.resume(); }catch(e){}
+    }, 11000);
+  } else {
+    const words = text.trim().split(/\s+/).length;
+    const wpm = 165 * state.rate;
+    const ms = Math.max(1100, (words/wpm)*60000);
+    pendingTimer = setTimeout(()=>{ if(onend) onend(); }, ms);
+  }
+}
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+const speedEl = document.getElementById('speed');
+const speedVal = document.getElementById('speedVal');
+function setSpeedFill(){ const pct = ((state.rate-0.5)/(1.75-0.5))*100; speedEl.style.setProperty('--fill', pct+'%'); }
+speedEl.addEventListener('input', e=>{ state.rate = parseFloat(e.target.value); speedVal.textContent = state.rate.toFixed(1)+'×'; setSpeedFill(); });
+setSpeedFill();
+document.getElementById('voiceToggle').addEventListener('change', e=>{ state.voiceOn = e.target.checked; if(!state.voiceOn) stopSpeech(); });
+document.getElementById('stopAll').addEventListener('click', ()=>{ cancelNarration(); learnPlaying=false; updateLearnBtn(); fcAuto=false; updateAutoBtn(); });
+
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    cancelNarration(); learnPlaying=false; updateLearnBtn(); fcAuto=false; updateAutoBtn();
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.view).classList.add('active');
+    state.tab = t.dataset.view;
+  });
+});
+
+const lessonHost = document.getElementById('lessonHost');
+const tocEl = document.getElementById('toc');
+DATA.lessons.forEach(L=>{
+  const id = 'sec-'+L.num;
+  const sec = document.createElement('div');
+  sec.className = 'lesson' + (L.cls?' '+L.cls:'');
+  sec.id = id;
+  let html = '<div class="lesson-tag"><span class="num">'+L.num+'</span>'+L.tag+'<span class="lvl">'+L.lvl+'</span></div><h2 class="lh">'+L.title+'</h2>';
+  L.paras.forEach(p=>{ html += '<p class="para">'+p+'</p>'; });
+  sec.innerHTML = html;
+  lessonHost.appendChild(sec);
+  const a = document.createElement('a');
+  a.href = '#'+id;
+  a.textContent = L.num+' · '+L.title.replace(/—.*$/,'').trim();
+  tocEl.appendChild(a);
+});
+
+let learnParas = [...document.querySelectorAll('#learn .para')];
+let learnIdx = -1, learnPlaying = false;
+const learnPlayBtn = document.getElementById('learnPlay');
+function clearLearnHL(){ learnParas.forEach(p=>p.classList.remove('reading')); }
+function updateLearnBtn(){ learnPlayBtn.innerHTML = learnPlaying ? '❚❚ Pause reading' : '▶ Read this module'; learnPlayBtn.classList.toggle('green', !learnPlaying); }
+function readLearnFrom(i){
+  cancelNarration(); clearLearnHL();
+  if(i<0 || i>=learnParas.length){ learnPlaying=false; learnIdx=-1; updateLearnBtn(); return; }
+  learnIdx = i; learnPlaying = true; updateLearnBtn();
+  const el = learnParas[i];
+  el.classList.add('reading');
+  el.scrollIntoView({behavior:'smooth', block:'center'});
+  narrate(el.textContent, ()=>{ if(learnPlaying) readLearnFrom(i+1); });
+}
+learnPlayBtn.addEventListener('click', ()=>{
+  if(learnPlaying){ learnPlaying=false; cancelNarration(); updateLearnBtn(); }
+  else { readLearnFrom(learnIdx<0?0:learnIdx); }
+});
+document.getElementById('learnRestart').addEventListener('click', ()=>readLearnFrom(0));
+learnParas.forEach((p,i)=>{ p.addEventListener('click', ()=>readLearnFrom(i)); });
+
+const allCards = DATA.cards.slice();
+let activeCat = "All";
+let deck = allCards.slice();
+let fcIdx = 0, fcFlipped = false, fcAuto = false;
+const fcEl = document.getElementById('fcEl');
+const fcFront = document.getElementById('fcFront');
+const fcBack = document.getElementById('fcBack');
+const fcCatF = document.getElementById('fcCatF');
+const fcCatB = document.getElementById('fcCatB');
+const fcCount = document.getElementById('fcCount');
+const fcBar = document.getElementById('fcBar');
+const fcModeEl = document.getElementById('fcMode');
+const fcAutoBtn = document.getElementById('fcAuto');
+const catFilter = document.getElementById('catFilter');
+
+const cats = ["All", ...Array.from(new Set(allCards.map(c=>c.c)))];
+cats.forEach(name=>{
+  const b = document.createElement('button');
+  b.className = 'chip' + (name===activeCat?' active':'');
+  b.textContent = name + (name==='All' ? ' · '+allCards.length : ' · '+allCards.filter(c=>c.c===name).length);
+  b.addEventListener('click', ()=>{
+    activeCat = name;
+    document.querySelectorAll('#catFilter .chip').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    deck = (name==='All') ? allCards.slice() : allCards.filter(c=>c.c===name);
+    fcIdx=0; fcFlipped=false; stopManual(); renderCard();
+  });
+  catFilter.appendChild(b);
+});
+
+function renderCard(){
+  if(!deck.length) return;
+  const card = deck[fcIdx];
+  fcFront.textContent = card.f;
+  fcBack.textContent = card.b;
+  fcCatF.textContent = card.c;
+  fcCatB.textContent = card.c;
+  fcEl.classList.toggle('flipped', fcFlipped);
+  fcCount.textContent = 'Card '+(fcIdx+1)+' / '+deck.length;
+  fcBar.style.width = ((fcIdx+1)/deck.length*100)+'%';
+  fcModeEl.textContent = fcAuto ? 'Auto-playing' : 'Manual';
+}
+function updateAutoBtn(){ fcAutoBtn.innerHTML = fcAuto ? '❚❚ Stop auto-play' : '▶ Auto-play deck'; fcModeEl.textContent = fcAuto ? 'Auto-playing' : 'Manual'; }
+function fcPlayFront(){
+  if(!fcAuto) return;
+  fcFlipped=false; renderCard();
+  narrate('Question. '+deck[fcIdx].f, ()=>{
+    if(!fcAuto) return;
+    fcFlipped=true; renderCard();
+    pendingTimer = setTimeout(()=>{
+      if(!fcAuto) return;
+      narrate('Answer. '+deck[fcIdx].b, ()=>{
+        if(!fcAuto) return;
+        pendingTimer = setTimeout(()=>{
+          if(!fcAuto) return;
+          fcIdx = (fcIdx+1) % deck.length;
+          fcPlayFront();
+        }, 700);
+      });
+    }, 550);
+  });
+}
+function stopManual(){ if(fcAuto){ fcAuto=false; cancelNarration(); updateAutoBtn(); } }
+fcEl.addEventListener('click', ()=>{ stopManual(); fcFlipped=!fcFlipped; renderCard(); });
+document.getElementById('fcFlip').addEventListener('click', ()=>{ stopManual(); fcFlipped=!fcFlipped; renderCard(); });
+document.getElementById('fcNext').addEventListener('click', ()=>{ stopManual(); fcIdx=(fcIdx+1)%deck.length; fcFlipped=false; renderCard(); });
+document.getElementById('fcPrev').addEventListener('click', ()=>{ stopManual(); fcIdx=(fcIdx-1+deck.length)%deck.length; fcFlipped=false; renderCard(); });
+document.getElementById('fcShuffle').addEventListener('click', ()=>{ stopManual(); deck = shuffle(deck); fcIdx=0; fcFlipped=false; renderCard(); });
+document.getElementById('fcRandom').addEventListener('click', ()=>{ stopManual(); fcIdx = Math.floor(Math.random()*deck.length); fcFlipped=false; renderCard(); });
+fcAutoBtn.addEventListener('click', ()=>{ fcAuto=!fcAuto; if(fcAuto){ updateAutoBtn(); fcPlayFront(); } else { cancelNarration(); updateAutoBtn(); } });
+renderCard();
+
+const quizPicker = document.getElementById('quizPicker');
+const quizHost = document.getElementById('quizHost');
+let activeQuiz = DATA.quizzes[0].id;
+
+DATA.quizzes.forEach(qz=>{
+  const b = document.createElement('button');
+  b.className = 'pick' + (qz.id===activeQuiz?' active':'');
+  b.dataset.id = qz.id;
+  const total = qz.id==='qmix' ? DATA.quizzes.filter(q=>q.id!=='qmix').reduce((s,q)=>s+q.questions.length,0) : qz.questions.length;
+  b.innerHTML = '<div class="pk-tag">'+qz.tag+'</div><div class="pk-name">'+qz.name+'</div><div class="pk-desc">'+qz.desc+' · '+total+' in pool · '+qz.sample+' per session</div>';
+  b.addEventListener('click', ()=>{ activeQuiz=qz.id; document.querySelectorAll('#quizPicker .pick').forEach(x=>x.classList.toggle('active',x.dataset.id===qz.id)); renderQuiz(); });
+  quizPicker.appendChild(b);
+});
+
+function renderQuiz(){
+  const qz = DATA.quizzes.find(q=>q.id===activeQuiz);
+  let pool = qz.id==='qmix' ? DATA.quizzes.filter(q=>q.id!=='qmix').flatMap(q=>q.questions) : qz.questions;
+  const N = Math.min(qz.sample || 10, pool.length);
+  const picked = shuffle(pool).slice(0, N).map(q=>{
+    const idxs = shuffle(q.o.map((_,i)=>i));
+    return { q:q.q, e:q.e, _opts: idxs.map(i=>q.o[i]), _ans: idxs.indexOf(q.a) };
+  });
+
+  let correct=0;
+  quizHost.innerHTML = '';
+  const score = document.createElement('div');
+  score.className='scorebar';
+  score.innerHTML = '<span class="lbl">'+qz.name+' · Score</span><span class="val"><span class="amber" id="scNum">0</span> / '+N+'</span><button class="btn amber sm reroll" id="rerollBtn">🎲 New random quiz</button>';
+  quizHost.appendChild(score);
+  document.getElementById('rerollBtn').addEventListener('click', renderQuiz);
+
+  picked.forEach((Q,qi)=>{
+    const card=document.createElement('div'); card.className='q';
+    let h='<div class="q-num">Question '+(qi+1)+' of '+N+'</div><div class="q-text">'+Q.q+'</div><div class="opts">';
+    Q._opts.forEach((opt,oi)=>{ h += '<button class="opt" data-q="'+qi+'" data-o="'+oi+'"><span class="key">'+String.fromCharCode(65+oi)+'</span><span>'+opt+'</span></button>'; });
+    h += '</div><div class="explain" id="exp'+qi+'"></div>';
+    card.innerHTML=h;
+    quizHost.appendChild(card);
+    card.querySelectorAll('.opt').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const opts = card.querySelectorAll('.opt');
+        if([...opts].some(o=>o.classList.contains('locked'))) return;
+        const chosen = parseInt(btn.dataset.o);
+        opts.forEach((o,idx)=>{ o.classList.add('locked'); if(idx===Q._ans) o.classList.add('correct'); else if(idx===chosen) o.classList.add('wrong'); else o.classList.add('dim'); });
+        const exp = card.querySelector('#exp'+qi);
+        if(chosen===Q._ans){ correct++; exp.innerHTML='<b>Correct.</b> '+Q.e; }
+        else { exp.innerHTML='<b>Not quite.</b> '+Q.e; }
+        exp.classList.add('show');
+        document.getElementById('scNum').textContent = correct;
+      });
+    });
+  });
+}
+renderQuiz();
+
+const pracPicker = document.getElementById('pracPicker');
+const pracHost = document.getElementById('pracHost');
+let activePrac = DATA.practice[0].id;
+
+function buildPracPicker(){
+  pracPicker.innerHTML='';
+  DATA.practice.forEach(P=>{
+    const b=document.createElement('button');
+    b.className='pick'+(P.id===activePrac?' active':'');
+    b.dataset.id=P.id;
+    b.innerHTML='<div class="pk-tag">'+P.tag+'</div><div class="pk-name">'+P.title+'</div>';
+    b.addEventListener('click', ()=>{ activePrac=P.id; buildPracPicker(); renderPrac(); });
+    pracPicker.appendChild(b);
+  });
+}
+buildPracPicker();
+document.getElementById('pracRandom').addEventListener('click', ()=>{
+  const others = DATA.practice.filter(p=>p.id!==activePrac);
+  activePrac = others[Math.floor(Math.random()*others.length)].id;
+  buildPracPicker(); renderPrac();
+});
+
+function normMoney(s){ return parseFloat(String(s).replace(/[^0-9.\-]/g,'')); }
+function normText(s){ return String(s).toLowerCase().replace(/[^a-z0-9 \-]/g,'').trim(); }
+function renderPrac(){
+  const P = DATA.practice.find(x=>x.id===activePrac);
+  let h='<div class="scenario"><div class="scn-tag">'+P.tag+'</div><div class="scn-title">'+P.title+'</div><div class="scn-text">'+P.scn+'</div>';
+  h+='<div class="given"><div class="given-cap">Given — sample data</div>';
+  P.given.forEach(g=>{ h+='<div class="grow"><span class="gk">'+g.k+'</span><span class="gv">'+(g.v||'')+'</span></div>'; });
+  h+='</div></div>';
+  P.fields.forEach(f=>{
+    h+='<div class="field" id="fld-'+f.id+'"><div class="field-top"><div class="field-label">'+(f.ln?'<span class="ln">'+f.ln+'</span>':'')+f.label+'</div><span class="mark" id="mk-'+f.id+'"></span></div>';
+    h+='<div class="inwrap">'+(f.pfx?'<span class="pfx">'+f.pfx+'</span>':'')+'<input type="text" id="in-'+f.id+'" placeholder="'+(f.type==='text'?'type your answer':'enter amount')+'" autocomplete="off"></div>';
+    h+='<button class="hint-btn" data-h="'+f.id+'">Need a hint?</button><div class="hint" id="hint-'+f.id+'">'+f.hint+'</div></div>';
+  });
+  h+='<div class="prac-actions"><button class="btn green" id="pCheck">✓ Check my answers</button><button class="btn ghost" id="pReset">⟲ Clear</button><button class="btn red" id="pGiveUp">Give up &amp; show answers</button></div>';
+  h+='<div class="solution" id="pSol"><h4>Worked solution</h4>'+P.sol+'</div>';
+  pracHost.innerHTML=h;
+
+  pracHost.querySelectorAll('.hint-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{ const hb=document.getElementById('hint-'+btn.dataset.h); hb.classList.toggle('show'); btn.textContent = hb.classList.contains('show')?'Hide hint':'Need a hint?'; });
+  });
+  document.getElementById('pCheck').addEventListener('click', ()=>{
+    P.fields.forEach(f=>{
+      const inp=document.getElementById('in-'+f.id);
+      const fld=document.getElementById('fld-'+f.id);
+      const mk=document.getElementById('mk-'+f.id);
+      const val=inp.value.trim();
+      if(val===''){ fld.classList.remove('ok','no'); mk.textContent=''; mk.className='mark'; return; }
+      let ok=false;
+      if(f.type==='text'){ const nv=normText(val); ok = f.accept.some(a=>nv.includes(normText(a))); }
+      else { const n=normMoney(val); ok = !isNaN(n) && Math.abs(n-f.ans)<=0.5; }
+      fld.classList.toggle('ok',ok); fld.classList.toggle('no',!ok);
+      mk.textContent = ok?'✓ correct':'✗ try again'; mk.className='mark '+(ok?'ok':'no');
+    });
+  });
+  document.getElementById('pReset').addEventListener('click', ()=>renderPrac());
+  document.getElementById('pGiveUp').addEventListener('click', ()=>{
+    P.fields.forEach(f=>{
+      const inp=document.getElementById('in-'+f.id);
+      const fld=document.getElementById('fld-'+f.id);
+      const mk=document.getElementById('mk-'+f.id);
+      if(f.type==='text'){ inp.value = f.accept[0]; }
+      else { inp.value = f.ans.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+      fld.classList.remove('no'); fld.classList.add('ok');
+      mk.textContent='answer'; mk.className='mark ok';
+    });
+    document.getElementById('pSol').classList.add('show');
+    document.getElementById('pSol').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+}
+renderPrac();
+</script>
+</body>
+</html>

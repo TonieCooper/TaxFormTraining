@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payroll Tax Trainer · EA Exam Prep — Form W-2, W-2c, W-3, W-3c</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:#08111f;
+    --bg-2:#111827;
+    --card:rgba(255,255,255,.14);
+    --card-strong:rgba(255,255,255,.22);
+    --card-solid:rgba(8,17,31,.72);
+    --ink:#ffffff;
+    --ink-soft:rgba(255,255,255,.76);
+    --ink-faint:rgba(255,255,255,.52);
+    --blue:#4f8cff;
+    --purple:#9b5cff;
+    --pink:#ff5fa2;
+    --green:#38d996;
+    --green-2:#57efad;
+    --green-wash:rgba(56,217,150,.16);
+    --amber:#ffd166;
+    --hl:rgba(255,209,102,.22);
+    --hl-edge:rgba(255,209,102,.92);
+    --red:#ff7a68;
+    --red-wash:rgba(255,122,104,.16);
+    --line:rgba(255,255,255,.22);
+    --line-soft:rgba(255,255,255,.14);
+    --shadow:0 24px 70px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;padding:0}
+  body{font-family:Inter,"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 12% 18%,rgba(79,140,255,.52),transparent 34%),radial-gradient(circle at 82% 12%,rgba(255,95,162,.42),transparent 30%),radial-gradient(circle at 70% 82%,rgba(56,217,150,.34),transparent 34%),linear-gradient(135deg,#07111f 0%,#111827 44%,#261447 100%);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 85%);z-index:-1}
+  body::after{content:"";position:fixed;width:420px;height:420px;right:-140px;top:18%;border-radius:50%;background:radial-gradient(circle,rgba(255,209,102,.28),transparent 68%);filter:blur(2px);pointer-events:none;z-index:-1}
+  .sparkle{position:fixed;border-radius:999px;background:rgba(255,255,255,.72);filter:blur(.2px);animation:sparkle 4s ease-in-out infinite;pointer-events:none;z-index:0}.sparkle.one{width:7px;height:7px;top:18%;left:5%}.sparkle.two{width:5px;height:5px;top:36%;right:12%;animation-delay:1.1s}.sparkle.three{width:9px;height:9px;bottom:18%;left:44%;animation-delay:2s}@keyframes sparkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:.9;transform:scale(1.2)}}
+  .wrap{position:relative;max-width:1180px;margin:0 auto;padding:0 20px 80px;z-index:1}
+  header.top{position:relative;padding:46px 0 26px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;margin-bottom:14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);font-weight:750}.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(56,217,150,.7);animation:pulse 1.8s infinite}@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(56,217,150,0)}100%{box-shadow:0 0 0 0 rgba(56,217,150,0)}}
+  h1.title{font-weight:900;font-size:clamp(46px,8vw,88px);line-height:.92;margin:0 0 16px;letter-spacing:-.08em;max-width:860px;background:linear-gradient(90deg,#fff 0%,#b9d3ff 32%,#ffd6e8 64%,#d8fff0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}h1.title em{font-style:normal;color:transparent}.sub{color:var(--ink-soft);font-size:clamp(17px,2vw,22px);line-height:1.55;max-width:760px}.rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:26px 0 0}
+  .controls{position:sticky;top:0;z-index:40;background:rgba(8,17,31,.74);backdrop-filter:blur(18px);border-bottom:1px solid var(--line-soft);margin:0;padding:10px 0}.controls-inner{max-width:1180px;margin:0 auto;display:flex;gap:14px 22px;align-items:center;flex-wrap:wrap;padding:0 20px}.ctl-group{display:flex;align-items:center;gap:9px}.ctl-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:800}.toggle{appearance:none;width:48px;height:26px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid var(--line);position:relative;cursor:pointer;transition:.2s;flex:none}.toggle:checked{background:linear-gradient(135deg,var(--blue),var(--pink))}.toggle::after{content:"";position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 8px rgba(0,0,0,.35)}.toggle:checked::after{transform:translateX(21px)}input[type=range]{-webkit-appearance:none;appearance:none;height:5px;border-radius:5px;width:150px;background:linear-gradient(90deg,var(--green) var(--fill,33%),rgba(255,255,255,.18) var(--fill,33%));cursor:pointer}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--green);box-shadow:0 1px 8px rgba(0,0,0,.4);cursor:pointer}input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--green);cursor:pointer}.speed-val{font-weight:800;font-size:13px;min-width:34px;color:#fff}
+  nav.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);width:max-content;max-width:100%}.tab{font-weight:800;font-size:14px;border:0;background:transparent;color:var(--ink-soft);padding:10px 16px;border-radius:999px;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:8px}.tab .ico{width:7px;height:7px;border-radius:50%;background:var(--ink-faint);transition:.15s}.tab:hover{color:#fff;background:rgba(255,255,255,.14)}.tab.active{background:#fff;color:#101828}.tab.active .ico{background:var(--pink)}.view{display:none;animation:fade .35s ease}.view.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .lesson,.q,.scenario,.field,.fc-face,.pick,.study-glass{background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(20px)}.lesson{padding:26px 28px 20px;margin-bottom:20px;position:relative;overflow:hidden;transition:.22s}.lesson:hover{background:var(--card-strong);border-color:rgba(255,255,255,.36);transform:translateY(-2px)}.lesson::before{content:"";position:absolute;right:-70px;bottom:-90px;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle,rgba(79,140,255,.55),transparent 64%);opacity:.75}.lesson.corr::before{background:radial-gradient(circle,rgba(255,95,162,.58),transparent 64%)}.lesson.found::before{background:radial-gradient(circle,rgba(56,217,150,.55),transparent 64%)}.lesson>*{position:relative;z-index:1}.lesson-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}.lesson.corr .lesson-tag{color:var(--pink)}.lesson.found .lesson-tag{color:var(--green)}.lesson-tag .num{background:rgba(255,255,255,.14);padding:3px 9px;border-radius:999px}.lesson-tag .lvl{margin-left:auto;color:var(--ink-faint);background:rgba(255,255,255,.08);padding:2px 8px;border-radius:20px;border:1px solid var(--line-soft);font-weight:700}h2.lh{font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;margin:4px 0 14px;line-height:1.1}.para{margin:0 0 4px;padding:8px 10px;border-radius:12px;cursor:pointer;transition:background .15s;position:relative;color:var(--ink-soft)}.para:hover{background:rgba(255,255,255,.1);color:#fff}.para.reading{background:var(--hl);box-shadow:inset 4px 0 0 var(--hl-edge);color:#fff}.read-hint{font-size:13px;color:var(--ink-faint);font-style:italic;margin:6px 0 18px;display:flex;align-items:center;gap:7px}.toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.toc a,.chip{font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);background:rgba(255,255,255,.08);padding:7px 11px;border-radius:999px;color:var(--ink-soft);text-decoration:none;transition:.15s;font-weight:800}.toc a:hover,.chip:hover{background:rgba(255,255,255,.14);color:#fff}.chip{cursor:pointer}.chip.active{background:#fff;color:#101828;border-color:#fff}
+  .playbar,.fc-controls,.prac-actions{display:flex;align-items:center;gap:12px;margin:0 0 20px;flex-wrap:wrap}.btn{font-weight:850;font-size:14px;cursor:pointer;border-radius:16px;padding:12px 18px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.95);color:#111827;transition:.22s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 18px 45px rgba(0,0,0,.12)}.btn:hover{transform:translateY(-3px)}.btn:active{transform:translateY(0)}.btn.green{background:linear-gradient(135deg,var(--green),#8fffd0);border-color:transparent;color:#07111f}.btn.amber{background:linear-gradient(135deg,var(--amber),#fff0b8);border-color:transparent;color:#111827}.btn.ghost{background:rgba(255,255,255,.08);color:#fff;border-color:var(--line);backdrop-filter:blur(16px);box-shadow:none}.btn.ghost:hover{background:rgba(255,255,255,.14)}.btn.sm{padding:8px 13px;font-size:13px}.btn.red{background:linear-gradient(135deg,var(--red),var(--pink));border-color:transparent;color:#fff}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+  .fc-stage{perspective:1600px;margin:8px auto 18px;max-width:620px}.fc{position:relative;width:100%;min-height:300px;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,.1,.2,1);cursor:pointer}.fc.flipped{transform:rotateY(180deg)}.fc-face{position:absolute;inset:0;backface-visibility:hidden;padding:34px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden}.fc-face::before{content:"";position:absolute;width:220px;height:220px;right:-70px;bottom:-90px;border-radius:50%;background:radial-gradient(circle,rgba(56,217,150,.58),transparent 64%)}.fc-face.back{transform:rotateY(180deg);background:linear-gradient(135deg,rgba(79,140,255,.28),rgba(155,92,255,.22)),rgba(255,255,255,.14)}.fc-face.back::before{background:radial-gradient(circle,rgba(255,95,162,.7),transparent 64%)}.fc-cat{position:absolute;top:18px;left:22px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);font-weight:800}.fc-side{font-size:11px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:14px;color:var(--green);font-weight:800}.fc-face.back .fc-side{color:var(--amber)}.fc-q{position:relative;z-index:1;font-size:clamp(22px,3vw,32px);font-weight:850;line-height:1.22;letter-spacing:-.035em}.fc-face.back .fc-q{color:#fff;font-size:18px;font-weight:650;line-height:1.55;letter-spacing:0}.fc-meta{display:flex;justify-content:space-between;align-items:center;max-width:620px;margin:0 auto 12px;font-size:12px;color:var(--ink-soft);font-weight:800}.progress{height:7px;background:rgba(255,255,255,.14);border-radius:999px;max-width:620px;margin:0 auto 14px;overflow:hidden}.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--pink),var(--green));border-radius:999px;transition:width .3s}.deck-filter{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:0 auto 16px;max-width:860px}
+  .picker{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:22px}.pick{text-align:left;cursor:pointer;padding:18px 20px;transition:.22s;color:#fff}.pick:hover{transform:translateY(-5px);background:var(--card-strong);border-color:rgba(255,255,255,.38)}.pick.active{border-color:rgba(255,255,255,.6);background:linear-gradient(135deg,rgba(79,140,255,.28),rgba(255,95,162,.16)),var(--card)}.pick .pk-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800}.pick .pk-name{font-size:20px;font-weight:900;margin-top:3px;letter-spacing:-.04em}.pick .pk-desc{font-size:13px;color:var(--ink-soft);margin-top:2px}.scorebar{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.12);border:1px solid var(--line);color:#fff;border-radius:24px;padding:14px 18px;margin-bottom:18px;gap:14px;flex-wrap:wrap;backdrop-filter:blur(18px)}.scorebar .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:800}.scorebar .val{font-size:28px;font-weight:950;letter-spacing:-.05em}.scorebar .val .amber{color:var(--amber)}.reroll{margin-left:auto}.q{padding:22px 24px;margin-bottom:16px}.q-num{font-size:11px;letter-spacing:.18em;color:var(--ink-faint);text-transform:uppercase;font-weight:800}.q-text{font-size:21px;font-weight:850;margin:7px 0 15px;line-height:1.35;letter-spacing:-.035em}.opts{display:flex;flex-direction:column;gap:10px}.opt{text-align:left;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:16px;padding:13px 15px;cursor:pointer;font-size:14.5px;transition:.13s;display:flex;align-items:center;gap:12px;color:#fff}.opt .key{font-weight:900;width:28px;height:28px;border-radius:10px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:12px;flex:none}.opt:hover:not(.locked){border-color:rgba(255,255,255,.42);background:rgba(255,255,255,.14);transform:translateX(3px)}.opt.correct{border-color:var(--green-2);background:var(--green-wash)}.opt.correct .key{background:var(--green);color:#07111f}.opt.wrong{border-color:var(--red);background:var(--red-wash)}.opt.wrong .key{background:var(--red);color:#fff}.opt.locked{cursor:default}.opt.dim{opacity:.5}.explain{margin-top:13px;padding:13px 15px;border-radius:16px;background:rgba(255,255,255,.1);font-size:14px;color:var(--ink-soft);display:none;border-left:3px solid var(--green)}.explain.show{display:block;animation:fade .3s}.explain b{color:#fff}
+  .scenario{padding:24px 26px;margin-bottom:18px}.scn-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800}.scn-title{font-size:26px;font-weight:900;letter-spacing:-.045em;margin:3px 0 8px}.scn-text{font-size:15px;color:var(--ink-soft);margin-bottom:16px}.given{border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:8px;background:rgba(255,255,255,.08)}.given .grow{display:flex;justify-content:space-between;gap:14px;padding:10px 15px;border-bottom:1px solid var(--line-soft);font-size:14px}.given .grow:last-child{border-bottom:none}.given .gk{color:var(--ink-soft)}.given .gv{font-weight:850;text-align:right}.given-cap{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);padding:9px 15px 2px;font-weight:800}.field{margin:14px 0;padding:16px 18px}.field-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}.field-label{font-weight:850;font-size:15px}.field-label .ln{font-size:11px;color:#07111f;background:var(--green);padding:2px 8px;border-radius:999px;margin-right:7px;font-weight:900}.inwrap{display:flex;align-items:center;gap:6px;margin-top:10px}.pfx{color:var(--ink-soft);font-size:15px}.field input{font-size:15px;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.1);color:#fff;width:220px;transition:.15s}.field input::placeholder{color:rgba(255,255,255,.42)}.field input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(56,217,150,.16)}.field.ok input{border-color:var(--green-2);background:var(--green-wash)}.field.no input{border-color:var(--red);background:var(--red-wash)}.mark{font-weight:900;font-size:14px}.mark.ok{color:var(--green-2)}.mark.no{color:var(--red)}.hint{margin-top:10px;font-size:13.5px;color:var(--ink-soft);background:rgba(255,255,255,.1);border-radius:14px;padding:10px 13px;display:none;border-left:3px solid var(--amber)}.hint.show{display:block;animation:fade .25s}.hint-btn{background:none;border:none;color:var(--green);font-weight:850;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:4px;padding:8px 0 0}.solution{margin-top:16px;padding:18px 20px;border-radius:22px;background:var(--green-wash);border:1px solid rgba(56,217,150,.32);display:none}.solution.show{display:block;animation:fade .3s}.solution h4{margin:0 0 7px;font-size:20px;color:#fff}.solution p{margin:0 0 7px;font-size:14px;color:var(--ink-soft)}.solution code{background:rgba(255,255,255,.14);padding:2px 7px;border-radius:8px;font-size:13px;color:#fff}
+  footer{margin-top:46px;padding-top:20px;border-top:1px solid var(--line-soft);text-align:center}.disc{font-size:13px;color:var(--ink-faint);line-height:1.6}.disc b{color:#fff}
+  @media(max-width:880px){nav.tabs{border-radius:24px;width:100%}.tab{flex:1;justify-content:center}.lesson{padding:22px 20px}.picker{grid-template-columns:1fr}.controls-inner{align-items:flex-start}.ctl-group[style]{margin-left:0!important}}
+  @media(max-width:560px){.wrap{padding:0 14px 70px}.lesson{border-radius:24px;padding:20px 16px}.fc-face{padding:30px 20px}.field input{width:160px}.scorebar .reroll{margin-left:0}.given .grow{flex-direction:column;gap:2px}.given .gv{text-align:left}}
+
+
+  .site-nav{position:relative;z-index:45;max-width:1180px;margin:18px auto 0;padding:0 20px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .site-brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em;color:#fff;text-decoration:none}
+  .site-brand .brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--pink));box-shadow:0 12px 30px rgba(79,140,255,.34)}
+  .site-links{display:flex;align-items:center;gap:8px;padding:7px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);flex-wrap:wrap}
+  .site-links a{padding:8px 12px;border-radius:999px;color:var(--ink-soft);font-size:13px;text-decoration:none;font-weight:750}
+  .site-links a:hover{color:#fff;background:rgba(255,255,255,.14)}
+  @media(max-width:720px){.site-nav{align-items:flex-start;flex-direction:column}.site-links{width:100%;border-radius:22px}.site-links a{flex:1;text-align:center}}
+</style>
+</head>
+<body>
+<div class="sparkle one"></div>
+<div class="sparkle two"></div>
+<div class="sparkle three"></div>
+<nav class="site-nav" aria-label="Module navigation">
+  <a class="site-brand" href="index.html"><span class="brand-mark">✓</span><span>Payroll Tax Trainer</span></a>
+  <div class="site-links">
+    <a href="index.html">Home</a>
+    <a href="941-941x.html">941 &amp; 941-X</a>
+    <a href="w2-w2c.html">W-2 &amp; W-2c</a>
+    <a href="940.html">940</a>
+  </div>
+</nav>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="ctl-group"><span class="ctl-label">Read aloud</span><input type="checkbox" class="toggle" id="voiceToggle" checked></div>
+    <div class="ctl-group"><span class="ctl-label">Speed</span><input type="range" id="speed" min="0.5" max="1.75" step="0.05" value="1"><span class="speed-val" id="speedVal">1.0×</span></div>
+    <div class="ctl-group" style="margin-left:auto"><button class="btn ghost sm" id="stopAll">■ Stop audio</button></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">EA Exam Prep · Employment Taxes · Module 02</div>
+    <h1 class="title">Form W-2 <span style="color:var(--ink-faint);font-weight:400">·</span> <em>W-2c</em> <span style="color:var(--ink-faint);font-weight:400">·</span> W-3 <span style="color:var(--ink-faint);font-weight:400">·</span> <em>W-3c</em></h1>
+    <p class="sub">The annual wage statement and its transmittal — plus the corrected versions. Box-by-box, every common Box 12 code, the W-2c mechanics, and the reconciliation logic that ties the year together for Enrolled Agent exam depth.</p>
+    <div class="rule"></div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-view="learn"><span class="ico"></span>Learn</button>
+    <button class="tab" data-view="cards"><span class="ico"></span>Flashcards</button>
+    <button class="tab" data-view="quiz"><span class="ico"></span>Quiz</button>
+    <button class="tab" data-view="practice"><span class="ico"></span>Practice</button>
+  </nav>
+
+  <section class="view active" id="learn">
+    <div class="playbar">
+      <button class="btn green" id="learnPlay">▶ Read this module</button>
+      <button class="btn ghost sm" id="learnRestart">⟲ From the top</button>
+    </div>
+    <div class="read-hint">✦ Tip: click any paragraph to jump the narrator there. It stops what it was reading and picks up from where you clicked.</div>
+    <div class="toc" id="toc"></div>
+    <div id="lessonHost"></div>
+  </section>
+
+  <section class="view" id="cards">
+    <div class="deck-filter" id="catFilter"></div>
+    <div class="fc-meta"><span id="fcCount">Card 1 / 1</span><span id="fcMode">Manual</span></div>
+    <div class="progress"><i id="fcBar" style="width:4%"></i></div>
+    <div class="fc-stage">
+      <div class="fc" id="fcEl">
+        <div class="fc-face front"><div class="fc-cat" id="fcCatF"></div><div class="fc-side">Question · tap to flip</div><div class="fc-q" id="fcFront"></div></div>
+        <div class="fc-face back"><div class="fc-cat" id="fcCatB"></div><div class="fc-side">Answer</div><div class="fc-q" id="fcBack"></div></div>
+      </div>
+    </div>
+    <div class="fc-controls">
+      <button class="btn ghost sm" id="fcPrev">‹ Prev</button>
+      <button class="btn sm" id="fcFlip">⟳ Flip</button>
+      <button class="btn ghost sm" id="fcNext">Next ›</button>
+      <button class="btn green sm" id="fcAuto">▶ Auto-play deck</button>
+      <button class="btn ghost sm" id="fcShuffle">⤮ Shuffle</button>
+      <button class="btn amber sm" id="fcRandom">🎲 Random</button>
+    </div>
+  </section>
+
+  <section class="view" id="quiz">
+    <div class="picker" id="quizPicker"></div>
+    <div id="quizHost"></div>
+  </section>
+
+  <section class="view" id="practice">
+    <div class="picker" id="pracPicker"></div>
+    <div class="playbar" style="margin-top:-6px"><button class="btn amber sm" id="pracRandom">🎲 Pick a random scenario</button></div>
+    <div id="pracHost"></div>
+  </section>
+
+  <footer>
+    <p class="disc"><b>Learning material — not tax advice.</b> Built with current figures (2026 Social Security wage base $184,500; 2025 $176,100; e-file threshold of 10+ aggregate information returns effective 2024). Penalty dollar amounts and form revisions change annually — confirm against current IRS General Instructions for Forms W-2 and W-3 before filing.</p>
+  </footer>
+</div>
+
+<script>
+const DATA = {
+lessons:[
+{tag:"Foundations", num:"01", lvl:"Beginner", cls:"found", title:"Form W-2 — what it is and who gets it", paras:[
+ "Form W-2, Wage and Tax Statement, is the annual report of each employee's wages, federal income tax withholding, FICA wages, FICA tax, and a long list of other compensation items. You file one W-2 for every employee who received wages during the year — even employees who quit, retired, or were terminated.",
+ "W-2 copies go in three directions. Copy A is the official return — it goes to the Social Security Administration with Form W-3 as the transmittal. Copies B, C, and 2 go to the employee for their federal, personal, and state filings. Copy D stays in your records. Note the destination — Copy A goes to the SSA, not the IRS. The SSA shares the data with the IRS through the Combined Annual Wage Reporting program.",
+ "The deadline is January 31 for everything — employee copies and SSA Copy A — whether you file on paper or electronically. The pre-2017 system gave paper filers an extra month; that ended. January 31 it is.",
+ "Most employers now must file electronically. Starting with returns filed in 2024, the e-file threshold dropped from 250 returns down to 10 — and the count is aggregate across all information returns you file (W-2s, 1099s, and others combined). Most small employers easily exceed 10.",
+ "Electronic W-2 filing is done through the Social Security Administration's Business Services Online portal — known as BSO — not through the IRS. If you e-file W-2s, you don't separately file a paper W-3; the totals are transmitted automatically.",
+ "Information return penalties are tiered by lateness. They apply per return and per failure. The IRS can charge one penalty for failing to file Copy A with the SSA and another, separate penalty for failing to furnish a correct W-2 to the employee — so a single error can generate two penalties."
+]},
+
+{tag:"Section", num:"02", lvl:"Beginner", cls:"", title:"The lettered identification boxes (a through f)", paras:[
+ "Box a is the employee's Social Security number. Box b is the employer's EIN. Box c is the employer's name, address, and ZIP. These three identify the parties to the wage payment.",
+ "Box d is a control number — a number you assign to help organize your forms. It's optional; many employers leave it blank.",
+ "Box e is the employee's name as it appears on their Social Security card. Box f is the employee's address.",
+ "You may truncate the employee's SSN on the copies you give the employee — showing only the last four digits — to reduce identity theft risk. Never truncate the SSN on Copy A or on Form W-2c Copy A sent to the SSA. The employer's EIN is never truncated.",
+ "Get the name and SSN right. The SSA validates each name-SSN pair against its records. A mismatch flags the return, can trigger SSA verification letters to the employer, and may eventually require a W-2c. Use the free SSA Social Security Number Verification Service to verify before filing."
+]},
+
+{tag:"Section", num:"03", lvl:"Intermediate", cls:"", title:"Box 1 — Wages, tips, other compensation", paras:[
+ "Box 1 reports wages subject to federal income tax. It mirrors the line 2 totals on your four quarterly 941s — they should reconcile.",
+ "What's in Box 1: regular wages, salary, bonuses, commissions, severance, tips reported by the employee, taxable fringe benefits, group-term life insurance imputed income for coverage above $50,000, vacation pay, and most non-cash compensation valued at fair market value.",
+ "What's NOT in Box 1: pre-tax 401(k) or 403(b) elective deferrals (reduce Box 1, but not Boxes 3 and 5); pre-tax cafeteria-plan deductions like the employee share of health insurance, HSA contributions, dependent care FSA elections; qualified transportation fringe benefits up to the monthly cap; and any other items that reduce federal income tax wages.",
+ "The split between Box 1 and Boxes 3, 5 is a constant source of EA exam questions. Memorize the rule: traditional 401(k) reduces Box 1 only. Roth 401(k) reduces neither — it's after-tax. Cafeteria plan health premiums and most pre-tax deferrals through Section 125 reduce all three (Box 1 and Boxes 3 and 5)."
+]},
+
+{tag:"Section", num:"04", lvl:"Intermediate", cls:"", title:"Boxes 2, 3, 4, 5, 6 — federal income tax and FICA", paras:[
+ "Box 2 is the federal income tax you withheld during the year. It equals the line 3 total on your four 941s. Backup withholding goes on Form 945 and is NOT in Box 2.",
+ "Box 3 is Social Security wages — the amount subject to Social Security tax — capped per employee at the annual wage base. The base was $168,600 in 2024, $176,100 in 2025, and $184,500 in 2026. Once an employee passes that amount in the year, Box 3 stops growing.",
+ "Box 4 is the employee's Social Security tax withheld — 6.2 percent of Box 3. The maximum Box 4 figure for 2026 is $11,439 (6.2% of $184,500).",
+ "Box 5 is Medicare wages — there's no wage cap, so Box 5 is often larger than Box 3 for high earners. Box 6 is the Medicare tax withheld, which is 1.45 percent of Box 5 plus the 0.9 percent Additional Medicare Tax on each dollar over $200,000 in the year.",
+ "The combined Box 3 plus Box 7 (Social Security tips) cannot exceed the wage base — they share one cap. If an employee has both reported tips and other wages and combined hits the base, you stop withholding Social Security on both."
+]},
+
+{tag:"Section", num:"05", lvl:"Intermediate", cls:"", title:"Boxes 7 through 11 — tips and special compensation", paras:[
+ "Box 7 is Social Security tips — tips the employee reported to you on Form 4070 or a similar statement. Together with Box 3, Box 7 fills up the Social Security wage base. Medicare wages already include tips (they're in Box 5), so there's no separate Medicare tips box.",
+ "Box 8 is allocated tips — used only by large food or beverage establishments where total reported tips fell below 8 percent of gross receipts. The shortfall is allocated to tipped employees and goes here. Critical detail: allocated tips are NOT in Boxes 1, 3, 5, or 7 — the employee adds them to wages on their own return using Form 4137 if applicable.",
+ "Box 9 is reserved and should be blank. It was formerly used for advance Earned Income Credit payments, which were repealed.",
+ "Box 10 reports dependent care benefits provided under a Section 129 plan. The first $5,000 is excludable ($2,500 for married filing separately). Any amount over $5,000 is added back to Boxes 1, 3, and 5 — taxable. Box 10 shows the total provided, not just the excludable portion.",
+ "Box 11 captures nonqualified deferred compensation plan distributions to the employee. The SSA uses Box 11 to apply the Social Security earnings test correctly — to determine which year wages were actually earned versus paid."
+]},
+
+{tag:"Section", num:"06", lvl:"Advanced", cls:"", title:"Box 12 — the codes you must know", paras:[
+ "Box 12 has four slots labeled 12a, 12b, 12c, and 12d. Each holds one code-amount pair. If an employee needs more than four entries, issue a second W-2.",
+ "Retirement and deferred compensation codes: D is a pre-tax traditional 401(k) elective deferral; E is a 403(b) elective deferral; G is a 457(b) governmental plan deferral; S is a SIMPLE IRA salary reduction. The Roth versions get separate codes: AA is Roth 401(k); BB is Roth 403(b); EE is Roth governmental 457(b). The Roth codes report Roth contributions even though those are after-tax and don't reduce any wage box.",
+ "Health and benefit codes: W is for HSA contributions, including both the employer share and any employee contributions made through a cafeteria plan. DD is the cost of employer-sponsored health coverage — pure information, never taxable, just reporting required by the ACA. FF reports payments from a Qualified Small Employer HRA. T is for employer-provided adoption benefits.",
+ "Insurance and uncollected tax codes: C is the imputed cost of group-term life insurance over $50,000 — this amount is ALSO in Boxes 1, 3, and 5 because it's taxable. M and N are uncollected Social Security and Medicare tax on group-term life insurance for former employees, who you couldn't withhold against.",
+ "Stock and special compensation: V is income from the exercise of nonstatutory stock options (also in Boxes 1, 3, 5). Y is current-year deferrals under a Section 409A nonqualified plan. Z is income inclusions from a 409A plan failure.",
+ "Other common codes: J is nontaxable third-party sick pay; P is excludable moving expense reimbursements — under current law only members of the Armed Forces on active duty qualify; Q is nontaxable combat pay.",
+ "The interaction with the wage boxes matters. Code DD never changes anything taxable. Codes D, E, G reduce Box 1 but not Boxes 3 and 5. Code C adds to Boxes 1, 3, and 5. Code AA never reduces Boxes 1, 3, or 5 because Roth is after-tax. Memorize these patterns."
+]},
+
+{tag:"Section", num:"07", lvl:"Intermediate", cls:"", title:"Box 13 checkboxes and Box 14", paras:[
+ "Box 13 has three checkboxes. They're binary — check or don't check. No dollars.",
+ "Statutory employee: check this for any of the four §3121(d) statutory employee categories — certain agent or commission drivers, full-time life insurance salespersons, home workers, or full-time traveling or city salespersons. A statutory employee's wages appear in Boxes 3 and 5 for FICA purposes, but typically Box 1 has no income tax withheld and the worker reports income on Schedule C with their own deductible expenses.",
+ "Retirement plan: check this if the employee was an active participant in an employer-sponsored retirement plan at any time during the year. This box affects the employee's ability to deduct a traditional IRA contribution.",
+ "Third-party sick pay: check this when reporting sick pay paid by a third-party insurer. Typically the insurance company files the W-2 with this box checked; the employer might also issue a W-2 in some arrangements.",
+ "Box 14 is the catch-all 'other' box. The employer chooses what to put here and labels it. Common uses: state disability tax withheld, union dues, after-tax health insurance, pension contributions not reported in Box 12, employer-paid vehicle lease value, charitable deductions through payroll. Box 14 entries are typically informational; consult state and federal rules before relying on them."
+]},
+
+{tag:"Section", num:"08", lvl:"Intermediate", cls:"", title:"Boxes 15 through 20 — state and local", paras:[
+ "Box 15 holds the state's two-letter postal abbreviation and the employer's state ID number for that state. Box 16 is state wages, tips, and so on. Box 17 is state income tax withheld.",
+ "Box 18 is local wages, tips, etc. Box 19 is local income tax withheld. Box 20 is the locality name — a city, county, or school district as applicable.",
+ "State and federal wages can legitimately differ. State treatment of pre-tax 401(k), HSA, and other items varies — Pennsylvania, for example, taxes 401(k) deferrals at the state level, so Box 16 will be higher than Box 1 there. Some states tax fringe benefits federal law excludes.",
+ "An employee who worked in multiple states during the year can have multiple state lines on a single W-2 — the form has space for two state entries. If they worked in more than two states, you issue additional W-2 forms or use a continuation."
+]},
+
+{tag:"Section", num:"09", lvl:"Intermediate", cls:"", title:"Form W-3 — the transmittal", paras:[
+ "Form W-3, Transmittal of Wage and Tax Statements, is the cover sheet for all the Copy A W-2 forms you send to the SSA on paper. The W-3 sums every dollar box across all your W-2s.",
+ "When you e-file W-2s through BSO, you do not submit a separate paper W-3 — the SSA captures the totals from the electronic submission. Paper filers still need a paper W-3.",
+ "Box b on the W-3 identifies the 'kind of payer' — 941, Military, 943, 944, CT-1, Household, or Medicare government employer. Box b also identifies the 'kind of employer' — None apply, 501c non-government, State/local non-501c, State/local 501c, Federal government.",
+ "The W-3 totals reconcile to your four quarterly 941 totals for the year. Box 1 total = sum of 941 line 2. Box 2 total = sum of 941 line 3. Box 3 total = sum of 941 line 5a column 1 (subject to wage-base cap). Box 5 total = sum of 941 line 5c column 1. The SSA and IRS share data and flag mismatches.",
+ "If the totals legitimately differ — for example because of third-party sick pay reported on a different return — file Schedule D (Form 941) to explain the difference and head off a Combined Annual Wage Reporting discrepancy notice."
+]},
+
+{tag:"Correction Form", num:"10", lvl:"Intermediate", cls:"corr", title:"Form W-2c — when and why to correct", paras:[
+ "File Form W-2c, Corrected Wage and Tax Statement, whenever you discover an error on a W-2 you already filed with the SSA. There's no annual deadline — file as soon as possible after discovering the error.",
+ "Common triggers for a W-2c: wrong employee name; wrong Social Security number; wrong Box 1 wages; wrong Box 3 or 5 wages; wrong tax withheld in Box 2, 4, or 6; wrong Box 12 codes or amounts; wrong state wages or withholding.",
+ "Address-only changes are an important exception. If only the employee's address is wrong, you do NOT need a W-2c. Just give the employee a corrected copy showing the right address and update your records. The SSA does not need to be notified.",
+ "Voiding before filing is also separate. If you haven't sent Copy A to the SSA yet, mark the wrong W-2 'VOID' across Copy A and issue a new W-2 — not a W-2c. The 'c' is for corrections to forms the SSA already has.",
+ "Provide the corrected W-2c to the employee promptly. If they already filed their personal return using the wrong W-2, they may need to file Form 1040-X to amend. Late delivery of a W-2c can have its own penalty.",
+ "Don't make the same mistake twice: the same penalty schedule that applies to original W-2s applies to W-2cs — for both failure to file with the SSA and failure to furnish to the employee."
+]},
+
+{tag:"Correction Form", num:"11", lvl:"Advanced", cls:"corr", title:"Form W-2c — structure of the correction", paras:[
+ "Each W-2c shows two columns of figures side by side. 'Previously reported' is what was on the original W-2. 'Correct information' is the new, right amount. Only the boxes that changed need entries — leave the unchanged boxes blank on the W-2c.",
+ "Many corrections cascade. If you change Box 3 (Social Security wages), Box 4 (Social Security tax) changes too — recompute it. The same applies to Box 5/Box 6. Changing Box 1 may not affect FICA boxes (because of the Box 1 vs Box 3/5 split rule).",
+ "Box e on the W-2c — employee's incorrect SSN as previously reported — is used specifically for SSN corrections. Enter the wrong SSN there and the correct SSN in the standard Box d area. Same logic if you also need to correct the employee's name.",
+ "Special rule for income tax withholding: you generally can only correct Box 2 (federal income tax withheld) for the same calendar year. After year-end, if Box 2 was wrong, the employee's correction happens on their 1040 — you can't change it after the fact through a W-2c that crosses calendar-year boundaries.",
+ "Special rule for refunding overcollected FICA: like the 941-X process, refunding employee SS or Medicare overcollection requires that the employer either repay or reimburse the employee first, or obtain the employee's written consent. The W-2c reports the corrected wage and tax figures; the FICA correction itself is also reflected on Form 941-X for the affected quarter."
+]},
+
+{tag:"Correction Form", num:"12", lvl:"Intermediate", cls:"corr", title:"Form W-3c — transmittal for corrections", paras:[
+ "Form W-3c, Transmittal of Corrected Wage and Tax Statements, is the cover for paper W-2c filings. It summarizes the changes you're sending the SSA — both the previously reported totals and the correct totals.",
+ "File one W-3c per tax year being corrected. Never combine multiple years on a single W-3c. If you're fixing 2024 and 2025 W-2s, that's two W-3cs.",
+ "Electronic W-2c filings through BSO don't need a separate paper W-3c — the SSA captures the totals from the submission. Most employers can e-file W-2c forms through BSO regardless of original filing method.",
+ "Box c on the W-3c identifies the kind of return being corrected: original W-2, W-2c, W-2AS (American Samoa), W-2GU (Guam), W-2VI (U.S. Virgin Islands), or W-3SS. Most regular employers check the box for W-2 originals.",
+ "Even when correcting just one employee's W-2, you file a W-3c with that single W-2c — the W-3c is always required as the transmittal for paper W-2cs."
+]},
+
+{tag:"Section", num:"13", lvl:"Advanced", cls:"", title:"Special situations and prior-year repayments", paras:[
+ "Repayment in the same calendar year wages were paid: if the employee gives back wages in the same year, you simply reduce Boxes 1, 3, and 5 and recompute the taxes. If you haven't yet filed the W-2, just file the lower numbers. If you have filed, the timing usually means a W-2c showing the reduction.",
+ "Repayment in a later year: this is the tricky one. File a W-2c reducing Boxes 3, 4, 5, and 6 to reflect the FICA reversal — but generally do NOT reduce Box 1. The employee paid income tax on the original Box 1 amount in the original year, and they recover it through a 'claim of right' adjustment on Schedule A or Form 1040, not through a W-2c.",
+ "Deceased employee: wages paid in the year of death are still reported on a regular W-2 in the deceased employee's name and SSN. Wages paid after the year of death go on Form 1099-MISC (Box 3 — Other income) to the estate or beneficiary, not on a W-2.",
+ "Rehires within the same year: combine all wages into one W-2 — do not issue two separate W-2s for one calendar year for the same employer/employee. The Social Security wage base resets per employer per year, but only one wage base applies for that combined employment.",
+ "Common-law employees who became contractors mid-year: file one W-2 for the W-2 wages portion. The contractor compensation goes on a separate 1099-NEC. Document carefully — IRS reclassification audits often catch these transitions."
+]},
+
+{tag:"Section", num:"14", lvl:"Advanced", cls:"", title:"Reconciliation and the CAWR mismatch", paras:[
+ "The annual reconciliation is the heart of payroll compliance. Once a year, your four 941s must net out to your W-2 and W-3 totals. The IRS and SSA literally compare them via the Combined Annual Wage Reporting program, or CAWR.",
+ "What should match: total Box 1 wages across all W-2s = sum of 941 line 2 for the year. Total Box 2 = sum of 941 line 3. Total Box 3 = sum of 941 line 5a column 1 (subject to per-employee cap). Total Box 5 = sum of 941 line 5c column 1. Total Box 4 SS tax = roughly the employee half of 941 line 5a column 2 (which contains both halves). Total Box 6 Medicare tax = employee half of 941 line 5c column 2, plus any 0.9% additional Medicare.",
+ "Legitimate differences exist. Third-party sick pay reported on the insurer's W-2 won't be on your 941. Box 12 code C (group-term life insurance imputed income) for former employees creates Box 1, 3, 5 entries without parallel 941 wages. Schedule D (Form 941) is the tool for explaining these.",
+ "When CAWR flags a mismatch, you get a notice asking for reconciliation. Common causes: missed third-party sick pay, late-filed 941-X without corresponding W-2c, math errors, or employee misclassification corrections. Respond promptly.",
+ "Good practice: do the reconciliation BEFORE you file the W-3 in January. Comparing quarterly totals to your year-end payroll register and to the W-3 you're about to submit catches the most fixable errors while they're still easy to correct."
+]}
+],
+
+cards:[
+ {c:"W-2 Basics", f:"Full title of Form W-2?", b:"Wage and Tax Statement."},
+ {c:"W-2 Basics", f:"Which agency receives Copy A of the W-2?", b:"The Social Security Administration (SSA) — not the IRS. The SSA shares the data via CAWR."},
+ {c:"W-2 Basics", f:"W-2 deadline (employee copies AND SSA Copy A)?", b:"January 31 — for both paper and electronic, regardless of method."},
+ {c:"W-2 Basics", f:"E-file mandate threshold (current)?", b:"10 or more aggregate information returns (W-2 + 1099 + others combined). Effective for filings made in 2024 and later — way down from the old 250-return threshold."},
+ {c:"W-2 Basics", f:"Where do you e-file W-2s?", b:"Through the SSA's Business Services Online (BSO) portal — not through the IRS."},
+ {c:"W-2 Basics", f:"Which copy stays with the employer?", b:"Copy D."},
+ {c:"W-2 Basics", f:"Which copies go to the employee?", b:"Copies B (federal), C (employee records), and 2 (state/local)."},
+ {c:"W-2 Basics", f:"Two separate W-2 penalties for one error?", b:"Yes — failure to file Copy A with SSA AND failure to furnish to employee are two distinct penalties."},
+
+ {c:"ID Boxes", f:"Box a?", b:"Employee's Social Security number."},
+ {c:"ID Boxes", f:"Box b?", b:"Employer's EIN."},
+ {c:"ID Boxes", f:"Box c?", b:"Employer's name, address, and ZIP."},
+ {c:"ID Boxes", f:"Box d?", b:"Control number — optional, employer-assigned."},
+ {c:"ID Boxes", f:"Box e?", b:"Employee's name (as on the Social Security card)."},
+ {c:"ID Boxes", f:"Box f?", b:"Employee's address."},
+ {c:"ID Boxes", f:"Can you truncate the employee SSN?", b:"Yes — on copies given to the employee (last 4 only). NEVER on Copy A to the SSA. Never on the EIN."},
+
+ {c:"Boxes 1-6", f:"Box 1?", b:"Wages, tips, and other compensation — federal income tax wages."},
+ {c:"Boxes 1-6", f:"Box 2?", b:"Federal income tax withheld."},
+ {c:"Boxes 1-6", f:"Box 3?", b:"Social Security wages (capped at annual wage base)."},
+ {c:"Boxes 1-6", f:"Box 4?", b:"Social Security tax withheld (6.2% of Box 3)."},
+ {c:"Boxes 1-6", f:"Box 5?", b:"Medicare wages and tips (no cap)."},
+ {c:"Boxes 1-6", f:"Box 6?", b:"Medicare tax withheld (1.45% of Box 5, plus 0.9% Additional Medicare on wages over $200K)."},
+ {c:"Boxes 1-6", f:"Does pre-tax 401(k) reduce Box 1?", b:"Yes — pre-tax traditional 401(k) reduces Box 1."},
+ {c:"Boxes 1-6", f:"Does pre-tax 401(k) reduce Boxes 3 and 5?", b:"No — 401(k) deferrals are still subject to FICA."},
+ {c:"Boxes 1-6", f:"Does Roth 401(k) reduce Box 1?", b:"No — Roth contributions are after-tax, so Box 1 is not reduced."},
+ {c:"Boxes 1-6", f:"Cafeteria plan health insurance — effect on Boxes 1, 3, 5?", b:"Reduces ALL THREE (it's a Section 125 pre-tax deduction)."},
+ {c:"Boxes 1-6", f:"Maximum Box 4 for 2026?", b:"$11,439 (6.2% × $184,500)."},
+ {c:"Boxes 1-6", f:"Why is Box 5 often higher than Box 3?", b:"Medicare has no wage cap; Social Security caps at the annual wage base."},
+
+ {c:"Boxes 7-11", f:"Box 7?", b:"Social Security tips reported by the employee."},
+ {c:"Boxes 7-11", f:"Are tips included in Box 5 (Medicare)?", b:"Yes — Box 5 already includes tips. There's no separate Medicare tips box."},
+ {c:"Boxes 7-11", f:"Box 8?", b:"Allocated tips — for large food/beverage establishments where reported tips fell below 8% of receipts."},
+ {c:"Boxes 7-11", f:"Are allocated tips (Box 8) in Boxes 1, 3, 5?", b:"No — Box 8 is separate. The employee reports them separately (Form 4137 if applicable)."},
+ {c:"Boxes 7-11", f:"Box 9 — what's in it?", b:"Nothing. It's reserved/blank (formerly advance EIC, which was repealed)."},
+ {c:"Boxes 7-11", f:"Box 10?", b:"Dependent care benefits. First $5,000 excludable ($2,500 MFS); excess flows back to Boxes 1, 3, 5."},
+ {c:"Boxes 7-11", f:"Box 11?", b:"Nonqualified deferred compensation plan distributions. Used by SSA for the earnings test."},
+ {c:"Boxes 7-11", f:"Box 3 + Box 7 — what's the cap?", b:"Together cannot exceed the Social Security wage base — they share one cap."},
+
+ {c:"Box 12 Codes", f:"Code D?", b:"Pre-tax traditional 401(k) elective deferral. Reduces Box 1 only."},
+ {c:"Box 12 Codes", f:"Code E?", b:"Pre-tax 403(b) elective deferral. Reduces Box 1 only."},
+ {c:"Box 12 Codes", f:"Code G?", b:"Pre-tax 457(b) elective deferral. Reduces Box 1 only."},
+ {c:"Box 12 Codes", f:"Code S?", b:"SIMPLE IRA salary reduction contribution."},
+ {c:"Box 12 Codes", f:"Code AA?", b:"Roth 401(k) contribution. After-tax — does NOT reduce Box 1, 3, or 5."},
+ {c:"Box 12 Codes", f:"Code BB?", b:"Roth 403(b) contribution. After-tax — does NOT reduce wage boxes."},
+ {c:"Box 12 Codes", f:"Code EE?", b:"Roth governmental 457(b) contribution. After-tax."},
+ {c:"Box 12 Codes", f:"Code W?", b:"HSA contributions (employer + cafeteria plan employee contributions)."},
+ {c:"Box 12 Codes", f:"Code DD?", b:"Cost of employer-sponsored health coverage. Pure information — never taxable."},
+ {c:"Box 12 Codes", f:"Code C?", b:"Imputed cost of group-term life insurance over $50,000. ALSO included in Boxes 1, 3, 5."},
+ {c:"Box 12 Codes", f:"Code V?", b:"Income from exercise of nonstatutory stock options. Also in Boxes 1, 3, 5."},
+ {c:"Box 12 Codes", f:"Code J?", b:"Nontaxable third-party sick pay."},
+ {c:"Box 12 Codes", f:"Code P?", b:"Excludable moving expense reimbursements — only for active-duty Armed Forces."},
+ {c:"Box 12 Codes", f:"Code Q?", b:"Nontaxable combat pay."},
+ {c:"Box 12 Codes", f:"Code T?", b:"Employer-provided adoption benefits."},
+ {c:"Box 12 Codes", f:"Code FF?", b:"Permitted benefits under a Qualified Small Employer HRA (QSEHRA)."},
+ {c:"Box 12 Codes", f:"Code M / Code N?", b:"Uncollected Social Security (M) and Medicare (N) tax on group-term life insurance over $50K for former employees."},
+ {c:"Box 12 Codes", f:"How many Box 12 entries fit on one W-2?", b:"Four (12a, 12b, 12c, 12d). Issue a second W-2 if more are needed."},
+
+ {c:"Boxes 13-14", f:"Box 13 — three checkboxes?", b:"Statutory employee · Retirement plan · Third-party sick pay."},
+ {c:"Boxes 13-14", f:"Statutory employee box — when checked?", b:"For any of the four §3121(d) statutory employee categories. FICA applies; FIT withholding typically does not."},
+ {c:"Boxes 13-14", f:"Retirement plan box — effect on the employee?", b:"Affects whether the employee can deduct a traditional IRA contribution (deduction phases out at lower income)."},
+ {c:"Boxes 13-14", f:"Box 14?", b:"'Other' — employer-chosen items like state disability, union dues, after-tax benefits. Informational."},
+
+ {c:"Boxes 15-20", f:"Box 15?", b:"State postal abbreviation and employer's state ID number."},
+ {c:"Boxes 15-20", f:"Box 16?", b:"State wages, tips, etc. (may differ from Box 1 due to state-specific rules)."},
+ {c:"Boxes 15-20", f:"Box 17?", b:"State income tax withheld."},
+ {c:"Boxes 15-20", f:"Boxes 18, 19, 20?", b:"Local wages, local tax withheld, locality name."},
+ {c:"Boxes 15-20", f:"Why might Box 16 ≠ Box 1?", b:"State treatment of pre-tax items (e.g., PA taxes 401(k) deferrals at the state level)."},
+
+ {c:"Form W-3", f:"What does Form W-3 do?", b:"Transmittal of W-2s to the SSA — a cover sheet that summarizes the totals."},
+ {c:"Form W-3", f:"Is a paper W-3 needed if you e-file W-2s?", b:"No — BSO e-filing transmits totals automatically."},
+ {c:"Form W-3", f:"W-3 'kind of payer' options?", b:"941, Military, 943, 944, CT-1, Household employer, Medicare government employer."},
+ {c:"Form W-3", f:"Reconciliation — Box 1 totals match what 941 line?", b:"Sum of line 2 across all four 941s."},
+ {c:"Form W-3", f:"Box 3 totals match what?", b:"Sum of 941 line 5a column 1 (with per-employee wage base cap respected)."},
+ {c:"Form W-3", f:"What is CAWR?", b:"Combined Annual Wage Reporting — the IRS/SSA data-share program that catches 941-vs-W-3 mismatches."},
+ {c:"Form W-3", f:"Tool to explain legitimate 941/W-2 differences?", b:"Schedule D (Form 941)."},
+
+ {c:"W-2c", f:"Full title of Form W-2c?", b:"Corrected Wage and Tax Statement."},
+ {c:"W-2c", f:"When do you file a W-2c?", b:"As soon as you discover an error on a W-2 already filed with the SSA. No fixed annual deadline."},
+ {c:"W-2c", f:"Does an address-only error require a W-2c?", b:"No — just give the employee a corrected copy with the right address. Don't file with SSA."},
+ {c:"W-2c", f:"Wrong W-2 not yet filed with SSA — what do you do?", b:"Mark it VOID and issue a corrected W-2 (not a W-2c). W-2c is for forms the SSA already has."},
+ {c:"W-2c", f:"W-2c column layout?", b:"Two columns side by side: 'Previously reported' and 'Correct information.' Only changed boxes need entries."},
+ {c:"W-2c", f:"Correcting an SSN — where does the incorrect SSN go?", b:"In Box e on the W-2c (employee's incorrect SSN). The correct SSN goes in the standard Box d/a area."},
+ {c:"W-2c", f:"Federal income tax withholding (Box 2) correction limit?", b:"Generally same calendar year only. After year-end, the employee's correction is on their 1040."},
+ {c:"W-2c", f:"Refunding overcollected FICA — requirement?", b:"Repay or reimburse the employee first, OR obtain written employee consent — same rule as 941-X."},
+ {c:"W-2c", f:"Penalty exposure for late W-2c?", b:"Same tiered penalty schedule as original W-2s, both for SSA filing and employee delivery."},
+ {c:"W-2c", f:"Box 3 changed — what else must change?", b:"Box 4 must be recomputed (6.2% of corrected Box 3). Same logic for Box 5/Box 6."},
+
+ {c:"W-3c", f:"What is Form W-3c?", b:"Transmittal of Corrected Wage and Tax Statements — the cover sheet for paper W-2cs."},
+ {c:"W-3c", f:"One W-3c can cover how many tax years?", b:"One. File a separate W-3c per tax year being corrected."},
+ {c:"W-3c", f:"Is a paper W-3c needed when e-filing W-2cs?", b:"No — BSO submission captures totals automatically."},
+ {c:"W-3c", f:"Even one W-2c needs a W-3c (on paper)?", b:"Yes — the W-3c is always the transmittal for paper W-2c filings."},
+
+ {c:"Special Cases", f:"Same-year repayment of wages — how reported?", b:"Reduce Boxes 1, 3, 5 (and recompute taxes). If already filed, issue W-2c."},
+ {c:"Special Cases", f:"Prior-year repayment — what's the W-2c rule?", b:"Reduce Boxes 3, 4, 5, 6 but generally NOT Box 1. Employee uses 'claim of right' adjustment on their personal return."},
+ {c:"Special Cases", f:"Deceased employee — wages paid in year of death?", b:"Still on the deceased employee's W-2."},
+ {c:"Special Cases", f:"Deceased employee — wages paid AFTER year of death?", b:"Form 1099-MISC to the estate/beneficiary (Box 3, Other income). Not on W-2."},
+ {c:"Special Cases", f:"Rehired employee in the same year — how many W-2s?", b:"One combined W-2 for the year — not two."},
+ {c:"Special Cases", f:"Employee became contractor mid-year — reporting?", b:"W-2 for the employee portion; separate 1099-NEC for the contractor portion."},
+ {c:"Special Cases", f:"Statutory employee — Box 1 treatment?", b:"Typically no Box 1 / no income tax withholding. Worker reports income on Schedule C."}
+],
+
+quizzes:[
+ {id:"qboxes", tag:"Topic Quiz", name:"W-2 Boxes", desc:"Numbered boxes and what goes where", sample:10, questions:[
+  {q:"Form W-2 deadline (employee copies AND SSA Copy A)?", o:["January 31 for both","January 31 for employees; February 28 for SSA paper","March 15","April 15"], a:0, e:"Both due January 31 since 2017 — same date for paper or electronic."},
+  {q:"Which copy of the W-2 goes to the SSA?", o:["Copy B","Copy A","Copy C","Copy D"], a:1, e:"Copy A is the official return to the SSA."},
+  {q:"Box 1 of Form W-2 reports:", o:["All wages including 401(k)","Federal income tax wages (reduced by pre-tax deferrals)","FICA wages","State wages"], a:1, e:"Box 1 = FIT-taxable wages; reduced by pre-tax traditional 401(k) and cafeteria plan items."},
+  {q:"Box 3 (Social Security wages) is capped at:", o:["No limit","$176,100 (2025) / $184,500 (2026) per employee","$200,000","$250,000"], a:1, e:"Capped at the annual Social Security wage base per employee per employer."},
+  {q:"Box 5 (Medicare wages) cap?", o:["$200,000","$176,100","No cap","$184,500"], a:2, e:"No cap — Medicare applies to all wages."},
+  {q:"Box 6 includes the 0.9% Additional Medicare Tax for wages over:", o:["$160,000","$176,100","$200,000","$250,000"], a:2, e:"$200,000 is the employer withholding threshold regardless of the employee's filing status."},
+  {q:"Box 8 (allocated tips) is included in Boxes 1, 3, 5?", o:["Yes, all three","No — separate from Boxes 1, 3, 5, 7","Only in Box 5","Only in Box 1"], a:1, e:"Allocated tips stand alone — the employee adds them to wages on Form 4137 if applicable."},
+  {q:"Dependent care benefits (Box 10) — taxable threshold?", o:["First $1,000","First $5,000 ($2,500 MFS) excludable; excess in Boxes 1, 3, 5","All taxable","All nontaxable"], a:1, e:"Section 129 — $5,000 cap ($2,500 MFS); excess flows back to Boxes 1, 3, 5."},
+  {q:"Box 13 has how many checkboxes?", o:["Two","Three","Four","One"], a:1, e:"Three: Statutory employee, Retirement plan, Third-party sick pay."},
+  {q:"Why might Box 16 (state wages) differ from Box 1?", o:["They can't differ","State-specific treatment of pre-tax items","Math error only","Different employer"], a:1, e:"E.g., Pennsylvania taxes 401(k) deferrals at state level — Box 16 ends up higher than Box 1 there."},
+  {q:"Box 9 should contain:", o:["State wages","Allocated tips","Nothing — reserved/blank","Social Security tips"], a:2, e:"Formerly advance EIC, which was repealed. Box 9 is now blank/reserved."},
+  {q:"Box 7 (Social Security tips) combined with Box 3 — limit?", o:["No combined limit","Cannot exceed the SS wage base","$200,000","Cannot exceed Box 5"], a:1, e:"Box 3 + Box 7 share one wage-base cap."}
+ ]},
+
+ {id:"q12", tag:"Topic Quiz", name:"Box 12 Codes", desc:"The deep-dive codes", sample:10, questions:[
+  {q:"Code D represents:", o:["Roth 401(k)","Pre-tax traditional 401(k) elective deferral","HSA","457(b) deferral"], a:1, e:"Code D = pre-tax 401(k) — reduces Box 1, not Boxes 3 and 5."},
+  {q:"Code DD represents:", o:["Roth 401(k) salary deferral","Cost of employer-sponsored health coverage (informational)","Adoption benefits","HSA contributions"], a:1, e:"Code DD is pure information — required by the ACA, never taxable."},
+  {q:"Code W represents:", o:["Roth 403(b)","HSA contributions (employer + cafeteria employee)","Nonstatutory stock options","Group-term life > $50K"], a:1, e:"Code W = HSA contributions (employer and pre-tax employee via cafeteria plan)."},
+  {q:"Code AA represents:", o:["Roth 401(k) contribution","Traditional 401(k)","Adoption benefits","SIMPLE IRA"], a:0, e:"Code AA is Roth 401(k) — after-tax."},
+  {q:"Code C — what does it add to?", o:["Nothing — informational","Adds to Boxes 1, 3, 5","Adds to Box 4 only","Adds to Box 10"], a:1, e:"Code C (GTL > $50K imputed income) is taxable and ALSO in Boxes 1, 3, 5."},
+  {q:"Code P (excludable moving expenses) — who qualifies?", o:["Anyone","Active-duty military only","Federal employees","Retirees"], a:1, e:"Post-TCJA, only active-duty Armed Forces qualify."},
+  {q:"Code Q represents:", o:["Qualified plan distributions","Nontaxable combat pay","Adoption benefits","Stock option income"], a:1, e:"Code Q = nontaxable combat pay."},
+  {q:"How many Box 12 entries on a single W-2?", o:["Two (12a, 12b)","Four (12a–12d)","Six (12a–12f)","Unlimited"], a:1, e:"Four slots; issue a second W-2 if more entries are needed."},
+  {q:"Code V represents:", o:["Vacation pay","Income from exercise of nonstatutory stock options","Vehicle benefits","Voluntary contributions"], a:1, e:"Code V — NSO exercise income (also in Boxes 1, 3, 5)."},
+  {q:"Does Code G (457(b) deferral) reduce Boxes 3 and 5?", o:["Yes","No — reduces Box 1 only","Reduces Box 5 only","Reduces all three"], a:1, e:"Pre-tax 457(b) deferrals reduce Box 1; FICA still applies."}
+ ]},
+
+ {id:"qcorr", tag:"Topic Quiz", name:"W-2c & W-3c", desc:"Corrections to wage statements", sample:10, questions:[
+  {q:"When do you file a W-2c?", o:["By January 31 the following year","As soon as you discover the error","Only at year-end","Never — you refile the original"], a:1, e:"No fixed deadline — file promptly upon discovery."},
+  {q:"Address-only error on a previously filed W-2 — file a W-2c?", o:["Yes — always","No — just give the employee a corrected copy","Only if it's the federal address","Only if employee asks"], a:1, e:"Address-only corrections don't require a W-2c filed with the SSA."},
+  {q:"Wrong W-2 not yet sent to SSA — what do you do?", o:["File a W-2c","Void it and issue a corrected W-2 (not W-2c)","Send it anyway","File Form 941-X"], a:1, e:"W-2c is only for forms the SSA already has."},
+  {q:"W-2c column structure?", o:["One column showing the new amount","Two columns: 'previously reported' and 'correct information'","Three columns","No columns — narrative only"], a:1, e:"Two side-by-side columns; only changed boxes filled in."},
+  {q:"You correct Box 3. What else must change?", o:["Nothing","Box 4 must be recomputed","Box 1 must always change","Box 5 must change too"], a:1, e:"Box 4 = 6.2% of Box 3 — recompute when Box 3 changes."},
+  {q:"Box 2 (federal income tax) correction — time limit?", o:["No limit","Generally same calendar year only","3 years","6 months"], a:1, e:"After year-end, the employee handles withholding through their 1040, not via W-2c."},
+  {q:"Refund of overcollected FICA — requirement?", o:["Just file W-2c","Repay or reimburse the employee first, OR obtain written consent","File 941-X first","Wait for IRS approval"], a:1, e:"Same rule as 941-X — employee repayment or written consent required."},
+  {q:"Form W-3c covers how many tax years?", o:["One","Two","Up to four","Unlimited"], a:0, e:"One year per W-3c. File a separate W-3c for each year being corrected."},
+  {q:"E-filing W-2cs through BSO — do you need a paper W-3c?", o:["Always","Never — BSO captures totals automatically","Only for first-time filers","Only for prior years"], a:1, e:"Paper W-3c not needed for e-filed W-2cs."},
+  {q:"SSN was wrong on the original W-2. On the W-2c you enter:", o:["Only the new SSN","The incorrect SSN in Box e AND the correct SSN in the regular Box a area","Just leave SSN blank","The corrected SSN twice"], a:1, e:"Box e captures the incorrect SSN; the correct SSN goes in the standard SSN box."}
+ ]},
+
+ {id:"qfile", tag:"Topic Quiz", name:"Deadlines, Filing & Penalties", desc:"How and when to file", sample:8, questions:[
+  {q:"E-file threshold for W-2 (and aggregate information returns)?", o:["250 returns","100 returns","10 or more aggregate","1 return"], a:2, e:"10+ aggregate (W-2 + 1099 + other info returns combined), effective for 2024 filings."},
+  {q:"Where do you file W-2s electronically?", o:["IRS e-file","SSA Business Services Online (BSO)","Treasury Direct","EFTPS"], a:1, e:"SSA's BSO — not the IRS."},
+  {q:"Number of penalties for failing to file one incorrect W-2?", o:["One","Two — SSA filing failure + employee delivery failure","Three","None"], a:1, e:"Two separate penalties: failure to file with SSA AND failure to furnish to employee."},
+  {q:"How are W-2 penalties structured?", o:["Flat $50","Tiered by lateness — increasing per return","Percentage of wages","Flat $1,000"], a:1, e:"Tiered: lowest if corrected within 30 days, higher tiers for later, top tier for intentional disregard."},
+  {q:"What's the destination of Copy A?", o:["IRS","Employee","Social Security Administration","State agency"], a:2, e:"Copy A goes to the SSA."},
+  {q:"Required if filing electronically — what specifically?", o:["A paper W-3","Use BSO/EFW2 file format","Mail to IRS","Form SS-4"], a:1, e:"BSO with the EFW2 format for electronic submissions."},
+  {q:"Can employers truncate the EIN on W-2 copies?", o:["Yes — last 4 only","No — EIN is never truncated","Only on Copy D","Only with IRS approval"], a:1, e:"Truncation rules allow SSN truncation (employee copies only) but not EIN truncation."},
+  {q:"Pre-2017, paper W-2 SSA filing was due:", o:["January 31","Last day of February (paper) / March 31 (electronic) — both later than current","March 31","April 15"], a:1, e:"That extra time ended — now everything is January 31."}
+ ]},
+
+ {id:"qspec", tag:"Topic Quiz", name:"Special Cases & Reconciliation", desc:"Repayments, deceased, CAWR", sample:8, questions:[
+  {q:"Employee repaid wages in a LATER year — how do you handle on a W-2c?", o:["Reduce Box 1, 3, 5","Reduce Boxes 3, 4, 5, 6 but NOT Box 1","Reduce only Box 1","No W-2c needed"], a:1, e:"Prior-year repayment: FICA boxes reduced; Box 1 not — employee uses 'claim of right' on their 1040."},
+  {q:"Wages paid in the year of an employee's death go on:", o:["A 1099-MISC to the estate","The deceased employee's regular W-2","Nothing — exempt","Form W-2c"], a:1, e:"Year-of-death wages on the deceased employee's regular W-2."},
+  {q:"Wages paid AFTER the year of death — reported how?", o:["W-2 to deceased","1099-MISC to estate or beneficiary","W-2c","Schedule K-1"], a:1, e:"Post-death wages to the estate/beneficiary on 1099-MISC, not W-2."},
+  {q:"Employee terminated and rehired in same year — how many W-2s?", o:["Two","One combined","Three","Zero"], a:1, e:"One combined W-2 for the calendar year and employer."},
+  {q:"What is CAWR?", o:["Combined Annual Wage Reporting","Central Audit and Withholding Reconciliation","Compliance Audit for Wages and Returns","Corporate Annual Wage Reconciliation"], a:0, e:"CAWR — IRS/SSA data-share that flags 941/W-3 mismatches."},
+  {q:"Tool to explain a legitimate 941-vs-W-2 difference?", o:["Form 941-X","Schedule D (Form 941)","Form 8919","Form SS-4"], a:1, e:"Schedule D (Form 941) — explains discrepancies to head off CAWR notices."},
+  {q:"Statutory employee — typical Box 1 treatment?", o:["Full wages with FIT withheld","Typically no Box 1 / no FIT — worker reports on Schedule C","Same as regular employee","All wages exempt"], a:1, e:"Statutory employees: FICA yes, FIT withholding typically no. Worker files Schedule C for deductible expenses."},
+  {q:"Box 3 of W-3 should match what on the 941s?", o:["Line 2 sum","Line 5a column 1 sum (subject to wage-base cap)","Line 12 sum","Line 13 sum"], a:1, e:"Box 3 W-3 total = sum of 941 line 5a col 1 across the year (per-employee wage base respected)."}
+ ]},
+
+ {id:"qmix", tag:"Random Mix", name:"EA Mixed (random pull)", desc:"Random questions across all topics", sample:12, questions:[]}
+],
+
+practice:[
+ {id:"p1", tag:"Practice · W-2 Boxes", title:"Compute Box 1, 3, 5 with pre-tax items",
+  scn:"Carlos earned $80,000 in gross wages this year. He contributed $6,000 to a pre-tax traditional 401(k) and paid $3,600 in employee health insurance premiums through a Section 125 cafeteria plan. He had no other pre-tax deductions. Compute his W-2 boxes.",
+  given:[
+   {k:"Gross wages", v:"$80,000.00"},
+   {k:"Pre-tax 401(k)", v:"$6,000.00"},
+   {k:"Cafeteria plan health premiums", v:"$3,600.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"Box 1", label:"Wages, tips, other compensation", pfx:"$", type:"money", ans:70400, hint:"401(k) AND cafeteria reduce Box 1. 80,000 − 6,000 − 3,600."},
+   {id:"f2", ln:"Box 3", label:"Social Security wages", pfx:"$", type:"money", ans:76400, hint:"Cafeteria plan reduces Box 3; pre-tax 401(k) does NOT. 80,000 − 3,600."},
+   {id:"f3", ln:"Box 4", label:"Social Security tax withheld", pfx:"$", type:"money", ans:4736.80, hint:"6.2% × Box 3."},
+   {id:"f4", ln:"Box 5", label:"Medicare wages", pfx:"$", type:"money", ans:76400, hint:"Same as Box 3 here (well under wage base, no tips, not over $200K). Cafeteria reduces; 401(k) does not."},
+   {id:"f5", ln:"Box 6", label:"Medicare tax withheld", pfx:"$", type:"money", ans:1107.80, hint:"1.45% × Box 5."}
+  ],
+  sol:"<p><b>Box 1:</b> 80,000 − 6,000 − 3,600 = <code>$70,400.00</code> (401(k) AND cafeteria reduce Box 1)</p><p><b>Box 3:</b> 80,000 − 3,600 = <code>$76,400.00</code> (cafeteria reduces; 401(k) does not)</p><p><b>Box 4:</b> 76,400 × 6.2% = <code>$4,736.80</code></p><p><b>Box 5:</b> 76,400 = <code>$76,400.00</code> (same as Box 3 here; Medicare has no cap but Carlos is under both thresholds)</p><p><b>Box 6:</b> 76,400 × 1.45% = <code>$1,107.80</code></p><p><b>Key rule:</b> traditional 401(k) reduces Box 1 only. Cafeteria plan deductions under §125 reduce all three (Box 1, 3, 5).</p>"},
+
+ {id:"p2", tag:"Practice · W-2 Boxes", title:"Wage-base cap in 2026 — high earner",
+  scn:"Imani's 2026 gross wages from her sole employer were $220,000. She had $18,000 in pre-tax 401(k) deferrals and no other pre-tax items. Compute her FICA-related boxes.",
+  given:[
+   {k:"Gross wages 2026", v:"$220,000.00"},
+   {k:"Pre-tax 401(k)", v:"$18,000.00"},
+   {k:"2026 Social Security wage base", v:"$184,500.00"},
+   {k:"Add'l Medicare threshold", v:"$200,000.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"Box 1", label:"Wages, tips, other compensation", pfx:"$", type:"money", ans:202000, hint:"401(k) reduces Box 1: 220,000 − 18,000."},
+   {id:"f2", ln:"Box 3", label:"Social Security wages (capped)", pfx:"$", type:"money", ans:184500, hint:"Capped at 2026 wage base. 401(k) does NOT reduce SS wages. Compare 220,000 vs $184,500 cap."},
+   {id:"f3", ln:"Box 4", label:"Social Security tax", pfx:"$", type:"money", ans:11439, hint:"6.2% × Box 3 cap. The 2026 max."},
+   {id:"f4", ln:"Box 5", label:"Medicare wages", pfx:"$", type:"money", ans:220000, hint:"No cap on Medicare. 401(k) doesn't reduce."},
+   {id:"f5", ln:"Box 6", label:"Medicare tax (1.45% on all + 0.9% over $200K)", pfx:"$", type:"money", ans:3370, hint:"1.45% × 220,000 = 3,190.00. PLUS 0.9% × (220,000 − 200,000) = 180. Total 3,370."}
+  ],
+  sol:"<p><b>Box 1:</b> 220,000 − 18,000 = <code>$202,000.00</code> (401(k) reduces FIT wages)</p><p><b>Box 3:</b> <code>$184,500.00</code> (capped; 401(k) does NOT reduce FICA)</p><p><b>Box 4:</b> 184,500 × 6.2% = <code>$11,439.00</code> (2026 maximum)</p><p><b>Box 5:</b> <code>$220,000.00</code> (no cap)</p><p><b>Box 6:</b> 220,000 × 1.45% = 3,190.00. PLUS 220,000 − 200,000 = 20,000 × 0.9% = 180. Total <code>$3,370.00</code></p>"},
+
+ {id:"p3", tag:"Practice · W-2c", title:"Correcting a wrong SSN",
+  scn:"You filed Riya's 2024 W-2 with SSN 123-45-6789. You discovered the correct SSN is 123-45-9876. All other amounts were right. Issue a W-2c.",
+  given:[
+   {k:"Tax year", v:"2024"},
+   {k:"Previously reported SSN", v:"123-45-6789"},
+   {k:"Correct SSN", v:"123-45-9876"},
+   {k:"Other amounts", v:"All correct as originally filed"}
+  ],
+  fields:[
+   {id:"f1", ln:"Box e", label:"Incorrect SSN as previously reported", pfx:"", type:"text", accept:["123-45-6789","123456789"], hint:"Box e on the W-2c specifically captures the WRONG SSN you originally reported."},
+   {id:"f2", ln:"Box a", label:"Correct SSN", pfx:"", type:"text", accept:["123-45-9876","123459876"], hint:"The correct SSN goes in the regular SSN box."},
+   {id:"f3", ln:"wages", label:"How many wage boxes need to be filled in on this W-2c?", pfx:"", type:"text", accept:["zero","0","none"], hint:"Only changed boxes need entries. Did wages change?"},
+   {id:"f4", ln:"deadline", label:"By what date must you file? ('asap', a specific date, or 'no fixed deadline')", pfx:"", type:"text", accept:["asap","as soon as possible","no fixed deadline","no deadline","promptly"], hint:"There is no statutory annual deadline for W-2c — the IRS expects this filed quickly."}
+  ],
+  sol:"<p><b>Box e (W-2c):</b> <code>123-45-6789</code> (the wrong SSN you originally reported)</p><p><b>Box a:</b> <code>123-45-9876</code> (correct SSN)</p><p><b>Wage boxes:</b> <code>Zero</code> — wages were right, leave those boxes blank on the W-2c.</p><p><b>Deadline:</b> <code>ASAP</code> — file as soon as you discover the error. Also give Riya a corrected copy promptly so she can amend her 1040 if needed.</p>"},
+
+ {id:"p4", tag:"Practice · W-2c", title:"Wages changed — cascade effects",
+  scn:"You filed Daniel's 2025 W-2 with $50,000 in Box 1, Box 3, and Box 5. You then realized you missed a $5,000 bonus. The correct figures are $55,000 in each wage box. Federal income tax of $7,000 was withheld and was correct. Issue a W-2c showing the changes.",
+  given:[
+   {k:"Tax year", v:"2025"},
+   {k:"Previously reported wages (Boxes 1, 3, 5)", v:"$50,000.00 each"},
+   {k:"Correct wages", v:"$55,000.00 each"},
+   {k:"Box 2 (FIT) was correct", v:"$7,000.00 (no change)"}
+  ],
+  fields:[
+   {id:"f1", ln:"Box 1 correct", label:"Box 1 — correct information", pfx:"$", type:"money", ans:55000, hint:"The new right amount."},
+   {id:"f2", ln:"Box 3 correct", label:"Box 3 — correct information", pfx:"$", type:"money", ans:55000, hint:"Under 2025 wage base of $176,100, so no cap issue."},
+   {id:"f3", ln:"Box 4 correct", label:"Box 4 — corrected SS tax", pfx:"$", type:"money", ans:3410, hint:"6.2% × corrected Box 3. Box 4 must be recomputed when Box 3 changes."},
+   {id:"f4", ln:"Box 5 correct", label:"Box 5 — correct information", pfx:"$", type:"money", ans:55000, hint:"No cap on Medicare."},
+   {id:"f5", ln:"Box 6 correct", label:"Box 6 — corrected Medicare tax", pfx:"$", type:"money", ans:797.50, hint:"1.45% × corrected Box 5 (under $200K so no Add'l Medicare)."},
+   {id:"f6", ln:"Box 2 entry", label:"Does Box 2 need an entry on this W-2c? (yes/no)", pfx:"", type:"text", accept:["no","n"], hint:"Only changed boxes need entries. Did Box 2 change?"}
+  ],
+  sol:"<p><b>Box 1:</b> <code>$55,000.00</code> &nbsp; <b>Box 3:</b> <code>$55,000.00</code> &nbsp; <b>Box 4:</b> 55,000 × 6.2% = <code>$3,410.00</code></p><p><b>Box 5:</b> <code>$55,000.00</code> &nbsp; <b>Box 6:</b> 55,000 × 1.45% = <code>$797.50</code></p><p><b>Box 2:</b> <code>No</code> — leave blank on the W-2c. Only changed boxes get entries.</p><p>Note: this 941-quarter underreport also requires a 941-X for the affected quarter. The W-2c fixes the annual statement; the 941-X fixes the quarterly liability and any additional FICA owed.</p>"},
+
+ {id:"p5", tag:"Practice · Box 12", title:"Pick the right Box 12 codes",
+  scn:"For Priya's W-2, identify the correct Box 12 codes for each item.",
+  given:[
+   {k:"Item A", v:"Pre-tax traditional 401(k) elective deferral of $8,000"},
+   {k:"Item B", v:"HSA contributions (employer + cafeteria plan) of $4,000"},
+   {k:"Item C", v:"Employer-sponsored health coverage total cost $14,500"},
+   {k:"Item D", v:"Roth 401(k) contribution of $3,000"}
+  ],
+  fields:[
+   {id:"f1", ln:"code", label:"Item A code (one letter)", pfx:"", type:"text", accept:["d"], hint:"Pre-tax traditional 401(k)."},
+   {id:"f2", ln:"code", label:"Item B code (one letter)", pfx:"", type:"text", accept:["w"], hint:"Health Savings Account."},
+   {id:"f3", ln:"code", label:"Item C code (two letters)", pfx:"", type:"text", accept:["dd"], hint:"Employer-sponsored health coverage cost — informational ACA reporting."},
+   {id:"f4", ln:"code", label:"Item D code (two letters)", pfx:"", type:"text", accept:["aa"], hint:"Roth 401(k)."},
+   {id:"f5", ln:"effect", label:"Which of these reduces Box 1? (list codes)", pfx:"", type:"text", accept:["d","d only","just d","code d"], hint:"Traditional pre-tax deferrals reduce Box 1. Roth and DD do not. HSA via cafeteria reduces Box 1 and FICA boxes."}
+  ],
+  sol:"<p><b>A:</b> Code <code>D</code> (traditional 401(k)) &nbsp; <b>B:</b> Code <code>W</code> (HSA) &nbsp; <b>C:</b> Code <code>DD</code> (health coverage cost — pure information) &nbsp; <b>D:</b> Code <code>AA</code> (Roth 401(k))</p><p><b>Box 1 effect:</b> Code <code>D</code> reduces Box 1 only. Code AA does NOT (Roth is after-tax). Code DD never reduces anything. Code W reduces Box 1 AND Boxes 3 and 5 (cafeteria plan pre-tax).</p>"},
+
+ {id:"p6", tag:"Practice · W-2 Boxes", title:"Dependent care benefits over the cap",
+  scn:"Sasha's employer provided $7,500 in dependent care assistance through a Section 129 plan. Sasha files as Single. Her base wages (no other pre-tax items) were $60,000.",
+  given:[
+   {k:"Gross wages", v:"$60,000.00"},
+   {k:"Dependent care benefits provided", v:"$7,500.00"},
+   {k:"Filing status", v:"Single"}
+  ],
+  fields:[
+   {id:"f1", ln:"Box 10", label:"Box 10 — Dependent care benefits", pfx:"$", type:"money", ans:7500, hint:"Box 10 shows the total provided, not the excludable portion."},
+   {id:"f2", ln:"taxable", label:"Taxable excess (above the $5,000 limit)", pfx:"$", type:"money", ans:2500, hint:"7,500 − 5,000."},
+   {id:"f3", ln:"Box 1", label:"Box 1 — Wages", pfx:"$", type:"money", ans:62500, hint:"Add the taxable excess to wages: 60,000 + 2,500."},
+   {id:"f4", ln:"Box 3", label:"Box 3 — Social Security wages", pfx:"$", type:"money", ans:62500, hint:"The excess flows into Box 3 too."},
+   {id:"f5", ln:"Box 5", label:"Box 5 — Medicare wages", pfx:"$", type:"money", ans:62500, hint:"And Box 5."}
+  ],
+  sol:"<p><b>Box 10:</b> <code>$7,500.00</code> (total benefit provided)</p><p><b>Taxable excess:</b> 7,500 − 5,000 = <code>$2,500.00</code> ($2,500 is the MFS limit; $5,000 is the regular limit)</p><p><b>Box 1, 3, 5:</b> 60,000 + 2,500 = <code>$62,500.00</code> each — the excess flows back into all three wage boxes.</p>"},
+
+ {id:"p7", tag:"Practice · Reconciliation", title:"Reconcile W-3 totals to 941 totals",
+  scn:"Crescent Co's 2025 quarterly 941 line 2 totals were $250,000, $260,000, $255,000, $265,000. Their W-2s for the year total $1,030,000 in Box 1 amounts. Check the reconciliation.",
+  given:[
+   {k:"Q1 941 line 2", v:"$250,000.00"},
+   {k:"Q2 941 line 2", v:"$260,000.00"},
+   {k:"Q3 941 line 2", v:"$255,000.00"},
+   {k:"Q4 941 line 2", v:"$265,000.00"},
+   {k:"W-2 Box 1 total (and W-3 Box 1)", v:"$1,030,000.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"sum", label:"Sum of 941 line 2 (all 4 quarters)", pfx:"$", type:"money", ans:1030000, hint:"Add the four quarters."},
+   {id:"f2", ln:"match", label:"Does W-3 Box 1 match the 941 sum? (yes/no)", pfx:"", type:"text", accept:["yes","y","match","matches"], hint:"Compare the two totals."},
+   {id:"f3", ln:"if-no", label:"If they didn't match, what form explains legitimate differences?", pfx:"", type:"text", accept:["schedule d","schedule d (form 941)","schedule d form 941","sched d"], hint:"Used for third-party sick pay timing and similar legitimate discrepancies."},
+   {id:"f4", ln:"prog", label:"What program flags mismatches between IRS and SSA data?", pfx:"", type:"text", accept:["cawr","combined annual wage reporting"], hint:"Three-letter acronym."}
+  ],
+  sol:"<p><b>941 sum:</b> 250,000 + 260,000 + 255,000 + 265,000 = <code>$1,030,000.00</code></p><p><b>W-3 Box 1 match:</b> <code>Yes</code> — perfectly reconciled.</p><p><b>Form to explain a legitimate difference:</b> <code>Schedule D (Form 941)</code>.</p><p><b>Mismatch program:</b> <code>CAWR</code> — Combined Annual Wage Reporting (IRS + SSA data share).</p>"},
+
+ {id:"p8", tag:"Practice · Special Cases", title:"Prior-year wage repayment — what changes?",
+  scn:"In April 2026, Tomas repaid $4,000 of wages that were paid to him in 2024 (a sign-on bonus he had to give back when he left within the clawback period). His 2024 W-2 originally showed $90,000 in Boxes 1, 3, 5. You need to issue a 2024 W-2c.",
+  given:[
+   {k:"Year wages were originally paid", v:"2024"},
+   {k:"Year repaid", v:"2026"},
+   {k:"Repayment amount", v:"$4,000.00"},
+   {k:"Originally reported (Boxes 1, 3, 5)", v:"$90,000.00 each"},
+   {k:"2024 SS wage base", v:"$168,600 (so Box 3 was already capped lower)"}
+  ],
+  fields:[
+   {id:"f1", ln:"Box 1", label:"Box 1 correct (after prior-year repayment)", pfx:"$", type:"money", ans:90000, hint:"Box 1 is generally NOT reduced for prior-year repayments. Employee uses 'claim of right' on their own return."},
+   {id:"f2", ln:"Box 3", label:"Box 3 correct — reduce by the repayment", pfx:"$", type:"money", ans:86000, hint:"90,000 − 4,000 (under 2024 cap of $168,600, so reduction flows through)."},
+   {id:"f3", ln:"Box 4", label:"Box 4 corrected (recompute)", pfx:"$", type:"money", ans:5332.00, hint:"6.2% × corrected Box 3."},
+   {id:"f4", ln:"Box 5", label:"Box 5 correct", pfx:"$", type:"money", ans:86000, hint:"Reduce by the repayment."},
+   {id:"f5", ln:"Box 6", label:"Box 6 corrected", pfx:"$", type:"money", ans:1247.00, hint:"1.45% × corrected Box 5."}
+  ],
+  sol:"<p><b>Box 1:</b> <code>$90,000.00</code> (unchanged — Box 1 is generally NOT reduced for prior-year repayments)</p><p><b>Box 3:</b> 90,000 − 4,000 = <code>$86,000.00</code></p><p><b>Box 4:</b> 86,000 × 6.2% = <code>$5,332.00</code></p><p><b>Box 5:</b> <code>$86,000.00</code> &nbsp; <b>Box 6:</b> 86,000 × 1.45% = <code>$1,247.00</code></p><p><b>Why Box 1 stays:</b> Tomas already paid 2024 income tax on the full $90,000. He recovers it through a 'claim of right' adjustment on his 2026 personal return (either an itemized deduction or a credit under IRC §1341), not through a W-2c that reduces Box 1.</p>"},
+
+ {id:"p9", tag:"Practice · Box 12", title:"Group-term life insurance over $50,000",
+  scn:"Patricia's employer provides $200,000 of group-term life insurance coverage. Using the IRS Table I rates, her age-based imputed annual cost for the coverage above $50,000 is $360. Her base salary is $75,000 with no other pre-tax items.",
+  given:[
+   {k:"Base salary", v:"$75,000.00"},
+   {k:"GTL coverage", v:"$200,000"},
+   {k:"Imputed cost over $50K (annual)", v:"$360.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"code", label:"Box 12 code for the imputed cost", pfx:"", type:"text", accept:["c"], hint:"Group-term life insurance over $50,000."},
+   {id:"f2", ln:"amount", label:"Box 12 amount for that code", pfx:"$", type:"money", ans:360, hint:"The imputed Table I cost for coverage above $50,000."},
+   {id:"f3", ln:"Box 1", label:"Box 1 — Wages", pfx:"$", type:"money", ans:75360, hint:"Imputed GTL cost is ALSO added to Box 1."},
+   {id:"f4", ln:"Box 3", label:"Box 3 — Social Security wages", pfx:"$", type:"money", ans:75360, hint:"AND Box 3."},
+   {id:"f5", ln:"Box 5", label:"Box 5 — Medicare wages", pfx:"$", type:"money", ans:75360, hint:"AND Box 5."}
+  ],
+  sol:"<p><b>Code:</b> <code>C</code> (group-term life insurance over $50,000)</p><p><b>Box 12 amount:</b> <code>$360.00</code></p><p><b>Boxes 1, 3, 5:</b> 75,000 + 360 = <code>$75,360.00</code> each — Code C is one of the codes that ALSO adds to all three wage boxes because the imputed cost is taxable for both income tax and FICA.</p>"}
+]
+};
+
+/* =========================================================
+   ENGINE
+   ========================================================= */
+const state = { rate:1, voiceOn:true, tab:"learn" };
+let voices=[], pendingTimer=null, keepAlive=null, currentUtter=null;
+function loadVoices(){ try{ voices = window.speechSynthesis ? speechSynthesis.getVoices() : []; }catch(e){ voices=[]; } }
+if(window.speechSynthesis){ speechSynthesis.onvoiceschanged = loadVoices; loadVoices(); }
+function pickVoice(){
+  if(!voices.length) loadVoices();
+  return voices.find(v=>/en[-_]US/i.test(v.lang) && /(samantha|jenny|aria|zira|natural|female)/i.test(v.name))
+      || voices.find(v=>/en[-_]US/i.test(v.lang))
+      || voices.find(v=>/^en/i.test(v.lang))
+      || voices[0] || null;
+}
+function stopSpeech(){
+  if(keepAlive){clearInterval(keepAlive);keepAlive=null;}
+  try{ if(window.speechSynthesis) speechSynthesis.cancel(); }catch(e){}
+  currentUtter=null;
+}
+function cancelNarration(){ stopSpeech(); if(pendingTimer){clearTimeout(pendingTimer);pendingTimer=null;} }
+function narrate(text, onend){
+  cancelNarration();
+  if(state.voiceOn && window.speechSynthesis){
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = state.rate; u.pitch = 1; const v = pickVoice(); if(v) u.voice = v;
+    u.onend = ()=>{ if(keepAlive){clearInterval(keepAlive);keepAlive=null;} if(onend) onend(); };
+    u.onerror = ()=>{ if(keepAlive){clearInterval(keepAlive);keepAlive=null;} };
+    currentUtter = u;
+    speechSynthesis.speak(u);
+    keepAlive = setInterval(()=>{
+      if(!speechSynthesis.speaking){clearInterval(keepAlive);keepAlive=null;return;}
+      try{ speechSynthesis.pause(); speechSynthesis.resume(); }catch(e){}
+    }, 11000);
+  } else {
+    const words = text.trim().split(/\s+/).length;
+    const wpm = 165 * state.rate;
+    const ms = Math.max(1100, (words/wpm)*60000);
+    pendingTimer = setTimeout(()=>{ if(onend) onend(); }, ms);
+  }
+}
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+const speedEl = document.getElementById('speed');
+const speedVal = document.getElementById('speedVal');
+function setSpeedFill(){ const pct = ((state.rate-0.5)/(1.75-0.5))*100; speedEl.style.setProperty('--fill', pct+'%'); }
+speedEl.addEventListener('input', e=>{ state.rate = parseFloat(e.target.value); speedVal.textContent = state.rate.toFixed(1)+'×'; setSpeedFill(); });
+setSpeedFill();
+document.getElementById('voiceToggle').addEventListener('change', e=>{ state.voiceOn = e.target.checked; if(!state.voiceOn) stopSpeech(); });
+document.getElementById('stopAll').addEventListener('click', ()=>{ cancelNarration(); learnPlaying=false; updateLearnBtn(); fcAuto=false; updateAutoBtn(); });
+
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    cancelNarration(); learnPlaying=false; updateLearnBtn(); fcAuto=false; updateAutoBtn();
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.view).classList.add('active');
+    state.tab = t.dataset.view;
+  });
+});
+
+const lessonHost = document.getElementById('lessonHost');
+const tocEl = document.getElementById('toc');
+DATA.lessons.forEach(L=>{
+  const id = 'sec-'+L.num;
+  const sec = document.createElement('div');
+  sec.className = 'lesson' + (L.cls?' '+L.cls:'');
+  sec.id = id;
+  let html = '<div class="lesson-tag"><span class="num">'+L.num+'</span>'+L.tag+'<span class="lvl">'+L.lvl+'</span></div><h2 class="lh">'+L.title+'</h2>';
+  L.paras.forEach(p=>{ html += '<p class="para">'+p+'</p>'; });
+  sec.innerHTML = html;
+  lessonHost.appendChild(sec);
+  const a = document.createElement('a');
+  a.href = '#'+id;
+  a.textContent = L.num+' · '+L.title.replace(/—.*$/,'').trim();
+  tocEl.appendChild(a);
+});
+
+let learnParas = [...document.querySelectorAll('#learn .para')];
+let learnIdx = -1, learnPlaying = false;
+const learnPlayBtn = document.getElementById('learnPlay');
+function clearLearnHL(){ learnParas.forEach(p=>p.classList.remove('reading')); }
+function updateLearnBtn(){ learnPlayBtn.innerHTML = learnPlaying ? '❚❚ Pause reading' : '▶ Read this module'; learnPlayBtn.classList.toggle('green', !learnPlaying); }
+function readLearnFrom(i){
+  cancelNarration(); clearLearnHL();
+  if(i<0 || i>=learnParas.length){ learnPlaying=false; learnIdx=-1; updateLearnBtn(); return; }
+  learnIdx = i; learnPlaying = true; updateLearnBtn();
+  const el = learnParas[i];
+  el.classList.add('reading');
+  el.scrollIntoView({behavior:'smooth', block:'center'});
+  narrate(el.textContent, ()=>{ if(learnPlaying) readLearnFrom(i+1); });
+}
+learnPlayBtn.addEventListener('click', ()=>{
+  if(learnPlaying){ learnPlaying=false; cancelNarration(); updateLearnBtn(); }
+  else { readLearnFrom(learnIdx<0?0:learnIdx); }
+});
+document.getElementById('learnRestart').addEventListener('click', ()=>readLearnFrom(0));
+learnParas.forEach((p,i)=>{ p.addEventListener('click', ()=>readLearnFrom(i)); });
+
+const allCards = DATA.cards.slice();
+let activeCat = "All";
+let deck = allCards.slice();
+let fcIdx = 0, fcFlipped = false, fcAuto = false;
+const fcEl = document.getElementById('fcEl');
+const fcFront = document.getElementById('fcFront');
+const fcBack = document.getElementById('fcBack');
+const fcCatF = document.getElementById('fcCatF');
+const fcCatB = document.getElementById('fcCatB');
+const fcCount = document.getElementById('fcCount');
+const fcBar = document.getElementById('fcBar');
+const fcModeEl = document.getElementById('fcMode');
+const fcAutoBtn = document.getElementById('fcAuto');
+const catFilter = document.getElementById('catFilter');
+
+const cats = ["All", ...Array.from(new Set(allCards.map(c=>c.c)))];
+cats.forEach(name=>{
+  const b = document.createElement('button');
+  b.className = 'chip' + (name===activeCat?' active':'');
+  b.textContent = name + (name==='All' ? ' · '+allCards.length : ' · '+allCards.filter(c=>c.c===name).length);
+  b.addEventListener('click', ()=>{
+    activeCat = name;
+    document.querySelectorAll('#catFilter .chip').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    deck = (name==='All') ? allCards.slice() : allCards.filter(c=>c.c===name);
+    fcIdx=0; fcFlipped=false; stopManual(); renderCard();
+  });
+  catFilter.appendChild(b);
+});
+
+function renderCard(){
+  if(!deck.length) return;
+  const card = deck[fcIdx];
+  fcFront.textContent = card.f;
+  fcBack.textContent = card.b;
+  fcCatF.textContent = card.c;
+  fcCatB.textContent = card.c;
+  fcEl.classList.toggle('flipped', fcFlipped);
+  fcCount.textContent = 'Card '+(fcIdx+1)+' / '+deck.length;
+  fcBar.style.width = ((fcIdx+1)/deck.length*100)+'%';
+  fcModeEl.textContent = fcAuto ? 'Auto-playing' : 'Manual';
+}
+function updateAutoBtn(){ fcAutoBtn.innerHTML = fcAuto ? '❚❚ Stop auto-play' : '▶ Auto-play deck'; fcModeEl.textContent = fcAuto ? 'Auto-playing' : 'Manual'; }
+function fcPlayFront(){
+  if(!fcAuto) return;
+  fcFlipped=false; renderCard();
+  narrate('Question. '+deck[fcIdx].f, ()=>{
+    if(!fcAuto) return;
+    fcFlipped=true; renderCard();
+    pendingTimer = setTimeout(()=>{
+      if(!fcAuto) return;
+      narrate('Answer. '+deck[fcIdx].b, ()=>{
+        if(!fcAuto) return;
+        pendingTimer = setTimeout(()=>{
+          if(!fcAuto) return;
+          fcIdx = (fcIdx+1) % deck.length;
+          fcPlayFront();
+        }, 700);
+      });
+    }, 550);
+  });
+}
+function stopManual(){ if(fcAuto){ fcAuto=false; cancelNarration(); updateAutoBtn(); } }
+fcEl.addEventListener('click', ()=>{ stopManual(); fcFlipped=!fcFlipped; renderCard(); });
+document.getElementById('fcFlip').addEventListener('click', ()=>{ stopManual(); fcFlipped=!fcFlipped; renderCard(); });
+document.getElementById('fcNext').addEventListener('click', ()=>{ stopManual(); fcIdx=(fcIdx+1)%deck.length; fcFlipped=false; renderCard(); });
+document.getElementById('fcPrev').addEventListener('click', ()=>{ stopManual(); fcIdx=(fcIdx-1+deck.length)%deck.length; fcFlipped=false; renderCard(); });
+document.getElementById('fcShuffle').addEventListener('click', ()=>{ stopManual(); deck = shuffle(deck); fcIdx=0; fcFlipped=false; renderCard(); });
+document.getElementById('fcRandom').addEventListener('click', ()=>{ stopManual(); fcIdx = Math.floor(Math.random()*deck.length); fcFlipped=false; renderCard(); });
+fcAutoBtn.addEventListener('click', ()=>{ fcAuto=!fcAuto; if(fcAuto){ updateAutoBtn(); fcPlayFront(); } else { cancelNarration(); updateAutoBtn(); } });
+renderCard();
+
+const quizPicker = document.getElementById('quizPicker');
+const quizHost = document.getElementById('quizHost');
+let activeQuiz = DATA.quizzes[0].id;
+
+DATA.quizzes.forEach(qz=>{
+  const b = document.createElement('button');
+  b.className = 'pick' + (qz.id===activeQuiz?' active':'');
+  b.dataset.id = qz.id;
+  const total = qz.id==='qmix' ? DATA.quizzes.filter(q=>q.id!=='qmix').reduce((s,q)=>s+q.questions.length,0) : qz.questions.length;
+  b.innerHTML = '<div class="pk-tag">'+qz.tag+'</div><div class="pk-name">'+qz.name+'</div><div class="pk-desc">'+qz.desc+' · '+total+' in pool · '+qz.sample+' per session</div>';
+  b.addEventListener('click', ()=>{ activeQuiz=qz.id; document.querySelectorAll('#quizPicker .pick').forEach(x=>x.classList.toggle('active',x.dataset.id===qz.id)); renderQuiz(); });
+  quizPicker.appendChild(b);
+});
+
+function renderQuiz(){
+  const qz = DATA.quizzes.find(q=>q.id===activeQuiz);
+  let pool = qz.id==='qmix' ? DATA.quizzes.filter(q=>q.id!=='qmix').flatMap(q=>q.questions) : qz.questions;
+  const N = Math.min(qz.sample || 10, pool.length);
+  const picked = shuffle(pool).slice(0, N).map(q=>{
+    const idxs = shuffle(q.o.map((_,i)=>i));
+    return { q:q.q, e:q.e, _opts: idxs.map(i=>q.o[i]), _ans: idxs.indexOf(q.a) };
+  });
+
+  let correct=0, answered=0;
+  quizHost.innerHTML = '';
+  const score = document.createElement('div');
+  score.className='scorebar';
+  score.innerHTML = '<span class="lbl">'+qz.name+' · Score</span><span class="val"><span class="amber" id="scNum">0</span> / '+N+'</span><button class="btn amber sm reroll" id="rerollBtn">🎲 New random quiz</button>';
+  quizHost.appendChild(score);
+  document.getElementById('rerollBtn').addEventListener('click', renderQuiz);
+
+  picked.forEach((Q,qi)=>{
+    const card=document.createElement('div'); card.className='q';
+    let h='<div class="q-num">Question '+(qi+1)+' of '+N+'</div><div class="q-text">'+Q.q+'</div><div class="opts">';
+    Q._opts.forEach((opt,oi)=>{ h += '<button class="opt" data-q="'+qi+'" data-o="'+oi+'"><span class="key">'+String.fromCharCode(65+oi)+'</span><span>'+opt+'</span></button>'; });
+    h += '</div><div class="explain" id="exp'+qi+'"></div>';
+    card.innerHTML=h;
+    quizHost.appendChild(card);
+    card.querySelectorAll('.opt').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const opts = card.querySelectorAll('.opt');
+        if([...opts].some(o=>o.classList.contains('locked'))) return;
+        const chosen = parseInt(btn.dataset.o);
+        answered++;
+        opts.forEach((o,idx)=>{ o.classList.add('locked'); if(idx===Q._ans) o.classList.add('correct'); else if(idx===chosen) o.classList.add('wrong'); else o.classList.add('dim'); });
+        const exp = card.querySelector('#exp'+qi);
+        if(chosen===Q._ans){ correct++; exp.innerHTML='<b>Correct.</b> '+Q.e; }
+        else { exp.innerHTML='<b>Not quite.</b> '+Q.e; }
+        exp.classList.add('show');
+        document.getElementById('scNum').textContent = correct;
+      });
+    });
+  });
+}
+renderQuiz();
+
+const pracPicker = document.getElementById('pracPicker');
+const pracHost = document.getElementById('pracHost');
+let activePrac = DATA.practice[0].id;
+
+function buildPracPicker(){
+  pracPicker.innerHTML='';
+  DATA.practice.forEach(P=>{
+    const b=document.createElement('button');
+    b.className='pick'+(P.id===activePrac?' active':'');
+    b.dataset.id=P.id;
+    b.innerHTML='<div class="pk-tag">'+P.tag+'</div><div class="pk-name">'+P.title+'</div>';
+    b.addEventListener('click', ()=>{ activePrac=P.id; buildPracPicker(); renderPrac(); });
+    pracPicker.appendChild(b);
+  });
+}
+buildPracPicker();
+document.getElementById('pracRandom').addEventListener('click', ()=>{
+  const others = DATA.practice.filter(p=>p.id!==activePrac);
+  activePrac = others[Math.floor(Math.random()*others.length)].id;
+  buildPracPicker(); renderPrac();
+});
+
+function normMoney(s){ return parseFloat(String(s).replace(/[^0-9.\-]/g,'')); }
+function normText(s){ return String(s).toLowerCase().replace(/[^a-z0-9 \-]/g,'').trim(); }
+function renderPrac(){
+  const P = DATA.practice.find(x=>x.id===activePrac);
+  let h='<div class="scenario"><div class="scn-tag">'+P.tag+'</div><div class="scn-title">'+P.title+'</div><div class="scn-text">'+P.scn+'</div>';
+  h+='<div class="given"><div class="given-cap">Given — sample data</div>';
+  P.given.forEach(g=>{ h+='<div class="grow"><span class="gk">'+g.k+'</span><span class="gv">'+g.v+'</span></div>'; });
+  h+='</div></div>';
+  P.fields.forEach(f=>{
+    h+='<div class="field" id="fld-'+f.id+'"><div class="field-top"><div class="field-label">'+(f.ln?'<span class="ln">'+f.ln+'</span>':'')+f.label+'</div><span class="mark" id="mk-'+f.id+'"></span></div>';
+    h+='<div class="inwrap">'+(f.pfx?'<span class="pfx">'+f.pfx+'</span>':'')+'<input type="text" id="in-'+f.id+'" placeholder="'+(f.type==='text'?'type your answer':'enter amount')+'" autocomplete="off"></div>';
+    h+='<button class="hint-btn" data-h="'+f.id+'">Need a hint?</button><div class="hint" id="hint-'+f.id+'">'+f.hint+'</div></div>';
+  });
+  h+='<div class="prac-actions"><button class="btn green" id="pCheck">✓ Check my answers</button><button class="btn ghost" id="pReset">⟲ Clear</button><button class="btn red" id="pGiveUp">Give up &amp; show answers</button></div>';
+  h+='<div class="solution" id="pSol"><h4>Worked solution</h4>'+P.sol+'</div>';
+  pracHost.innerHTML=h;
+
+  pracHost.querySelectorAll('.hint-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{ const hb=document.getElementById('hint-'+btn.dataset.h); hb.classList.toggle('show'); btn.textContent = hb.classList.contains('show')?'Hide hint':'Need a hint?'; });
+  });
+  document.getElementById('pCheck').addEventListener('click', ()=>{
+    P.fields.forEach(f=>{
+      const inp=document.getElementById('in-'+f.id);
+      const fld=document.getElementById('fld-'+f.id);
+      const mk=document.getElementById('mk-'+f.id);
+      const val=inp.value.trim();
+      if(val===''){ fld.classList.remove('ok','no'); mk.textContent=''; mk.className='mark'; return; }
+      let ok=false;
+      if(f.type==='text'){ const nv=normText(val); ok = f.accept.some(a=>nv.includes(normText(a))); }
+      else { const n=normMoney(val); ok = !isNaN(n) && Math.abs(n-f.ans)<=0.5; }
+      fld.classList.toggle('ok',ok); fld.classList.toggle('no',!ok);
+      mk.textContent = ok?'✓ correct':'✗ try again'; mk.className='mark '+(ok?'ok':'no');
+    });
+  });
+  document.getElementById('pReset').addEventListener('click', ()=>renderPrac());
+  document.getElementById('pGiveUp').addEventListener('click', ()=>{
+    P.fields.forEach(f=>{
+      const inp=document.getElementById('in-'+f.id);
+      const fld=document.getElementById('fld-'+f.id);
+      const mk=document.getElementById('mk-'+f.id);
+      if(f.type==='text'){ inp.value = f.accept[0]; }
+      else { inp.value = f.ans.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+      fld.classList.remove('no'); fld.classList.add('ok');
+      mk.textContent='answer'; mk.className='mark ok';
+    });
+    document.getElementById('pSol').classList.add('show');
+    document.getElementById('pSol').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+}
+renderPrac();
+</script>
+</body>
+</html>

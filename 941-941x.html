@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payroll Tax Trainer · EA Exam Prep — Form 941 &amp; 941-X</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:#08111f;
+    --bg-2:#111827;
+    --card:rgba(255,255,255,.14);
+    --card-strong:rgba(255,255,255,.22);
+    --card-solid:rgba(8,17,31,.72);
+    --ink:#ffffff;
+    --ink-soft:rgba(255,255,255,.76);
+    --ink-faint:rgba(255,255,255,.52);
+    --blue:#4f8cff;
+    --purple:#9b5cff;
+    --pink:#ff5fa2;
+    --green:#38d996;
+    --green-2:#57efad;
+    --green-wash:rgba(56,217,150,.16);
+    --amber:#ffd166;
+    --hl:rgba(255,209,102,.22);
+    --hl-edge:rgba(255,209,102,.92);
+    --red:#ff7a68;
+    --red-wash:rgba(255,122,104,.16);
+    --line:rgba(255,255,255,.22);
+    --line-soft:rgba(255,255,255,.14);
+    --shadow:0 24px 70px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;padding:0}
+  body{font-family:Inter,"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 12% 18%,rgba(79,140,255,.52),transparent 34%),radial-gradient(circle at 82% 12%,rgba(255,95,162,.42),transparent 30%),radial-gradient(circle at 70% 82%,rgba(56,217,150,.34),transparent 34%),linear-gradient(135deg,#07111f 0%,#111827 44%,#261447 100%);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 85%);z-index:-1}
+  body::after{content:"";position:fixed;width:420px;height:420px;right:-140px;top:18%;border-radius:50%;background:radial-gradient(circle,rgba(255,209,102,.28),transparent 68%);filter:blur(2px);pointer-events:none;z-index:-1}
+  .sparkle{position:fixed;border-radius:999px;background:rgba(255,255,255,.72);filter:blur(.2px);animation:sparkle 4s ease-in-out infinite;pointer-events:none;z-index:0}.sparkle.one{width:7px;height:7px;top:18%;left:5%}.sparkle.two{width:5px;height:5px;top:36%;right:12%;animation-delay:1.1s}.sparkle.three{width:9px;height:9px;bottom:18%;left:44%;animation-delay:2s}@keyframes sparkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:.9;transform:scale(1.2)}}
+  .wrap{position:relative;max-width:1180px;margin:0 auto;padding:0 20px 80px;z-index:1}
+  header.top{position:relative;padding:46px 0 26px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;margin-bottom:14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);font-weight:750}.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(56,217,150,.7);animation:pulse 1.8s infinite}@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(56,217,150,0)}100%{box-shadow:0 0 0 0 rgba(56,217,150,0)}}
+  h1.title{font-weight:900;font-size:clamp(46px,8vw,88px);line-height:.92;margin:0 0 16px;letter-spacing:-.08em;max-width:860px;background:linear-gradient(90deg,#fff 0%,#b9d3ff 32%,#ffd6e8 64%,#d8fff0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}h1.title em{font-style:normal;color:transparent}.sub{color:var(--ink-soft);font-size:clamp(17px,2vw,22px);line-height:1.55;max-width:760px}.rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:26px 0 0}
+  .controls{position:sticky;top:0;z-index:40;background:rgba(8,17,31,.74);backdrop-filter:blur(18px);border-bottom:1px solid var(--line-soft);margin:0;padding:10px 0}.controls-inner{max-width:1180px;margin:0 auto;display:flex;gap:14px 22px;align-items:center;flex-wrap:wrap;padding:0 20px}.ctl-group{display:flex;align-items:center;gap:9px}.ctl-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:800}.toggle{appearance:none;width:48px;height:26px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid var(--line);position:relative;cursor:pointer;transition:.2s;flex:none}.toggle:checked{background:linear-gradient(135deg,var(--blue),var(--pink))}.toggle::after{content:"";position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 8px rgba(0,0,0,.35)}.toggle:checked::after{transform:translateX(21px)}input[type=range]{-webkit-appearance:none;appearance:none;height:5px;border-radius:5px;width:150px;background:linear-gradient(90deg,var(--green) var(--fill,33%),rgba(255,255,255,.18) var(--fill,33%));cursor:pointer}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--green);box-shadow:0 1px 8px rgba(0,0,0,.4);cursor:pointer}input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--green);cursor:pointer}.speed-val{font-weight:800;font-size:13px;min-width:34px;color:#fff}
+  nav.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;padding:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);width:max-content;max-width:100%}.tab{font-weight:800;font-size:14px;border:0;background:transparent;color:var(--ink-soft);padding:10px 16px;border-radius:999px;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:8px}.tab .ico{width:7px;height:7px;border-radius:50%;background:var(--ink-faint);transition:.15s}.tab:hover{color:#fff;background:rgba(255,255,255,.14)}.tab.active{background:#fff;color:#101828}.tab.active .ico{background:var(--pink)}.view{display:none;animation:fade .35s ease}.view.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .lesson,.q,.scenario,.field,.fc-face,.pick,.study-glass{background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(20px)}.lesson{padding:26px 28px 20px;margin-bottom:20px;position:relative;overflow:hidden;transition:.22s}.lesson:hover{background:var(--card-strong);border-color:rgba(255,255,255,.36);transform:translateY(-2px)}.lesson::before{content:"";position:absolute;right:-70px;bottom:-90px;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle,rgba(79,140,255,.55),transparent 64%);opacity:.75}.lesson.corr::before{background:radial-gradient(circle,rgba(255,95,162,.58),transparent 64%)}.lesson.found::before{background:radial-gradient(circle,rgba(56,217,150,.55),transparent 64%)}.lesson>*{position:relative;z-index:1}.lesson-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}.lesson.corr .lesson-tag{color:var(--pink)}.lesson.found .lesson-tag{color:var(--green)}.lesson-tag .num{background:rgba(255,255,255,.14);padding:3px 9px;border-radius:999px}.lesson-tag .lvl{margin-left:auto;color:var(--ink-faint);background:rgba(255,255,255,.08);padding:2px 8px;border-radius:20px;border:1px solid var(--line-soft);font-weight:700}h2.lh{font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;margin:4px 0 14px;line-height:1.1}.para{margin:0 0 4px;padding:8px 10px;border-radius:12px;cursor:pointer;transition:background .15s;position:relative;color:var(--ink-soft)}.para:hover{background:rgba(255,255,255,.1);color:#fff}.para.reading{background:var(--hl);box-shadow:inset 4px 0 0 var(--hl-edge);color:#fff}.read-hint{font-size:13px;color:var(--ink-faint);font-style:italic;margin:6px 0 18px;display:flex;align-items:center;gap:7px}.toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.toc a,.chip{font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);background:rgba(255,255,255,.08);padding:7px 11px;border-radius:999px;color:var(--ink-soft);text-decoration:none;transition:.15s;font-weight:800}.toc a:hover,.chip:hover{background:rgba(255,255,255,.14);color:#fff}.chip{cursor:pointer}.chip.active{background:#fff;color:#101828;border-color:#fff}
+  .playbar,.fc-controls,.prac-actions{display:flex;align-items:center;gap:12px;margin:0 0 20px;flex-wrap:wrap}.btn{font-weight:850;font-size:14px;cursor:pointer;border-radius:16px;padding:12px 18px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.95);color:#111827;transition:.22s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 18px 45px rgba(0,0,0,.12)}.btn:hover{transform:translateY(-3px)}.btn:active{transform:translateY(0)}.btn.green{background:linear-gradient(135deg,var(--green),#8fffd0);border-color:transparent;color:#07111f}.btn.amber{background:linear-gradient(135deg,var(--amber),#fff0b8);border-color:transparent;color:#111827}.btn.ghost{background:rgba(255,255,255,.08);color:#fff;border-color:var(--line);backdrop-filter:blur(16px);box-shadow:none}.btn.ghost:hover{background:rgba(255,255,255,.14)}.btn.sm{padding:8px 13px;font-size:13px}.btn.red{background:linear-gradient(135deg,var(--red),var(--pink));border-color:transparent;color:#fff}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+  .fc-stage{perspective:1600px;margin:8px auto 18px;max-width:620px}.fc{position:relative;width:100%;min-height:300px;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,.1,.2,1);cursor:pointer}.fc.flipped{transform:rotateY(180deg)}.fc-face{position:absolute;inset:0;backface-visibility:hidden;padding:34px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden}.fc-face::before{content:"";position:absolute;width:220px;height:220px;right:-70px;bottom:-90px;border-radius:50%;background:radial-gradient(circle,rgba(56,217,150,.58),transparent 64%)}.fc-face.back{transform:rotateY(180deg);background:linear-gradient(135deg,rgba(79,140,255,.28),rgba(155,92,255,.22)),rgba(255,255,255,.14)}.fc-face.back::before{background:radial-gradient(circle,rgba(255,95,162,.7),transparent 64%)}.fc-cat{position:absolute;top:18px;left:22px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);font-weight:800}.fc-side{font-size:11px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:14px;color:var(--green);font-weight:800}.fc-face.back .fc-side{color:var(--amber)}.fc-q{position:relative;z-index:1;font-size:clamp(22px,3vw,32px);font-weight:850;line-height:1.22;letter-spacing:-.035em}.fc-face.back .fc-q{color:#fff;font-size:18px;font-weight:650;line-height:1.55;letter-spacing:0}.fc-meta{display:flex;justify-content:space-between;align-items:center;max-width:620px;margin:0 auto 12px;font-size:12px;color:var(--ink-soft);font-weight:800}.progress{height:7px;background:rgba(255,255,255,.14);border-radius:999px;max-width:620px;margin:0 auto 14px;overflow:hidden}.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--pink),var(--green));border-radius:999px;transition:width .3s}.deck-filter{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin:0 auto 16px;max-width:860px}
+  .picker{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:22px}.pick{text-align:left;cursor:pointer;padding:18px 20px;transition:.22s;color:#fff}.pick:hover{transform:translateY(-5px);background:var(--card-strong);border-color:rgba(255,255,255,.38)}.pick.active{border-color:rgba(255,255,255,.6);background:linear-gradient(135deg,rgba(79,140,255,.28),rgba(255,95,162,.16)),var(--card)}.pick .pk-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800}.pick .pk-name{font-size:20px;font-weight:900;margin-top:3px;letter-spacing:-.04em}.pick .pk-desc{font-size:13px;color:var(--ink-soft);margin-top:2px}.scorebar{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.12);border:1px solid var(--line);color:#fff;border-radius:24px;padding:14px 18px;margin-bottom:18px;gap:14px;flex-wrap:wrap;backdrop-filter:blur(18px)}.scorebar .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:800}.scorebar .val{font-size:28px;font-weight:950;letter-spacing:-.05em}.scorebar .val .amber{color:var(--amber)}.reroll{margin-left:auto}.q{padding:22px 24px;margin-bottom:16px}.q-num{font-size:11px;letter-spacing:.18em;color:var(--ink-faint);text-transform:uppercase;font-weight:800}.q-text{font-size:21px;font-weight:850;margin:7px 0 15px;line-height:1.35;letter-spacing:-.035em}.opts{display:flex;flex-direction:column;gap:10px}.opt{text-align:left;border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:16px;padding:13px 15px;cursor:pointer;font-size:14.5px;transition:.13s;display:flex;align-items:center;gap:12px;color:#fff}.opt .key{font-weight:900;width:28px;height:28px;border-radius:10px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:12px;flex:none}.opt:hover:not(.locked){border-color:rgba(255,255,255,.42);background:rgba(255,255,255,.14);transform:translateX(3px)}.opt.correct{border-color:var(--green-2);background:var(--green-wash)}.opt.correct .key{background:var(--green);color:#07111f}.opt.wrong{border-color:var(--red);background:var(--red-wash)}.opt.wrong .key{background:var(--red);color:#fff}.opt.locked{cursor:default}.opt.dim{opacity:.5}.explain{margin-top:13px;padding:13px 15px;border-radius:16px;background:rgba(255,255,255,.1);font-size:14px;color:var(--ink-soft);display:none;border-left:3px solid var(--green)}.explain.show{display:block;animation:fade .3s}.explain b{color:#fff}
+  .scenario{padding:24px 26px;margin-bottom:18px}.scn-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:800}.scn-title{font-size:26px;font-weight:900;letter-spacing:-.045em;margin:3px 0 8px}.scn-text{font-size:15px;color:var(--ink-soft);margin-bottom:16px}.given{border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:8px;background:rgba(255,255,255,.08)}.given .grow{display:flex;justify-content:space-between;gap:14px;padding:10px 15px;border-bottom:1px solid var(--line-soft);font-size:14px}.given .grow:last-child{border-bottom:none}.given .gk{color:var(--ink-soft)}.given .gv{font-weight:850;text-align:right}.given-cap{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);padding:9px 15px 2px;font-weight:800}.field{margin:14px 0;padding:16px 18px}.field-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}.field-label{font-weight:850;font-size:15px}.field-label .ln{font-size:11px;color:#07111f;background:var(--green);padding:2px 8px;border-radius:999px;margin-right:7px;font-weight:900}.inwrap{display:flex;align-items:center;gap:6px;margin-top:10px}.pfx{color:var(--ink-soft);font-size:15px}.field input{font-size:15px;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.1);color:#fff;width:220px;transition:.15s}.field input::placeholder{color:rgba(255,255,255,.42)}.field input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(56,217,150,.16)}.field.ok input{border-color:var(--green-2);background:var(--green-wash)}.field.no input{border-color:var(--red);background:var(--red-wash)}.mark{font-weight:900;font-size:14px}.mark.ok{color:var(--green-2)}.mark.no{color:var(--red)}.hint{margin-top:10px;font-size:13.5px;color:var(--ink-soft);background:rgba(255,255,255,.1);border-radius:14px;padding:10px 13px;display:none;border-left:3px solid var(--amber)}.hint.show{display:block;animation:fade .25s}.hint-btn{background:none;border:none;color:var(--green);font-weight:850;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:4px;padding:8px 0 0}.solution{margin-top:16px;padding:18px 20px;border-radius:22px;background:var(--green-wash);border:1px solid rgba(56,217,150,.32);display:none}.solution.show{display:block;animation:fade .3s}.solution h4{margin:0 0 7px;font-size:20px;color:#fff}.solution p{margin:0 0 7px;font-size:14px;color:var(--ink-soft)}.solution code{background:rgba(255,255,255,.14);padding:2px 7px;border-radius:8px;font-size:13px;color:#fff}
+  footer{margin-top:46px;padding-top:20px;border-top:1px solid var(--line-soft);text-align:center}.disc{font-size:13px;color:var(--ink-faint);line-height:1.6}.disc b{color:#fff}
+  @media(max-width:880px){nav.tabs{border-radius:24px;width:100%}.tab{flex:1;justify-content:center}.lesson{padding:22px 20px}.picker{grid-template-columns:1fr}.controls-inner{align-items:flex-start}.ctl-group[style]{margin-left:0!important}}
+  @media(max-width:560px){.wrap{padding:0 14px 70px}.lesson{border-radius:24px;padding:20px 16px}.fc-face{padding:30px 20px}.field input{width:160px}.scorebar .reroll{margin-left:0}.given .grow{flex-direction:column;gap:2px}.given .gv{text-align:left}}
+
+
+  .site-nav{position:relative;z-index:45;max-width:1180px;margin:18px auto 0;padding:0 20px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .site-brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em;color:#fff;text-decoration:none}
+  .site-brand .brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--pink));box-shadow:0 12px 30px rgba(79,140,255,.34)}
+  .site-links{display:flex;align-items:center;gap:8px;padding:7px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);flex-wrap:wrap}
+  .site-links a{padding:8px 12px;border-radius:999px;color:var(--ink-soft);font-size:13px;text-decoration:none;font-weight:750}
+  .site-links a:hover{color:#fff;background:rgba(255,255,255,.14)}
+  @media(max-width:720px){.site-nav{align-items:flex-start;flex-direction:column}.site-links{width:100%;border-radius:22px}.site-links a{flex:1;text-align:center}}
+</style>
+</head>
+<body>
+<div class="sparkle one"></div>
+<div class="sparkle two"></div>
+<div class="sparkle three"></div>
+<nav class="site-nav" aria-label="Module navigation">
+  <a class="site-brand" href="index.html"><span class="brand-mark">✓</span><span>Payroll Tax Trainer</span></a>
+  <div class="site-links">
+    <a href="index.html">Home</a>
+    <a href="941-941x.html">941 &amp; 941-X</a>
+    <a href="w2-w2c.html">W-2 &amp; W-2c</a>
+    <a href="940.html">940</a>
+  </div>
+</nav>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="ctl-group"><span class="ctl-label">Read aloud</span><input type="checkbox" class="toggle" id="voiceToggle" checked></div>
+    <div class="ctl-group"><span class="ctl-label">Speed</span><input type="range" id="speed" min="0.5" max="1.75" step="0.05" value="1"><span class="speed-val" id="speedVal">1.0×</span></div>
+    <div class="ctl-group" style="margin-left:auto"><button class="btn ghost sm" id="stopAll">■ Stop audio</button></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">EA Exam Prep · Employment Taxes · Module 01</div>
+    <h1 class="title">Form 941 <span style="color:var(--ink-faint);font-weight:400">&amp;</span> <em>941-X</em></h1>
+    <p class="sub">A full walk-through of federal employment taxes built for the Enrolled Agent exam — worker classification, withholding methods, deposit rules, the Trust Fund Recovery Penalty, and the full mechanics of filing and correcting Form 941.</p>
+    <div class="rule"></div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-view="learn"><span class="ico"></span>Learn</button>
+    <button class="tab" data-view="cards"><span class="ico"></span>Flashcards</button>
+    <button class="tab" data-view="quiz"><span class="ico"></span>Quiz</button>
+    <button class="tab" data-view="practice"><span class="ico"></span>Practice</button>
+  </nav>
+
+  <section class="view active" id="learn">
+    <div class="playbar"><button class="btn green" id="learnPlay">▶ Read this module</button><button class="btn ghost sm" id="learnRestart">⟲ From the top</button></div>
+    <div class="read-hint">✦ Tip: click any paragraph to jump the narrator there. It stops what it was reading and picks up from where you clicked.</div>
+    <div class="toc" id="toc"></div>
+    <div id="lessonHost"></div>
+  </section>
+
+  <section class="view" id="cards">
+    <div class="deck-filter" id="catFilter"></div>
+    <div class="fc-meta"><span id="fcCount">Card 1 / 1</span><span id="fcMode">Manual</span></div>
+    <div class="progress"><i id="fcBar" style="width:4%"></i></div>
+    <div class="fc-stage"><div class="fc" id="fcEl"><div class="fc-face front"><div class="fc-cat" id="fcCatF"></div><div class="fc-side">Question · tap to flip</div><div class="fc-q" id="fcFront"></div></div><div class="fc-face back"><div class="fc-cat" id="fcCatB"></div><div class="fc-side">Answer</div><div class="fc-q" id="fcBack"></div></div></div></div>
+    <div class="fc-controls"><button class="btn ghost sm" id="fcPrev">‹ Prev</button><button class="btn sm" id="fcFlip">⟳ Flip</button><button class="btn ghost sm" id="fcNext">Next ›</button><button class="btn green sm" id="fcAuto">▶ Auto-play deck</button><button class="btn ghost sm" id="fcShuffle">⤮ Shuffle</button><button class="btn amber sm" id="fcRandom">🎲 Random</button></div>
+  </section>
+
+  <section class="view" id="quiz"><div class="picker" id="quizPicker"></div><div id="quizHost"></div></section>
+
+  <section class="view" id="practice">
+    <div class="picker" id="pracPicker"></div>
+    <div class="playbar" style="margin-top:-6px"><button class="btn amber sm" id="pracRandom">🎲 Pick a random scenario</button></div>
+    <div id="pracHost"></div>
+  </section>
+
+  <footer><p class="disc"><b>Learning material — not tax advice.</b> Built with current figures (2026 Social Security wage base $184,500; 2025 $176,100; supplemental wage flat rate 22% under $1M / 37% above; backup withholding 24%). Tax law changes — verify against current IRS instructions for Form 941, 941-X, Publications 15 / 15-A / 15-T before filing or sitting the EA exam.</p></footer>
+</div>
+
+<script>
+const DATA = {
+lessons:[
+{tag:"Foundations", num:"01", lvl:"Beginner", cls:"found", title:"Employment taxes — the landscape", paras:[
+ "Employment taxes are the federal taxes connected to paying wages. Three sit at the center. The federal income tax you withhold from each paycheck. The Social Security and Medicare taxes that together make up FICA. And the federal unemployment tax called FUTA. FICA is split between employee and employer. FUTA is paid only by the employer. Income tax withholding comes out of the employee's pay and is held in trust for the IRS.",
+ "Anyone who pays wages to an employee is an employer for federal tax purposes. Step one is getting an Employer Identification Number — the EIN — your federal payroll account number. You apply with Form SS-4 or online, and you use the same EIN on every employment tax return.",
+ "Three returns drive the year. Form 941, the Employer's Quarterly Federal Tax Return, reports wages, withheld income tax, and FICA every three months. Form 940, the Employer's Annual Federal Unemployment (FUTA) Tax Return, settles up unemployment tax once a year. Form W-2 with its transmittal Form W-3 reports each employee's annual wages and withholding to the SSA and to the employee.",
+ "A few employers file differently. Very small employers whom the IRS notifies in writing file Form 944 annually instead of four 941s. Agricultural employers file Form 943. Employers withholding on nonpayroll items — gambling winnings, pensions, backup withholding — file Form 945. Unless the IRS tells you otherwise, you file the 941.",
+ "The most important concept to learn early is the trust fund. The income tax you withhold from an employee's paycheck, plus the employee's share of FICA, are not your money. You hold them in trust for the federal government and must deposit them on a schedule. Failing to pay over those trust fund amounts can trigger personal liability under Internal Revenue Code Section 6672 — even if your business is a corporation.",
+ "Payroll tax compliance follows a clear rhythm: deposit, file, reconcile. Deposit through EFTPS as wages are paid. File the return at the end of the quarter or year. Once a year, reconcile the four 941s to your W-2s and W-3. Getting all three pieces lined up is the whole job."
+]},
+
+{tag:"Section", num:"02", lvl:"Intermediate", cls:"", title:"Worker classification — the gateway decision", paras:[
+ "The biggest decision in payroll is classifying a worker as an employee or an independent contractor. Employees get a W-2; the employer withholds income tax, withholds and matches FICA, pays FUTA, and reports on Form 941. Independent contractors get Form 1099-NEC if paid $600 or more, pay their own self-employment tax on Schedule SE, and never appear on a 941. The cost difference per worker is large, so misclassification draws IRS attention.",
+ "The default test is the common law test, which the IRS organizes into three categories of facts. Behavioral control asks who decides how the work is done — does the company train, instruct, evaluate methods? Financial control asks who bears the economic risk — does the worker invest in tools, have unreimbursed expenses, profit or lose? The type of relationship asks about written contracts, benefits, permanency, and whether the work is part of the regular business.",
+ "No single factor decides the issue. The IRS weighs the whole picture. A worker can look like a contractor on one factor and an employee on another. When the answer is unclear, either side can file Form SS-8, Determination of Worker Status, and ask the IRS to rule.",
+ "The Code defines four kinds of statutory employees who are treated as employees for FICA purposes even if they would otherwise be contractors. They are: certain agent or commission drivers delivering food, beverages other than milk, laundry, or dry cleaning; full-time life insurance salespersons; home workers performing work on materials or goods supplied by the employer; and traveling or city salespersons working full-time on behalf of one principal. The statutory employee box on the W-2 gets checked.",
+ "Three groups go the other direction as statutory non-employees and are treated as self-employed regardless of common law facts: licensed real estate agents, direct sellers, and certain companion sitters. They get a 1099-NEC, never a W-2.",
+ "Section 530 of the Revenue Act of 1978 provides a safe harbor for employers who treated workers as contractors. To qualify, the employer must show three things — a reasonable basis (a court decision, prior IRS audit, or long-standing industry practice), substantive consistency (same treatment for all similar workers), and reporting consistency (1099s actually filed). If all three are met, the IRS cannot reclassify even if the workers are common-law employees.",
+ "The Voluntary Classification Settlement Program (VCSP) lets employers reclassify workers as employees prospectively. Pay just over one percent of one year's wages, agree to treat the workers as employees going forward, and the IRS does not audit prior years on classification.",
+ "A worker misclassified as a contractor can file Form 8919, Uncollected Social Security and Medicare Tax on Wages, with their own 1040. This lets them pay only the employee share of FICA (7.65%), not the full self-employment tax (15.3%). Form 8919 typically pairs with a favorable SS-8 determination."
+]},
+
+{tag:"Section", num:"03", lvl:"Intermediate", cls:"", title:"Wages, Form W-4, and withholding methods", paras:[
+ "Wages for employment tax purposes are essentially anything of value the employee receives for services, with statutory exceptions. Cash pay, salary, commissions, bonuses, taxable fringe benefits, group-term life insurance imputed income over $50,000, and most non-cash compensation count. Some items are excluded by law — qualified retirement plan contributions for income tax (but not for FICA), employer-paid health insurance, certain de minimis fringes.",
+ "Form W-4, the Employee's Withholding Certificate, tells you how much federal income tax to withhold. The 2020 redesign removed the old idea of withholding allowances. The new form has five steps: personal information; the multiple-jobs adjustment; the dependents claim; other adjustments for additional income, deductions, or extra withholding; and the signature. Pre-2020 W-4s remain valid for employees who haven't updated.",
+ "Publication 15-T, Federal Income Tax Withholding Methods, gives the actual calculation tables. The two main methods are the percentage method, used by payroll software, and the wage bracket method, used in tables for manual calculation. Publication 15-T also includes a computational bridge to convert pre-2020 W-4 data to the new system.",
+ "Supplemental wages — bonuses, commissions, severance, separately identified payments — have their own rules. If supplemental wages stay under one million dollars for the year, you can use a 22 percent flat supplemental rate, or aggregate with regular wages and use normal tables. On amounts above one million dollars in the year, a 37 percent mandatory rate applies with no alternative.",
+ "Backup withholding is a separate regime aimed at non-employee payments. The current rate is 24 percent. It applies when the payee has not furnished a correct TIN, when the IRS notifies the payer to begin backup withholding (a C-Notice), or when the payee fails to certify they are not subject to it. Backup withholding is reported on Form 945, not Form 941.",
+ "Watch the gap between FIT and FICA treatment. A traditional 401(k) contribution is excluded from Box 1 wages (reduces income tax) but stays in Boxes 3 and 5 (still subject to FICA). Roth 401(k) contributions are after-tax and reduce nothing. Section 125 cafeteria plan deductions like health premiums and HSA contributions reduce both income tax wages and FICA wages."
+]},
+
+{tag:"Section", num:"04", lvl:"Intermediate", cls:"", title:"Form 941, Part 1 — lines 1 through 4", paras:[
+ "Line 1 asks for a head count, not a dollar amount. Enter the number of employees who received wages in the pay period that includes the 12th of the last month of the quarter. For Q1 that is the pay period including March 12; for Q4, December 12. Don't count terminated employees or those on leave during that specific period.",
+ "Line 2 is the total wages, tips, and other compensation paid during the quarter. Items reportable in Box 1 of the W-2 generally belong on line 2.",
+ "Line 3 is the federal income tax you withheld — both from wages and from non-wage payments subject to wage-type withholding, including taxable fringe benefits. Backup withholding does NOT go here; it's on Form 945.",
+ "Line 4 is rarely used by typical employers. It's checked when no wages this quarter were subject to Social Security or Medicare tax — for example certain employees in U.S. territories with special rules. Most employers leave line 4 blank."
+]},
+
+{tag:"Section", num:"05", lvl:"Intermediate", cls:"", title:"Form 941, Part 1 — FICA lines (5a through 5f)", paras:[
+ "Lines 5a through 5d break out FICA. Column 1 is the wage amount; Column 2 is the tax on it. The combined rates already include both the employee and employer halves.",
+ "Line 5a is taxable Social Security wages times 12.4 percent (6.2% employee + 6.2% employer). Once an employee has crossed the Social Security wage base for the year, that employee's further wages stop appearing in line 5a column 1.",
+ "Respect the wage base. In 2026 it is $184,500. In 2025 it was $176,100. In 2024, $168,600. The base goes up most years.",
+ "Line 5b is taxable Social Security tips times 12.4 percent. Tips reported by employees (those whose monthly cash tips reach $20) are tipped wages for FICA purposes.",
+ "Line 5c is Medicare wages and tips times 2.9 percent. Medicare has NO wage cap, so this number is often larger than 5a for high earners. The 2.9 percent is 1.45 percent each side.",
+ "Line 5d is the Additional Medicare Tax. You withhold 0.9 percent on each employee's wages above $200,000 in the year. The employer threshold is always $200,000, regardless of the employee's filing status. The employer does NOT match this 0.9 percent — you only withhold it.",
+ "Line 5e totals column 2 from lines 5a through 5d. Line 5f is rare — tax assessed against an employer by an IRS Section 3121(q) Notice and Demand for unreported tips. Most employers leave 5f at zero."
+]},
+
+{tag:"Section", num:"06", lvl:"Intermediate", cls:"", title:"Form 941, Part 1 — adjustments and credits (lines 6–11)", paras:[
+ "Line 6 is total tax before adjustments — line 3 plus line 5e plus line 5f.",
+ "Line 7 is the fractions-of-cents adjustment, a tiny rounding entry that reconciles payroll software's accumulated FICA total to the formal calculation. Can be positive or negative.",
+ "Line 8 is the third-party sick pay adjustment. If a third-party insurer paid sick pay and withheld employee FICA, you adjust so you're not double-counting.",
+ "Line 9 is the adjustment for tips and group-term life insurance — typically for employees who left mid-year, leaving you unable to collect their FICA on tips or imputed life insurance income.",
+ "Line 10 totals lines 6 through 9 — tax after adjustments.",
+ "Line 11 is the qualified small business payroll tax credit for increasing research activities. You attach Form 8974. It offsets the employer share of Social Security tax and, above a threshold, the employer share of Medicare."
+]},
+
+{tag:"Section", num:"07", lvl:"Intermediate", cls:"", title:"Form 941, Part 1 — finishing the math (lines 12–15)", paras:[
+ "Line 12 is total taxes after adjustments and credits — line 10 minus line 11. This is your quarterly liability.",
+ "Line 13 is total deposits for the quarter, including any overpayments applied from a prior quarter or a 941-X.",
+ "Line 14 is balance due (line 12 > line 13). A small-employer convenience rule: if line 12 is $2,500 or less, or you're a monthly depositor whose prior quarter's line 12 was also under $2,500, you can pay the balance with the return rather than depositing. Above that threshold you should have been depositing.",
+ "Line 15 is overpayment (line 13 > line 12). Apply to next quarter or request a refund."
+]},
+
+{tag:"Section", num:"08", lvl:"Intermediate", cls:"", title:"Form 941, Parts 2 through 5 — deposit schedule, signature", paras:[
+ "Part 2 asks about your deposit schedule. You are a monthly schedule depositor or a semiweekly schedule depositor — never both at once. The $100,000 next-day deposit rule can override either schedule for one day.",
+ "Monthly schedule depositors complete the three monthly-total boxes in Part 2. Semiweekly depositors check the box and complete Schedule B, attached to show liability by date. Schedule B is also required when the $100,000 next-day deposit rule was triggered during the quarter.",
+ "Part 3 asks two yes-or-no questions — whether the business closed or stopped paying wages (making this a final 941) and whether the employer is seasonal and doesn't file every quarter.",
+ "Part 4 lets you authorize a third-party designee — often a paid preparer or office manager — with a name, phone number, and five-digit PIN to discuss the return with the IRS.",
+ "Part 5 is the signature. Both pages must be completed and the return must be signed. An unsigned 941 is treated as not filed."
+]},
+
+{tag:"Section", num:"09", lvl:"Advanced", cls:"", title:"Deposit rules — schedules, lookback, the $100K rule", paras:[
+ "Deposits are made through EFTPS, the Electronic Federal Tax Payment System. Paper deposits are no longer permitted for most employers. Each deposit must be scheduled by 8 p.m. Eastern the day before its due date.",
+ "Your deposit schedule for the year depends on a lookback period. For 941 depositors, the lookback period is the four quarters ending June 30 of the prior calendar year. For 2026 deposits, the lookback is July 1, 2024 through June 30, 2025.",
+ "If total employment tax in the lookback was $50,000 or less, you're a monthly schedule depositor for the entire current year. Deposit by the 15th of the month after each payday month.",
+ "If lookback exceeded $50,000, you're a semiweekly schedule depositor. The semiweekly schedule keys off the payday. Paydays Wednesday, Thursday, or Friday must be deposited by the following Wednesday. Paydays Saturday, Sunday, Monday, or Tuesday must be deposited by the following Friday.",
+ "The $100,000 next-day deposit rule overrides both schedules. If you accumulate an unpaid liability of $100,000+ on any one day, deposit by the close of the next business day. Triggering that rule has a tail — you become a semiweekly depositor for the rest of the current year and all of the following year.",
+ "A new employer is treated as a monthly schedule depositor for the first year, since there is no lookback yet. Once a full lookback period exists, the normal threshold applies.",
+ "Form 944 filers use a different lookback — the second preceding calendar year. Form 943 agricultural employers use the second preceding year as well, with the same $50,000 threshold."
+]},
+
+{tag:"Section", num:"10", lvl:"Advanced", cls:"", title:"Schedule B — semiweekly liability by date", paras:[
+ "Schedule B, Report of Tax Liability for Semiweekly Schedule Depositors, lists every day of the quarter and the tax liability you incurred on each payroll day. It is NOT a list of deposits made — it's a list of liability accrued.",
+ "You complete Schedule B if you were a semiweekly depositor for any part of the quarter, OR if you triggered the $100,000 next-day deposit rule. Monthly depositors do not file Schedule B; they fill the three monthly-total lines on the 941 itself.",
+ "The total of Schedule B for the quarter must equal line 12 of the 941. If they don't match, the IRS will contact you.",
+ "A common error is reporting deposits instead of liability, or treating each pay period as a single day. Liability is recorded on the date wages were paid — not when payroll was run, and not when the deposit was made."
+]},
+
+{tag:"Section", num:"11", lvl:"Advanced", cls:"", title:"Penalties — failure to deposit, file, and pay", paras:[
+ "The federal tax deposit (FTD) penalty has four tiers. Deposits 1 to 5 days late incur 2 percent. Deposits 6 to 15 days late are 5 percent. Deposits 16 or more days late, or any deposit made within 10 days after the date of the IRS's first notice, jump to 10 percent. Amounts still unpaid more than 10 days after the IRS issues notice and demand are at 15 percent.",
+ "Failure to file Form 941 is 5 percent of the unpaid tax for each month or part of a month the return is late, up to 25 percent. After 60 days late, there is also a minimum penalty.",
+ "Failure to pay the tax shown on the return is 0.5 percent per month or part of a month, capped at 25 percent. When both failure to file and failure to pay apply in the same month, the failure-to-file penalty is reduced so the combined monthly penalty is 5 percent.",
+ "Interest is separate from penalties. It accrues from the original due date until the tax is paid, at the federal short-term rate plus 3 percentage points, compounded daily, set quarterly.",
+ "Reasonable cause relief can abate penalties — but not interest — if the taxpayer shows ordinary business care and prudence were exercised yet the tax was not paid. First-Time Abate is also available to taxpayers with a clean three-year history.",
+ "Trust fund penalties are different and more serious. See the next lesson."
+]},
+
+{tag:"Section", num:"12", lvl:"Advanced", cls:"", title:"The Trust Fund Recovery Penalty — Section 6672", paras:[
+ "Section 6672 of the Internal Revenue Code lets the IRS personally assess the unpaid trust fund portion of employment taxes against responsible persons who willfully failed to collect, account for, or pay over those taxes.",
+ "The penalty equals 100 percent of the unpaid trust fund taxes. Trust fund taxes are the withheld federal income tax plus the employees' share of FICA — NOT the employer's matching share, and NOT FUTA.",
+ "The IRS investigates with Form 4180, a structured interview that asks who signed checks, who decided which creditors got paid, and who had authority over payroll. Anyone with control who chose not to pay over the trust fund taxes can be named.",
+ "A responsible person is anyone with the duty and authority to direct payment of the trust fund taxes — a corporate officer, controller, sometimes an outside bookkeeper or board member depending on the facts. Willfulness does NOT require evil intent. Knowing the taxes were owed and choosing to pay other creditors instead is willful.",
+ "Because the penalty is assessed personally, a corporate liability shield does NOT protect a responsible person. Multiple responsible persons in the same company can each be assessed the full amount, though the IRS will only collect it once in total."
+]},
+
+{tag:"Correction Form", num:"13", lvl:"Intermediate", cls:"corr", title:"Form 941-X — the correction mechanics", paras:[
+ "Form 941-X, the Adjusted Employer's Quarterly Federal Tax Return or Claim for Refund, is how you fix a mistake on a 941 you already sent in. It is filed on its own and is never attached to a regular 941.",
+ "One 941-X corrects one quarter. Errors in multiple quarters require multiple 941-X filings. At the top you enter the quarter being corrected and the date you discovered the error.",
+ "Part 1 forces a choice between two processes — adjustment or claim. You can use only one on a given 941-X.",
+ "Part 2 contains certifications. For overreported FICA you certify either that you repaid or reimbursed the employee, or that you obtained the employee's written consent. For income tax withholding corrections you certify the correction is for the current calendar year only.",
+ "Part 3 holds the line-by-line corrections. Every corrected line has four columns. Column 1 is the corrected amount. Column 2 is the amount originally reported. Column 3 is the difference (Col 1 − Col 2). Column 4 is the tax impact — the actual dollars of tax that change.",
+ "Line 27 on the current revision is the bottom-line correction — the sum of the column 4 impacts. A positive line 27 means you owe more tax. A negative line 27 means you overpaid.",
+ "Part 4 is short but mandatory: explain the correction in your own words. The IRS rejects 941-X filings that fail to provide a meaningful explanation."
+]},
+
+{tag:"Correction Form", num:"14", lvl:"Advanced", cls:"corr", title:"Form 941-X — adjustment process vs claim process", paras:[
+ "The adjustment process (check box on line 1) is the right choice in two situations. Whenever you underreported tax and now owe more, you must use the adjustment process. Whenever you overreported and would rather take the money as a credit on a future 941 than wait for a refund, you may use the adjustment process.",
+ "The claim process (check box on line 2) is used only when you overreported tax and want the IRS to refund or abate the overpayment in cash. You cannot use the claim process if any part of the 941-X is correcting an underreported amount.",
+ "Timing rules matter. The general period of limitations is three years from when the original 941 is treated as filed. Returns filed before April 15 are treated as filed on April 15 of the same year for limitations purposes.",
+ "If you are correcting an overreported amount in the last 90 days of that three-year window, the adjustment process is closed — you must use the claim process. This prevents adjustments from running out of time on the IRS side.",
+ "Income tax withholding errors have an extra restriction. They can generally only be corrected within the same calendar year the wages were paid. After year-end, the employee's withholding is part of their personal tax return — you cannot adjust it through a 941-X.",
+ "To refund an overpaid employee FICA amount, you must either repay or reimburse the employee first, or obtain the employee's written consent that they won't separately seek a refund. The Part 2 certification confirms this.",
+ "An underpayment correction is interest-free if you file the 941-X by the due date of the 941 for the quarter in which you discovered the error, and pay the additional tax when you file. Miss either condition and interest runs from the original due date."
+]},
+
+{tag:"Section", num:"15", lvl:"Advanced", cls:"", title:"Year-end reconciliation and related forms", paras:[
+ "Once a year, your four 941s should reconcile cleanly to your W-2s and W-3. The sum of line 2 across all four 941s should equal Box 1 totals on the W-3 (with adjustments for items like deferred compensation). The sum of line 3 should match Box 2. The sum of line 5a column 1 should match Box 3 (with the wage base capping per-employee amounts). The sum of line 5c column 1 should match Box 5.",
+ "When the 941 totals and the W-2 totals legitimately differ — for example because of timing on third-party sick pay, or pension distribution withholding flowing through a different return — Schedule D (Form 941) explains the variance to the IRS.",
+ "Form 944, the Employer's Annual Federal Tax Return, replaces the four 941s for the smallest employers with annual employment tax of roughly $1,000 or less. You do not pick to file 944 — the IRS notifies you in writing.",
+ "Form 943 covers agricultural employees and uses a different set of rules for the FICA wage threshold. Form 945 reports federal income tax withheld on nonpayroll items — backup withholding, gambling winnings, pension distributions, IRA distributions.",
+ "Large food or beverage establishments — those with more than 10 employees on a typical business day in the prior year — also file Form 8027, the Employer's Annual Information Return of Tip Income and Allocated Tips. If reported tips fall below 8 percent of gross receipts, the employer must allocate the shortfall among tipped employees.",
+ "Aggregate filers — certain agents, certified professional employer organizations (CPEOs), and Section 3504 filers — use Schedule R (Form 941) to allocate the aggregated 941 figures back to each client they file for."
+]}
+],
+
+cards:[
+ {c:"Foundations", f:"What does FICA stand for?", b:"Federal Insurance Contributions Act — the law imposing Social Security and Medicare on wages."},
+ {c:"Foundations", f:"What does FUTA stand for?", b:"Federal Unemployment Tax Act — paid only by the employer."},
+ {c:"Foundations", f:"What does SECA stand for?", b:"Self-Employment Contributions Act — equivalent of FICA for the self-employed, paid on Schedule SE."},
+ {c:"Foundations", f:"What are 'trust fund taxes'?", b:"Withheld federal income tax + employee share of FICA. Held in trust for the IRS."},
+ {c:"Foundations", f:"What form requests an EIN?", b:"Form SS-4, Application for Employer Identification Number (online also accepted)."},
+ {c:"Foundations", f:"The three core employment tax returns?", b:"Form 941 (quarterly), Form 940 (annual FUTA), Form W-2 with W-3 (annual wage statements)."},
+ {c:"Foundations", f:"Form 944 — what is it?", b:"Annual employment tax return for the smallest employers (~$1,000 or less annual liability). File 944 only if the IRS notifies you in writing."},
+ {c:"Foundations", f:"Form 943 — what is it?", b:"Annual employment tax return for agricultural employees."},
+ {c:"Foundations", f:"Form 945 — what is it?", b:"Annual return of withheld federal income tax on nonpayroll items (backup withholding, gambling winnings, pensions, IRA distributions)."},
+ {c:"Foundations", f:"What is EFTPS?", b:"Electronic Federal Tax Payment System — the required electronic method for federal tax deposits."},
+
+ {c:"Worker Class.", f:"Three categories of common law factors?", b:"(1) Behavioral control, (2) Financial control, (3) Type of relationship between the parties."},
+ {c:"Worker Class.", f:"What does Form SS-8 do?", b:"Asks the IRS to determine whether a worker is an employee or independent contractor."},
+ {c:"Worker Class.", f:"Four kinds of statutory employees?", b:"Certain agent/commission drivers (food, beverages other than milk, laundry, dry cleaning); full-time life insurance salespersons; home workers on employer-furnished materials; full-time traveling or city salespersons for one principal."},
+ {c:"Worker Class.", f:"Three statutory non-employees?", b:"Licensed real estate agents, direct sellers, and certain companion sitters — treated as self-employed regardless of common law facts."},
+ {c:"Worker Class.", f:"Section 530 safe harbor — three requirements?", b:"(1) Reasonable basis, (2) substantive consistency, (3) reporting consistency (1099s actually filed)."},
+ {c:"Worker Class.", f:"What is the VCSP?", b:"Voluntary Classification Settlement Program — reclassify ICs as employees prospectively for ~1% of one year's wages, no prior-year audit."},
+ {c:"Worker Class.", f:"Form 8919 — purpose?", b:"Worker files it to pay only the employee share of FICA on misclassified IC wages, not full self-employment tax."},
+ {c:"Worker Class.", f:"Form for IC payments of $600+?", b:"Form 1099-NEC (Nonemployee Compensation)."},
+ {c:"Worker Class.", f:"Statutory employee FICA treatment?", b:"Subject to Social Security and Medicare (both shares apply), typically NO income tax withholding by the principal."},
+ {c:"Worker Class.", f:"What's the SE tax rate?", b:"15.3% on net SE earnings — 12.4% Social Security (up to wage base) + 2.9% Medicare. Reported on Schedule SE."},
+
+ {c:"Wages & W-4", f:"What changed with the 2020 W-4 redesign?", b:"Withholding allowances eliminated. Five steps: personal info, multiple jobs, dependents, other adjustments, signature."},
+ {c:"Wages & W-4", f:"Pub 15-T — what is it?", b:"Publication 15-T, Federal Income Tax Withholding Methods — percentage method, wage bracket method, computational bridge for pre-2020 W-4s."},
+ {c:"Wages & W-4", f:"Supplemental wage flat rate (under $1M)?", b:"22% (optional; employer may also aggregate with regular wages and use normal tables)."},
+ {c:"Wages & W-4", f:"Supplemental wage rate over $1M in a year?", b:"37% — mandatory, no alternative method."},
+ {c:"Wages & W-4", f:"Backup withholding rate?", b:"24% (current rate). Reported on Form 945, not Form 941."},
+ {c:"Wages & W-4", f:"Three triggers for backup withholding?", b:"Missing/incorrect TIN; IRS notifies payer to begin (C-Notice); payee fails to certify they're not subject to backup withholding."},
+ {c:"Wages & W-4", f:"Is a traditional 401(k) contribution FIT-taxable?", b:"No — reduces Box 1 wages."},
+ {c:"Wages & W-4", f:"Is a traditional 401(k) contribution FICA-taxable?", b:"Yes — included in Boxes 3 and 5."},
+ {c:"Wages & W-4", f:"Are cafeteria plan deductions (§125) FICA-taxable?", b:"No — they reduce Boxes 1, 3, and 5."},
+ {c:"Wages & W-4", f:"Group-term life — when is it imputed income?", b:"Coverage above $50,000 — the imputed cost (W-2 Box 12 code C) is taxable and subject to FICA."},
+
+ {c:"FICA & Rates", f:"Employee Social Security rate?", b:"6.2% of wages, up to the annual wage base."},
+ {c:"FICA & Rates", f:"Employer Social Security rate?", b:"6.2% — matches the employee."},
+ {c:"FICA & Rates", f:"Combined Social Security rate (line 5a)?", b:"12.4% (6.2% + 6.2%)."},
+ {c:"FICA & Rates", f:"Employee Medicare rate?", b:"1.45% — no wage cap."},
+ {c:"FICA & Rates", f:"Combined Medicare rate (line 5c)?", b:"2.9% (1.45% + 1.45%)."},
+ {c:"FICA & Rates", f:"Additional Medicare Tax rate?", b:"0.9% — withheld on wages over $200,000 per employee. No employer match."},
+ {c:"FICA & Rates", f:"Add'l Medicare employer withholding threshold?", b:"$200,000 — regardless of employee's filing status. (Employee may owe more on 1040 if MFJ threshold is $250K.)"},
+ {c:"FICA & Rates", f:"Does the employer match the 0.9% Add'l Medicare?", b:"No — employer only withholds it."},
+ {c:"FICA & Rates", f:"2026 SS wage base?", b:"$184,500."},
+ {c:"FICA & Rates", f:"2025 SS wage base?", b:"$176,100."},
+ {c:"FICA & Rates", f:"2024 SS wage base?", b:"$168,600."},
+ {c:"FICA & Rates", f:"Maximum 2026 employee SS tax?", b:"$11,439 (6.2% × $184,500)."},
+ {c:"FICA & Rates", f:"Medicare wage cap?", b:"None — Medicare applies to all wages."},
+ {c:"FICA & Rates", f:"Combined FICA rate (no Add'l)?", b:"15.3% — 12.4% SS + 2.9% Medicare."},
+
+ {c:"Form 941", f:"Official title of Form 941?", b:"Employer's Quarterly Federal Tax Return."},
+ {c:"Form 941", f:"How often is Form 941 filed?", b:"Quarterly — one return per calendar quarter."},
+ {c:"Form 941", f:"Q1 due date?", b:"April 30."},
+ {c:"Form 941", f:"Q2 due date?", b:"July 31."},
+ {c:"Form 941", f:"Q3 due date?", b:"October 31."},
+ {c:"Form 941", f:"Q4 due date?", b:"January 31 (of the following year)."},
+ {c:"Form 941", f:"Extra time if deposits timely and full?", b:"About 10 business days past the standard due date."},
+ {c:"Form 941", f:"Line 1?", b:"Number of employees paid in the pay period including the 12th of the last month of the quarter. Head count, not dollars."},
+ {c:"Form 941", f:"Line 2?", b:"Total wages, tips, and other compensation paid during the quarter."},
+ {c:"Form 941", f:"Line 3?", b:"Federal income tax withheld from wages (not backup withholding)."},
+ {c:"Form 941", f:"Line 5a?", b:"Taxable Social Security wages × 12.4%."},
+ {c:"Form 941", f:"Line 5b?", b:"Taxable Social Security tips × 12.4%."},
+ {c:"Form 941", f:"Line 5c?", b:"Medicare wages and tips × 2.9% (no cap)."},
+ {c:"Form 941", f:"Line 5d?", b:"Additional Medicare Tax — 0.9% on each employee's wages over $200,000."},
+ {c:"Form 941", f:"Line 5e?", b:"Total column 2 from lines 5a–5d (total SS + Medicare taxes)."},
+ {c:"Form 941", f:"Line 5f?", b:"Section 3121(q) Notice and Demand tax (IRS-assessed for unreported tips). Rare."},
+ {c:"Form 941", f:"Line 6?", b:"Total taxes before adjustments — line 3 + 5e + 5f."},
+ {c:"Form 941", f:"Line 7?", b:"Fractions-of-cents adjustment (rounding reconciliation)."},
+ {c:"Form 941", f:"Line 8?", b:"Adjustment for sick pay paid by a third party."},
+ {c:"Form 941", f:"Line 9?", b:"Adjustment for tips and group-term life insurance (typically for departed employees)."},
+ {c:"Form 941", f:"Line 10?", b:"Total taxes after adjustments."},
+ {c:"Form 941", f:"Line 11?", b:"Qualified small business R&D payroll tax credit (attach Form 8974)."},
+ {c:"Form 941", f:"Line 12?", b:"Total taxes after adjustments and credits (line 10 − line 11)."},
+ {c:"Form 941", f:"Line 13?", b:"Total deposits for the quarter (including prior overpayments applied)."},
+ {c:"Form 941", f:"Line 14?", b:"Balance due (line 12 > line 13)."},
+ {c:"Form 941", f:"Line 15?", b:"Overpayment (line 13 > line 12) — refund or apply forward."},
+ {c:"Form 941", f:"Pay with return — threshold?", b:"Line 12 of $2,500 or less for the quarter (or qualifying monthly depositors). Above that, must deposit."},
+
+ {c:"Deposits", f:"Required deposit method?", b:"EFTPS — Electronic Federal Tax Payment System."},
+ {c:"Deposits", f:"Lookback period for 2026 941 deposits?", b:"July 1, 2024 through June 30, 2025."},
+ {c:"Deposits", f:"Lookback definition for 941?", b:"The four quarters ending June 30 of the prior calendar year."},
+ {c:"Deposits", f:"≤ $50,000 in lookback → which schedule?", b:"Monthly depositor — deposit by the 15th of the next month."},
+ {c:"Deposits", f:"> $50,000 in lookback → which schedule?", b:"Semiweekly depositor."},
+ {c:"Deposits", f:"Semiweekly: Wed/Thu/Fri payday — deposit by?", b:"The following Wednesday."},
+ {c:"Deposits", f:"Semiweekly: Sat/Sun/Mon/Tue payday — deposit by?", b:"The following Friday."},
+ {c:"Deposits", f:"$100,000 next-day deposit rule?", b:"Accumulate $100,000+ liability any single day → deposit by next business day. Also forces semiweekly for rest of year + next year."},
+ {c:"Deposits", f:"New employer default schedule?", b:"Monthly — until a full lookback period exists and the $50,000 threshold is exceeded."},
+ {c:"Deposits", f:"Schedule B — when required?", b:"Semiweekly depositors, OR any employer that triggered the $100,000 rule during the quarter."},
+ {c:"Deposits", f:"Form 944 lookback?", b:"The second preceding calendar year (different from 941)."},
+ {c:"Deposits", f:"Monthly depositor reports liability where?", b:"In the three monthly-total boxes in Part 2 of Form 941 (not Schedule B)."},
+
+ {c:"Penalties", f:"FTD penalty 1–5 days late?", b:"2%."},
+ {c:"Penalties", f:"FTD penalty 6–15 days late?", b:"5%."},
+ {c:"Penalties", f:"FTD penalty 16+ days late?", b:"10% (also amounts paid within 10 days of first IRS notice)."},
+ {c:"Penalties", f:"FTD penalty after IRS notice and demand for immediate payment?", b:"15% (amounts unpaid more than 10 days after IRS notice and demand)."},
+ {c:"Penalties", f:"Failure-to-file 941 penalty?", b:"5% per month or part, capped at 25% of unpaid tax."},
+ {c:"Penalties", f:"Failure-to-pay penalty?", b:"0.5% per month or part, capped at 25% of unpaid tax."},
+ {c:"Penalties", f:"When FTF and FTP both apply same month?", b:"FTF reduced by FTP — combined penalty is 5% per month."},
+ {c:"Penalties", f:"Interest rate on unpaid employment taxes?", b:"Federal short-term rate + 3 percentage points, compounded daily, set quarterly."},
+ {c:"Penalties", f:"First-Time Abate — requirement?", b:"Clean compliance history for the prior 3 years on the same return type."},
+ {c:"Penalties", f:"Reasonable cause — the test?", b:"Taxpayer exercised ordinary business care and prudence but was still unable to comply."},
+
+ {c:"TFRP", f:"Section 6672 penalty rate?", b:"100% of unpaid trust fund taxes."},
+ {c:"TFRP", f:"What counts as 'trust fund taxes'?", b:"Withheld federal income tax + employee share of FICA. NOT the employer match. NOT FUTA."},
+ {c:"TFRP", f:"Two TFRP elements?", b:"(1) Responsible person + (2) willful failure to collect/account for/pay over."},
+ {c:"TFRP", f:"What is a 'responsible person'?", b:"Anyone with duty and authority to direct payment of trust fund taxes — officer, controller, sometimes outside bookkeeper or director."},
+ {c:"TFRP", f:"What is 'willful' for TFRP?", b:"Knew the taxes were owed and consciously chose to pay other creditors instead. Evil intent NOT required."},
+ {c:"TFRP", f:"IRS interview form for TFRP investigation?", b:"Form 4180, Report of Interview with Individual Relative to Trust Fund Recovery Penalty."},
+ {c:"TFRP", f:"Can a corporate shield protect from TFRP?", b:"No — TFRP is personal and pierces the corporate veil."},
+ {c:"TFRP", f:"If multiple responsible persons exist?", b:"Each can be assessed the full amount, but the IRS collects only once in total."},
+
+ {c:"Tips", f:"Employee tip reporting threshold?", b:"$20 or more in cash tips in a month → must report to employer."},
+ {c:"Tips", f:"Form for employee to report tips to employer?", b:"Form 4070 (or equivalent statement)."},
+ {c:"Tips", f:"Large food/beverage employer annual tip return?", b:"Form 8027, Employer's Annual Information Return of Tip Income and Allocated Tips."},
+ {c:"Tips", f:"'Large food/beverage establishment' threshold?", b:"More than 10 employees on a typical business day in the prior calendar year (food/beverage on premises; tipping customary)."},
+ {c:"Tips", f:"Allocated tips — when required?", b:"When reported tips are less than 8% of gross receipts — the shortfall is allocated to tipped employees."},
+
+ {c:"Form 941-X", f:"Official title of Form 941-X?", b:"Adjusted Employer's Quarterly Federal Tax Return or Claim for Refund."},
+ {c:"Form 941-X", f:"How is 941-X filed?", b:"Separately — never attached to a 941."},
+ {c:"Form 941-X", f:"How many quarters per 941-X?", b:"One. Separate 941-X per quarter being corrected."},
+ {c:"Form 941-X", f:"Column 1?", b:"The corrected amount."},
+ {c:"Form 941-X", f:"Column 2?", b:"The amount originally reported."},
+ {c:"Form 941-X", f:"Column 3?", b:"The difference (Col 1 − Col 2)."},
+ {c:"Form 941-X", f:"Column 4?", b:"The tax impact in dollars — the change in tax."},
+ {c:"Form 941-X", f:"Adjustment process — who uses?", b:"Anyone underreporting tax; OR overreporters wanting credit on a future 941."},
+ {c:"Form 941-X", f:"Claim process — who uses?", b:"Overreporters wanting refund/abatement in cash — only if NO underreported amounts are on the form."},
+ {c:"Form 941-X", f:"Can adjustment + claim combine on one 941-X?", b:"No — pick one process per form."},
+ {c:"Form 941-X", f:"Period of limitations for refund?", b:"Generally 3 years from when the original 941 is deemed filed (early returns treated as filed April 15)."},
+ {c:"Form 941-X", f:"Last 90 days of limitations — which process?", b:"Must use claim process. Adjustment unavailable that close to deadline."},
+ {c:"Form 941-X", f:"FIT withholding error — time limit?", b:"Generally same calendar year only — after year-end the employee handles via 1040."},
+ {c:"Form 941-X", f:"Refunding overpaid FICA to employee — requirement?", b:"Either repay/reimburse the employee first, OR obtain written employee consent."},
+ {c:"Form 941-X", f:"How to make underpayment correction interest-free?", b:"File by due date of the 941 for the quarter you discovered the error, and pay any tax owed when you file."},
+ {c:"Form 941-X", f:"Where to explain the correction?", b:"Part 4 — explain in your own words. Required, not optional."},
+
+ {c:"Related Forms", f:"Schedule D (Form 941) — purpose?", b:"Explains discrepancies between W-2 totals and 941 totals (e.g., timing of third-party sick pay)."},
+ {c:"Related Forms", f:"Schedule R (Form 941) — purpose?", b:"Aggregate filers (CPEOs, §3504 agents, certain reporting agents) allocate aggregate figures to each client."},
+ {c:"Related Forms", f:"What's a CPEO?", b:"Certified Professional Employer Organization — IRS-certified PEO that files aggregate 941s for client companies."},
+ {c:"Related Forms", f:"W-2c — what is it?", b:"Corrected Wage and Tax Statement. Filed with Form W-3c as transmittal (or via SSA BSO)."},
+ {c:"Related Forms", f:"FUTA rate and wage base?", b:"6.0% on first $7,000 per employee. Up to 5.4% state credit → 0.6% net in most states."}
+],
+
+quizzes:[
+ {id:"q941", tag:"Topic Quiz", name:"Form 941 Mechanics", desc:"The quarterly return — lines and rules", sample:10, questions:[
+  {q:"How often must most employers file Form 941?", o:["Once a year","Quarterly — four times a year","Every month","Twice a year"], a:1, e:"Filed quarterly — one return per calendar quarter."},
+  {q:"The combined Social Security tax rate on line 5a is:", o:["6.2%","1.45%","12.4%","15.3%"], a:2, e:"6.2% employee + 6.2% employer = 12.4%."},
+  {q:"In 2026, Social Security tax applies only to each employee's wages up to:", o:["$168,600","$176,100","$184,500","No limit"], a:2, e:"2026 wage base is $184,500."},
+  {q:"The Additional Medicare Tax (line 5d) is:", o:["0.9% withheld on wages over $200,000, no employer match","1.45% matched by the employer","6.2% on all wages","2.9% on reported tips"], a:0, e:"0.9% withheld over $200K per employee; no employer match."},
+  {q:"Form 941 for Q3 (Jul–Sep) is generally due by:", o:["September 30","October 31","December 31","January 31"], a:1, e:"Returns due last day of month after quarter end."},
+  {q:"Line 1 of Form 941 reports:", o:["Total wages paid","Federal income tax withheld","Number of employees paid in the pay period including the 12th","Total deposits"], a:2, e:"Head count, not dollars."},
+  {q:"Line 11 (with Form 8974) relates to:", o:["Sick pay adjustment","Qualified small business R&D payroll tax credit","Fractions of cents","Tips adjustment"], a:1, e:"Line 11 is the qualified small business R&D credit; Form 8974 attached."},
+  {q:"Backup withholding is reported on:", o:["Form 941","Form 944","Form 945","Form 940"], a:2, e:"Form 945 — annual return for nonpayroll federal income tax."},
+  {q:"Can an employer pay balance due with Form 941 rather than depositing?", o:["No, never","Yes — if line 12 is $2,500 or less for the quarter","Yes, always","Only Q4"], a:1, e:"$2,500 or less de minimis rule (plus certain monthly depositors)."},
+  {q:"Where is the 0.9% Add'l Medicare employer threshold?", o:["$160,000","$200,000 regardless of filing status","$250,000 if married","$184,500"], a:1, e:"$200,000 employer threshold for every employee."},
+  {q:"Form 941 line 5e equals:", o:["Total wages","Federal income tax withheld","Total column 2 from lines 5a–5d","Total deposits"], a:2, e:"Sum of column 2 from 5a, 5b, 5c, 5d."},
+  {q:"Schedule R (Form 941) is used by:", o:["Sole proprietors","Aggregate filers like CPEOs to allocate to clients","All multi-state employers","Quarterly depositors"], a:1, e:"Schedule R allocates aggregate 941 figures back to each client."}
+ ]},
+
+ {id:"q941x", tag:"Topic Quiz", name:"Form 941-X Corrections", desc:"Adjustment vs claim, columns, timing", sample:10, questions:[
+  {q:"Form 941-X is used to:", o:["Report a new quarter","Correct a previously filed Form 941","File annually","Apply for an EIN"], a:1, e:"Adjusted Employer's Quarterly Federal Tax Return or Claim for Refund."},
+  {q:"How is Form 941-X filed?", o:["Stapled to the next Form 941","Separately, on its own","With the W-2s","Inside Schedule B"], a:1, e:"Always filed separately."},
+  {q:"You underreported tax. Which process?", o:["Claim","Adjustment","Either","Neither"], a:1, e:"Underreporting requires adjustment process — pay when filing."},
+  {q:"Column 3 on a 941-X correction represents:", o:["Corrected amount","Originally reported amount","Difference (Col 1 − Col 2)","Tax rate"], a:2, e:"Col 1 corrected, Col 2 reported, Col 3 difference."},
+  {q:"You overreported tax and want the money refunded. You should:", o:["Use the adjustment process","Use the claim process","Do nothing","Refile the 941"], a:1, e:"Claim process — only valid if NO underreported amounts on this form."},
+  {q:"To keep an underpayment correction interest-free, you must:", o:["Wait until year-end","File by due date of the 941 for the quarter you discovered the error AND pay then","Use the claim process","Use Form 940"], a:1, e:"File on time and pay with the form."},
+  {q:"Period of limitations for a refund of overreported employment tax?", o:["1 year","2 years","Generally 3 years","No limit"], a:2, e:"3 years from when original return is deemed filed."},
+  {q:"In the last 90 days of the limitations period, you must:", o:["Use adjustment","Use claim process","Refile the original 941","Stop — too late"], a:1, e:"Claim process only — adjustment unavailable that close to the deadline."},
+  {q:"How many quarters can ONE Form 941-X correct?", o:["1","2","4","Unlimited"], a:0, e:"One 941-X per quarter."},
+  {q:"Federal income tax withholding errors usually can only be corrected:", o:["Within the same calendar year","Within 3 years","At any time","Within 6 months"], a:0, e:"After year-end the withholding belongs on the employee's 1040."},
+  {q:"To refund overpaid FICA to an employee, employer must:", o:["Just file 941-X","Repay or reimburse the employee, OR get written employee consent","Wait for IRS instructions","File Form 4180"], a:1, e:"Part 2 certifications require repayment/reimbursement or employee consent."},
+  {q:"Where on Form 941-X do you explain the correction?", o:["Part 1","Part 2","Part 3","Part 4 — in your own words"], a:3, e:"Narrative explanation required in Part 4."}
+ ]},
+
+ {id:"qclass", tag:"Topic Quiz", name:"Worker Classification & W-4", desc:"Common law, statutory, withholding", sample:8, questions:[
+  {q:"The IRS common law test groups facts into how many categories?", o:["2","3","4","5"], a:1, e:"Behavioral control, financial control, type of relationship."},
+  {q:"Which form asks the IRS to determine a worker's status?", o:["Form 941","Form SS-4","Form SS-8","Form W-9"], a:2, e:"SS-8 — Determination of Worker Status."},
+  {q:"Statutory non-employees include:", o:["Home workers","Full-time life insurance salespersons","Licensed real estate agents and direct sellers","Agent/commission drivers"], a:2, e:"Real estate agents, direct sellers, certain companion sitters."},
+  {q:"Section 530 safe harbor requires:", o:["Only reasonable basis","Reasonable basis + substantive consistency + reporting consistency","SS-8 approval","Filing Form 8919"], a:1, e:"All three requirements together."},
+  {q:"The 2020 W-4 redesign removed:", o:["The signature","Withholding allowances","Dependents claim","All withholding"], a:1, e:"Allowances replaced by dollar amounts."},
+  {q:"Supplemental wage flat rate (under $1M)?", o:["10%","22%","24%","37%"], a:1, e:"22% optional flat rate under $1M."},
+  {q:"Supplemental wages over $1M in a year — withholding rate?", o:["22% optional","24% optional","37% mandatory","No special rule"], a:2, e:"37% mandatory above $1M."},
+  {q:"Backup withholding rate?", o:["10%","22%","24%","28%"], a:2, e:"Currently 24%."},
+  {q:"Misclassified worker — which form to pay only employee FICA share?", o:["Form 8919","Form SS-8","Form 941-X","Form 4180"], a:0, e:"Form 8919 — Uncollected Social Security and Medicare Tax on Wages."},
+  {q:"Pre-tax 401(k) — subject to FICA?", o:["No","Yes — reduces Box 1 only","Only above $200K","Only Roth"], a:1, e:"Pre-tax 401(k) reduces FIT (Box 1) but stays in Boxes 3 and 5 for FICA."}
+ ]},
+
+ {id:"qdep", tag:"Topic Quiz", name:"Deposits & Schedules", desc:"Monthly, semiweekly, lookback, $100K rule", sample:8, questions:[
+  {q:"Federal employment tax deposits must be made through:", o:["Paper coupon","EFTPS — electronic","Either, employer's choice","Mailed check"], a:1, e:"EFTPS required."},
+  {q:"Lookback period for 941 deposits is:", o:["Current calendar year","Prior calendar year","The 4 quarters ending June 30 of the prior calendar year","Same quarter last year"], a:2, e:"July 1 to June 30 of the prior calendar year."},
+  {q:"Lookback total ≤ $50,000 → schedule?", o:["Monthly","Semiweekly","Annual","Quarterly only"], a:0, e:"Monthly schedule."},
+  {q:"Lookback total > $50,000 → schedule?", o:["Monthly","Semiweekly","Daily","Annual"], a:1, e:"Semiweekly schedule."},
+  {q:"Monthly deposit due date?", o:["End of same month","Last day of next month","15th of next month","30 days after payday"], a:2, e:"15th of month following payday month."},
+  {q:"Semiweekly: payday on Friday — deposit by?", o:["Following Monday","Following Wednesday","Following Friday","Same day"], a:1, e:"Wed/Thu/Fri paydays → following Wednesday."},
+  {q:"Semiweekly: payday on Tuesday — deposit by?", o:["Same day","Following Friday","Following Wednesday","Next Tuesday"], a:1, e:"Sat/Sun/Mon/Tue paydays → following Friday."},
+  {q:"$100,000 next-day deposit rule consequence:", o:["Deposit by end of week","Deposit by next business day; also forced semiweekly rest of year + next year","No further effect","Skip to monthly"], a:1, e:"Next-business-day + semiweekly status."},
+  {q:"A new employer with no lookback is:", o:["Semiweekly","Monthly","Exempt","Annual"], a:1, e:"Monthly default until lookback exists."},
+  {q:"Schedule B is required when:", o:["Always","Never","Semiweekly depositor OR $100K rule triggered","Only Q4"], a:2, e:"Semiweekly status or the next-day deposit rule."}
+ ]},
+
+ {id:"qpen", tag:"Topic Quiz", name:"Penalties & TFRP", desc:"FTD tiers, FTF, FTP, Section 6672", sample:8, questions:[
+  {q:"FTD penalty for deposit 1–5 days late?", o:["0%","2%","5%","10%"], a:1, e:"2% for 1–5 days late."},
+  {q:"FTD penalty for deposit 6–15 days late?", o:["2%","5%","10%","15%"], a:1, e:"5% for 6–15 days late."},
+  {q:"FTD penalty for deposit 16+ days late?", o:["2%","5%","10%","15%"], a:2, e:"10% (or amounts paid within 10 days of first IRS notice)."},
+  {q:"FTD penalty after IRS notice and demand for immediate payment?", o:["5%","10%","15%","25%"], a:2, e:"15% — amounts unpaid 10+ days after notice and demand."},
+  {q:"Failure-to-file 941 penalty?", o:["1% per month, cap 10%","5% per month, cap 25%","10% per month, cap 50%","Flat $500"], a:1, e:"5% per month or part, capped at 25%."},
+  {q:"Failure-to-pay penalty?", o:["0.5% per month, cap 25%","1% per month, cap 25%","5% per month, cap 25%","Flat $1,000"], a:0, e:"0.5% per month or part, capped at 25%."},
+  {q:"Trust Fund Recovery Penalty (Section 6672) amount?", o:["50% of unpaid trust fund","100% of unpaid trust fund","100% of all employment taxes","25% of unpaid taxes"], a:1, e:"100% of unpaid trust fund."},
+  {q:"Which taxes are 'trust fund taxes'?", o:["FUTA only","Employer FICA share only","Withheld FIT + employee FICA share","All payroll taxes"], a:2, e:"Withheld income tax + employee FICA share."},
+  {q:"TFRP requires:", o:["Only being a corporate officer","Responsible person AND willful failure","An IRS audit notice","A trial"], a:1, e:"Both elements together."},
+  {q:"Which form is the IRS interview tool for TFRP?", o:["Form 4180","Form 4070","Form SS-8","Form 8974"], a:0, e:"Form 4180."}
+ ]},
+
+ {id:"qmix", tag:"Random Mix", name:"EA Mixed (random pull)", desc:"Random questions across all topics", sample:12, questions:[]}
+],
+
+practice:[
+ {id:"p1", tag:"Practice · Form 941", title:"Riverside Bakery — Q3 2025 (basic)",
+  scn:"Q3 2025 payroll for Riverside Bakery LLC. Four employees, all paid under the SS wage base, no tips, nobody over $200,000. Fill in the Part 1 tax lines.",
+  given:[
+   {k:"Quarter", v:"Q3 2025"},
+   {k:"Employees (line 1)", v:"4"},
+   {k:"Total wages (line 2)", v:"$90,000.00"},
+   {k:"Fed. income tax withheld (line 3)", v:"$9,400.00"},
+   {k:"SS wages (5a col 1)", v:"$90,000.00"},
+   {k:"Medicare wages (5c col 1)", v:"$90,000.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"5a · col 2", label:"Social Security tax", pfx:"$", type:"money", ans:11160, hint:"90,000 × 12.4%."},
+   {id:"f2", ln:"5c · col 2", label:"Medicare tax", pfx:"$", type:"money", ans:2610, hint:"90,000 × 2.9%."},
+   {id:"f3", ln:"5e", label:"Total SS + Medicare taxes", pfx:"$", type:"money", ans:13770, hint:"Sum of 5a col 2 + 5c col 2."},
+   {id:"f4", ln:"6", label:"Total taxes before adjustments", pfx:"$", type:"money", ans:23170, hint:"Line 3 + line 5e."}
+  ],
+  sol:"<p><b>5a:</b> 90,000 × 12.4% = <code>$11,160.00</code></p><p><b>5c:</b> 90,000 × 2.9% = <code>$2,610.00</code></p><p><b>5e:</b> <code>$13,770.00</code> &nbsp; <b>Line 6:</b> 9,400 + 13,770 = <code>$23,170.00</code></p>"},
+
+ {id:"p2", tag:"Practice · Form 941", title:"Summit Consulting — Q1 2026 (wage-base cap)",
+  scn:"One high earner pushes part of the quarter above the 2026 SS wage base of $184,500. SS wages cap but Medicare wages do not. Compute the FICA lines.",
+  given:[
+   {k:"Quarter", v:"Q1 2026"},
+   {k:"Total wages (line 2)", v:"$250,000.00"},
+   {k:"Fed. income tax withheld (line 3)", v:"$41,000.00"},
+   {k:"Taxable SS wages (5a col 1)", v:"$184,500.00"},
+   {k:"Taxable Medicare wages (5c col 1)", v:"$250,000.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"5a · col 2", label:"Social Security tax", pfx:"$", type:"money", ans:22878, hint:"184,500 × 12.4%."},
+   {id:"f2", ln:"5c · col 2", label:"Medicare tax", pfx:"$", type:"money", ans:7250, hint:"Medicare has no cap: 250,000 × 2.9%."},
+   {id:"f3", ln:"5e", label:"Total SS + Medicare taxes", pfx:"$", type:"money", ans:30128, hint:"Sum of 5a col 2 + 5c col 2."},
+   {id:"f4", ln:"6", label:"Total taxes before adjustments", pfx:"$", type:"money", ans:71128, hint:"Line 3 (41,000) + line 5e."}
+  ],
+  sol:"<p><b>5a:</b> 184,500 × 12.4% = <code>$22,878.00</code> — the cap applies.</p><p><b>5c:</b> 250,000 × 2.9% = <code>$7,250.00</code> — no Medicare cap.</p><p><b>5e:</b> <code>$30,128.00</code> &nbsp; <b>Line 6:</b> <code>$71,128.00</code></p>"},
+
+ {id:"p3", tag:"Practice · Form 941-X", title:"Q2 2025 underreported — missed commission",
+  scn:"Riverside Bakery's Q2 2025 941 reported $80,000 of Social Security wages. You discover a $6,000 commission was missed — the correct figure is $86,000. Income tax withholding was right.",
+  given:[
+   {k:"Quarter being corrected", v:"Q2 2025"},
+   {k:"Originally reported SS wages", v:"$80,000.00"},
+   {k:"Correct SS wages", v:"$86,000.00"},
+   {k:"Error type", v:"Underreported (you owe more)"}
+  ],
+  fields:[
+   {id:"f1", ln:"Part 1", label:"Which process — type 'adjustment' or 'claim'?", pfx:"", type:"text", accept:["adjustment","adjust","adjustment process","line 1"], hint:"Underreported and you owe more — not asking for a refund."},
+   {id:"f2", ln:"col 1", label:"Corrected SS wages", pfx:"$", type:"money", ans:86000, hint:"Col 1 = corrected amount."},
+   {id:"f3", ln:"col 2", label:"Originally reported SS wages", pfx:"$", type:"money", ans:80000, hint:"Col 2 = what was on the original."},
+   {id:"f4", ln:"col 3", label:"Difference", pfx:"$", type:"money", ans:6000, hint:"Col 1 − Col 2."},
+   {id:"f5", ln:"col 4", label:"Additional SS tax owed", pfx:"$", type:"money", ans:744, hint:"6,000 × 12.4%."}
+  ],
+  sol:"<p><b>Process:</b> <code>Adjustment</code> — underreporting → line 1, pay when filing.</p><p><b>Col 1:</b> $86,000 &nbsp; <b>Col 2:</b> $80,000 &nbsp; <b>Col 3:</b> $6,000</p><p><b>Tax:</b> 6,000 × 12.4% = <code>$744.00</code>. Filing on time for the quarter you discovered the error keeps it interest-free.</p>"},
+
+ {id:"p4", tag:"Practice · Form 941-X", title:"Q4 2024 overreported — claim a refund",
+  scn:"You overreported Q4 2024 Social Security wages by $12,000 — a former employee's pay was double-counted. The employer has already repaid the worker and obtained written consent. They want the refund in cash.",
+  given:[
+   {k:"Quarter being corrected", v:"Q4 2024"},
+   {k:"Originally reported SS wages", v:"$320,000.00"},
+   {k:"Correct SS wages", v:"$308,000.00"},
+   {k:"Repaid employee + consent?", v:"Yes"},
+   {k:"Preference", v:"Refund in cash"}
+  ],
+  fields:[
+   {id:"f1", ln:"Part 1", label:"Which process — type 'adjustment' or 'claim'?", pfx:"", type:"text", accept:["claim","claim process","line 2"], hint:"Overreported AND want the refund as cash."},
+   {id:"f2", ln:"col 1", label:"Corrected SS wages", pfx:"$", type:"money", ans:308000, hint:"Col 1 = corrected."},
+   {id:"f3", ln:"col 2", label:"Originally reported SS wages", pfx:"$", type:"money", ans:320000, hint:"From the original 941."},
+   {id:"f4", ln:"col 3", label:"Difference (enter as negative)", pfx:"$", type:"money", ans:-12000, hint:"308 − 320 = negative."},
+   {id:"f5", ln:"col 4", label:"Tax correction (negative = overpaid)", pfx:"$", type:"money", ans:-1488, hint:"-12,000 × 12.4%."}
+  ],
+  sol:"<p><b>Process:</b> <code>Claim</code> — overreporting + cash refund.</p><p><b>Col 1:</b> $308,000 &nbsp; <b>Col 2:</b> $320,000 &nbsp; <b>Col 3:</b> ($12,000)</p><p><b>Tax correction:</b> <code>($1,488.00)</code> — refunded.</p><p>Part 2 certification requires the employee repayment or written consent — given here. If any underreported amounts were on this form, the claim process would be unavailable.</p>"},
+
+ {id:"p5", tag:"Practice · Deposits", title:"Determine 2026 deposit schedule from lookback",
+  scn:"Crestview Co — set up 2026 deposit schedule. Figure out the lookback period, total the 941 line 12 amounts for those four quarters, and decide monthly vs semiweekly.",
+  given:[
+   {k:"Year being set up", v:"2026"},
+   {k:"Line 12 — Q3 2024", v:"$11,000.00"},
+   {k:"Line 12 — Q4 2024", v:"$12,500.00"},
+   {k:"Line 12 — Q1 2025", v:"$11,800.00"},
+   {k:"Line 12 — Q2 2025", v:"$11,300.00"}
+  ],
+  fields:[
+   {id:"f1", ln:"period", label:"Lookback period — start date (YYYY-MM-DD)", pfx:"", type:"text", accept:["2024-07-01","july 1 2024","jul 1 2024","7/1/2024","07/01/2024"], hint:"4 quarters ending June 30 of prior year → start July 1, 2024."},
+   {id:"f2", ln:"period", label:"Lookback period — end date (YYYY-MM-DD)", pfx:"", type:"text", accept:["2025-06-30","june 30 2025","jun 30 2025","6/30/2025","06/30/2025"], hint:"Ends June 30 of prior calendar year."},
+   {id:"f3", ln:"total", label:"Total lookback liability", pfx:"$", type:"money", ans:46600, hint:"Sum the four line-12 amounts."},
+   {id:"f4", ln:"result", label:"2026 schedule — type 'monthly' or 'semiweekly'", pfx:"", type:"text", accept:["monthly"], hint:"$50,000 threshold — above or below?"}
+  ],
+  sol:"<p><b>Lookback:</b> July 1, 2024 – June 30, 2025.</p><p><b>Total:</b> 11,000 + 12,500 + 11,800 + 11,300 = <code>$46,600</code> — below $50,000.</p><p><b>2026 schedule:</b> <code>Monthly</code>. Deposits due by the 15th of the next month. If any single day's accumulated liability hits $100,000, the next-day rule overrides and pushes Crestview into semiweekly for the rest of 2026 and all of 2027.</p>"},
+
+ {id:"p6", tag:"Practice · Penalties", title:"Failure-to-deposit penalty calculation",
+  scn:"Westgate Inc. owed a $24,000 federal tax deposit due Wednesday, January 15, 2026. It was paid on Thursday, January 29, 2026 — 14 days late.",
+  given:[
+   {k:"Deposit amount", v:"$24,000.00"},
+   {k:"Due date", v:"Jan 15, 2026 (Wed)"},
+   {k:"Date paid", v:"Jan 29, 2026 (Thu)"},
+   {k:"Days late", v:"14"}
+  ],
+  fields:[
+   {id:"f1", ln:"rate", label:"FTD penalty rate", pfx:"", type:"text", accept:["5%","5","5 percent","five percent"], hint:"6–15 days late tier."},
+   {id:"f2", ln:"penalty", label:"FTD penalty amount", pfx:"$", type:"money", ans:1200, hint:"24,000 × the rate."}
+  ],
+  sol:"<p>14 days late → tier two (6–15 days) → <code>5%</code> penalty.</p><p><b>Penalty:</b> 24,000 × 5% = <code>$1,200.00</code>. Interest also accrues separately from the original due date.</p>"},
+
+ {id:"p7", tag:"Practice · Withholding", title:"Additional Medicare Tax — high earner mid-period",
+  scn:"Maya is paid bi-weekly. YTD gross wages going into this pay are $215,000 — already over the $200,000 employer threshold. This pay period: $15,000 more.",
+  given:[
+   {k:"YTD wages before this pay", v:"$215,000.00"},
+   {k:"Wages this pay period", v:"$15,000.00"},
+   {k:"Filing status (irrelevant)", v:"Single"}
+  ],
+  fields:[
+   {id:"f1", ln:"threshold", label:"Employer threshold (line 5d)", pfx:"$", type:"money", ans:200000, hint:"Same for every employee regardless of filing status."},
+   {id:"f2", ln:"med-1", label:"Regular Medicare tax withheld this pay (1.45%)", pfx:"$", type:"money", ans:217.50, hint:"15,000 × 1.45%."},
+   {id:"f3", ln:"med-2", label:"Additional Medicare withheld this pay (0.9%)", pfx:"$", type:"money", ans:135, hint:"Already over $200K YTD, so full $15,000 subject. 15,000 × 0.9%."},
+   {id:"f4", ln:"match", label:"Employer match on the 0.9% (yes/no)", pfx:"", type:"text", accept:["no","none","0"], hint:"Does the employer match Additional Medicare Tax?"}
+  ],
+  sol:"<p><b>Threshold:</b> <code>$200,000</code> — uniform for employer withholding.</p><p><b>Regular Medicare:</b> 15,000 × 1.45% = <code>$217.50</code> (employer matches this).</p><p><b>Additional Medicare:</b> Over $200K YTD already, so the full $15,000 is subject. 15,000 × 0.9% = <code>$135.00</code>.</p><p><b>Employer match on Additional Medicare:</b> <code>No</code>. Employer withholds only.</p>"},
+
+ {id:"p8", tag:"Practice · Classification", title:"Worker classification — analyze the facts",
+  scn:"Pinecrest Architecture engages Dana, a draftsperson. Pinecrest sets her work hours, requires her to use Pinecrest's CAD station at the office, evaluates her drawings line-by-line, supplies all materials, has worked with her exclusively for four years, and pays her a fixed weekly amount with no opportunity for profit or loss. No written contract.",
+  given:[
+   {k:"Hours/methods set by", v:"Pinecrest"},
+   {k:"Tools/equipment owned by", v:"Pinecrest"},
+   {k:"Profit/loss opportunity", v:"None"},
+   {k:"Permanency", v:"4 years, exclusive"},
+   {k:"Written contract", v:"None"}
+  ],
+  fields:[
+   {id:"f1", ln:"control", label:"Which common law category dominates? (behavioral, financial, or relationship)", pfx:"", type:"text", accept:["behavioral","behavioral control","behaviour","behaviour control"], hint:"Setting hours, requiring methods, evaluating how the work is done."},
+   {id:"f2", ln:"status", label:"Most likely classification (employee or IC)?", pfx:"", type:"text", accept:["employee","w-2","w2","statutory","common law employee"], hint:"Weigh the whole picture."},
+   {id:"f3", ln:"form", label:"Form to ask IRS to determine status", pfx:"", type:"text", accept:["ss-8","ss8","form ss-8","form ss8"], hint:"One-page request for IRS determination."},
+   {id:"f4", ln:"worker", label:"If Dana was misclassified as IC, which form does SHE file?", pfx:"", type:"text", accept:["8919","form 8919"], hint:"Pairs with a favorable SS-8 determination."}
+  ],
+  sol:"<p><b>Dominant category:</b> <code>Behavioral control</code> — hours, location, methods, evaluation all set by Pinecrest.</p><p><b>Classification:</b> <code>Employee</code> — strong behavioral and financial control, permanent exclusive relationship.</p><p><b>Form for determination:</b> <code>SS-8</code>.</p><p><b>Worker's correction form:</b> <code>Form 8919</code> — Dana pays only the 7.65% employee FICA share, not full 15.3% SE tax.</p>"},
+
+ {id:"p9", tag:"Practice · TFRP", title:"Trust Fund Recovery Penalty exposure",
+  scn:"Acorn Manufacturing failed to remit Q3 2025 trust fund taxes totaling $48,000 ($32,000 withheld FIT + $16,000 employee FICA share). The employer share of FICA was a separate $16,000. The controller, Sam, had check-signing authority and chose to pay the bank loan instead of the IRS, knowing the taxes were due. Acorn is now insolvent.",
+  given:[
+   {k:"Withheld FIT", v:"$32,000.00"},
+   {k:"Employee FICA share", v:"$16,000.00"},
+   {k:"Employer FICA share", v:"$16,000.00"},
+   {k:"Sam's role", v:"Controller, check authority, knew + chose other creditor"}
+  ],
+  fields:[
+   {id:"f1", ln:"§6672", label:"Trust fund total at risk", pfx:"$", type:"money", ans:48000, hint:"Withheld FIT + employee FICA share. NOT the employer match."},
+   {id:"f2", ln:"%", label:"TFRP rate", pfx:"", type:"text", accept:["100%","100","one hundred percent"], hint:"§6672 imposes the full amount."},
+   {id:"f3", ln:"$", label:"TFRP assessment against Sam", pfx:"$", type:"money", ans:48000, hint:"100% × trust fund total."},
+   {id:"f4", ln:"liable", label:"Sam personally liable despite corporation? (yes/no)", pfx:"", type:"text", accept:["yes","y","personally liable"], hint:"§6672 is a personal assessment."},
+   {id:"f5", ln:"form", label:"IRS interview form for the investigation", pfx:"", type:"text", accept:["4180","form 4180"], hint:"Structured interview on authority and knowledge."}
+  ],
+  sol:"<p><b>Trust fund total:</b> 32,000 + 16,000 = <code>$48,000</code> (employer FICA share NOT included).</p><p><b>Rate:</b> <code>100%</code> &nbsp; <b>Assessment:</b> <code>$48,000</code>.</p><p><b>Personal liability:</b> <code>Yes</code> — §6672 pierces the corporate shield.</p><p><b>Investigation tool:</b> <code>Form 4180</code>. Multiple responsible persons can each be assessed the full $48,000, but the IRS collects only $48,000 in total.</p>"}
+]
+};
+
+const state = { rate:1, voiceOn:true, tab:"learn" };
+let voices=[], pendingTimer=null, keepAlive=null, currentUtter=null;
+function loadVoices(){ try{ voices = window.speechSynthesis ? speechSynthesis.getVoices() : []; }catch(e){ voices=[]; } }
+if(window.speechSynthesis){ speechSynthesis.onvoiceschanged = loadVoices; loadVoices(); }
+function pickVoice(){
+  if(!voices.length) loadVoices();
+  return voices.find(v=>/en[-_]US/i.test(v.lang) && /(samantha|jenny|aria|zira|natural|female)/i.test(v.name))
+      || voices.find(v=>/en[-_]US/i.test(v.lang))
+      || voices.find(v=>/^en/i.test(v.lang))
+      || voices[0] || null;
+}
+function stopSpeech(){
+  if(keepAlive){clearInterval(keepAlive);keepAlive=null;}
+  try{ if(window.speechSynthesis) speechSynthesis.cancel(); }catch(e){}
+  currentUtter=null;
+}
+function cancelNarration(){ stopSpeech(); if(pendingTimer){clearTimeout(pendingTimer);pendingTimer=null;} }
+function narrate(text, onend){
+  cancelNarration();
+  if(state.voiceOn && window.speechSynthesis){
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = state.rate; u.pitch = 1; const v = pickVoice(); if(v) u.voice = v;
+    u.onend = ()=>{ if(keepAlive){clearInterval(keepAlive);keepAlive=null;} if(onend) onend(); };
+    u.onerror = ()=>{ if(keepAlive){clearInterval(keepAlive);keepAlive=null;} };
+    currentUtter = u;
+    speechSynthesis.speak(u);
+    keepAlive = setInterval(()=>{
+      if(!speechSynthesis.speaking){clearInterval(keepAlive);keepAlive=null;return;}
+      try{ speechSynthesis.pause(); speechSynthesis.resume(); }catch(e){}
+    }, 11000);
+  } else {
+    const words = text.trim().split(/\s+/).length;
+    const wpm = 165 * state.rate;
+    const ms = Math.max(1100, (words/wpm)*60000);
+    pendingTimer = setTimeout(()=>{ if(onend) onend(); }, ms);
+  }
+}
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+const speedEl = document.getElementById('speed');
+const speedVal = document.getElementById('speedVal');
+function setSpeedFill(){ const pct = ((state.rate-0.5)/(1.75-0.5))*100; speedEl.style.setProperty('--fill', pct+'%'); }
+speedEl.addEventListener('input', e=>{ state.rate = parseFloat(e.target.value); speedVal.textContent = state.rate.toFixed(1)+'×'; setSpeedFill(); });
+setSpeedFill();
+document.getElementById('voiceToggle').addEventListener('change', e=>{ state.voiceOn = e.target.checked; if(!state.voiceOn) stopSpeech(); });
+document.getElementById('stopAll').addEventListener('click', ()=>{ cancelNarration(); learnPlaying=false; updateLearnBtn(); fcAuto=false; updateAutoBtn(); });
+
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    cancelNarration(); learnPlaying=false; updateLearnBtn(); fcAuto=false; updateAutoBtn();
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.view).classList.add('active');
+    state.tab = t.dataset.view;
+  });
+});
+
+const lessonHost = document.getElementById('lessonHost');
+const tocEl = document.getElementById('toc');
+DATA.lessons.forEach(L=>{
+  const id = 'sec-'+L.num;
+  const sec = document.createElement('div');
+  sec.className = 'lesson' + (L.cls?' '+L.cls:'');
+  sec.id = id;
+  let html = '<div class="lesson-tag"><span class="num">'+L.num+'</span>'+L.tag+'<span class="lvl">'+L.lvl+'</span></div><h2 class="lh">'+L.title+'</h2>';
+  L.paras.forEach(p=>{ html += '<p class="para">'+p+'</p>'; });
+  sec.innerHTML = html;
+  lessonHost.appendChild(sec);
+  const a = document.createElement('a');
+  a.href = '#'+id;
+  a.textContent = L.num+' · '+L.title.replace(/—.*$/,'').trim();
+  tocEl.appendChild(a);
+});
+
+let learnParas = [...document.querySelectorAll('#learn .para')];
+let learnIdx = -1, learnPlaying = false;
+const learnPlayBtn = document.getElementById('learnPlay');
+function clearLearnHL(){ learnParas.forEach(p=>p.classList.remove('reading')); }
+function updateLearnBtn(){ learnPlayBtn.innerHTML = learnPlaying ? '❚❚ Pause reading' : '▶ Read this module'; learnPlayBtn.classList.toggle('green', !learnPlaying); }
+function readLearnFrom(i){
+  cancelNarration(); clearLearnHL();
+  if(i<0 || i>=learnParas.length){ learnPlaying=false; learnIdx=-1; updateLearnBtn(); return; }
+  learnIdx = i; learnPlaying = true; updateLearnBtn();
+  const el = learnParas[i];
+  el.classList.add('reading');
+  el.scrollIntoView({behavior:'smooth', block:'center'});
+  narrate(el.textContent, ()=>{ if(learnPlaying) readLearnFrom(i+1); });
+}
+learnPlayBtn.addEventListener('click', ()=>{
+  if(learnPlaying){ learnPlaying=false; cancelNarration(); updateLearnBtn(); }
+  else { readLearnFrom(learnIdx<0?0:learnIdx); }
+});
+document.getElementById('learnRestart').addEventListener('click', ()=>readLearnFrom(0));
+learnParas.forEach((p,i)=>{ p.addEventListener('click', ()=>readLearnFrom(i)); });
+
+const allCards = DATA.cards.slice();
+let activeCat = "All";
+let deck = allCards.slice();
+let fcIdx = 0, fcFlipped = false, fcAuto = false;
+const fcEl = document.getElementById('fcEl');
+const fcFront = document.getElementById('fcFront');
+const fcBack = document.getElementById('fcBack');
+const fcCatF = document.getElementById('fcCatF');
+const fcCatB = document.getElementById('fcCatB');
+const fcCount = document.getElementById('fcCount');
+const fcBar = document.getElementById('fcBar');
+const fcModeEl = document.getElementById('fcMode');
+const fcAutoBtn = document.getElementById('fcAuto');
+const catFilter = document.getElementById('catFilter');
+
+const cats = ["All", ...Array.from(new Set(allCards.map(c=>c.c)))];
+cats.forEach(name=>{
+  const b = document.createElement('button');
+  b.className = 'chip' + (name===activeCat?' active':'');
+  b.textContent = name + (name==='All' ? ' · '+allCards.length : ' · '+allCards.filter(c=>c.c===name).length);
+  b.addEventListener('click', ()=>{
+    activeCat = name;
+    document.querySelectorAll('#catFilter .chip').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    deck = (name==='All') ? allCards.slice() : allCards.filter(c=>c.c===name);
+    fcIdx=0; fcFlipped=false; stopManual(); renderCard();
+  });
+  catFilter.appendChild(b);
+});
+
+function renderCard(){
+  if(!deck.length) return;
+  const card = deck[fcIdx];
+  fcFront.textContent = card.f;
+  fcBack.textContent = card.b;
+  fcCatF.textContent = card.c;
+  fcCatB.textContent = card.c;
+  fcEl.classList.toggle('flipped', fcFlipped);
+  fcCount.textContent = 'Card '+(fcIdx+1)+' / '+deck.length;
+  fcBar.style.width = ((fcIdx+1)/deck.length*100)+'%';
+  fcModeEl.textContent = fcAuto ? 'Auto-playing' : 'Manual';
+}
+function updateAutoBtn(){ fcAutoBtn.innerHTML = fcAuto ? '❚❚ Stop auto-play' : '▶ Auto-play deck'; fcModeEl.textContent = fcAuto ? 'Auto-playing' : 'Manual'; }
+function fcPlayFront(){
+  if(!fcAuto) return;
+  fcFlipped=false; renderCard();
+  narrate('Question. '+deck[fcIdx].f, ()=>{
+    if(!fcAuto) return;
+    fcFlipped=true; renderCard();
+    pendingTimer = setTimeout(()=>{
+      if(!fcAuto) return;
+      narrate('Answer. '+deck[fcIdx].b, ()=>{
+        if(!fcAuto) return;
+        pendingTimer = setTimeout(()=>{
+          if(!fcAuto) return;
+          fcIdx = (fcIdx+1) % deck.length;
+          fcPlayFront();
+        }, 700);
+      });
+    }, 550);
+  });
+}
+function stopManual(){ if(fcAuto){ fcAuto=false; cancelNarration(); updateAutoBtn(); } }
+fcEl.addEventListener('click', ()=>{ stopManual(); fcFlipped=!fcFlipped; renderCard(); });
+document.getElementById('fcFlip').addEventListener('click', ()=>{ stopManual(); fcFlipped=!fcFlipped; renderCard(); });
+document.getElementById('fcNext').addEventListener('click', ()=>{ stopManual(); fcIdx=(fcIdx+1)%deck.length; fcFlipped=false; renderCard(); });
+document.getElementById('fcPrev').addEventListener('click', ()=>{ stopManual(); fcIdx=(fcIdx-1+deck.length)%deck.length; fcFlipped=false; renderCard(); });
+document.getElementById('fcShuffle').addEventListener('click', ()=>{ stopManual(); deck = shuffle(deck); fcIdx=0; fcFlipped=false; renderCard(); });
+document.getElementById('fcRandom').addEventListener('click', ()=>{ stopManual(); fcIdx = Math.floor(Math.random()*deck.length); fcFlipped=false; renderCard(); });
+fcAutoBtn.addEventListener('click', ()=>{ fcAuto=!fcAuto; if(fcAuto){ updateAutoBtn(); fcPlayFront(); } else { cancelNarration(); updateAutoBtn(); } });
+renderCard();
+
+const quizPicker = document.getElementById('quizPicker');
+const quizHost = document.getElementById('quizHost');
+let activeQuiz = DATA.quizzes[0].id;
+
+DATA.quizzes.forEach(qz=>{
+  const b = document.createElement('button');
+  b.className = 'pick' + (qz.id===activeQuiz?' active':'');
+  b.dataset.id = qz.id;
+  const total = qz.id==='qmix' ? DATA.quizzes.filter(q=>q.id!=='qmix').reduce((s,q)=>s+q.questions.length,0) : qz.questions.length;
+  b.innerHTML = '<div class="pk-tag">'+qz.tag+'</div><div class="pk-name">'+qz.name+'</div><div class="pk-desc">'+qz.desc+' · '+total+' in pool · '+qz.sample+' per session</div>';
+  b.addEventListener('click', ()=>{ activeQuiz=qz.id; document.querySelectorAll('#quizPicker .pick').forEach(x=>x.classList.toggle('active',x.dataset.id===qz.id)); renderQuiz(); });
+  quizPicker.appendChild(b);
+});
+
+function renderQuiz(){
+  const qz = DATA.quizzes.find(q=>q.id===activeQuiz);
+  let pool = qz.id==='qmix' ? DATA.quizzes.filter(q=>q.id!=='qmix').flatMap(q=>q.questions) : qz.questions;
+  const N = Math.min(qz.sample || 10, pool.length);
+  const picked = shuffle(pool).slice(0, N).map(q=>{
+    const idxs = shuffle(q.o.map((_,i)=>i));
+    return { q:q.q, e:q.e, _opts: idxs.map(i=>q.o[i]), _ans: idxs.indexOf(q.a) };
+  });
+
+  let correct=0;
+  quizHost.innerHTML = '';
+  const score = document.createElement('div');
+  score.className='scorebar';
+  score.innerHTML = '<span class="lbl">'+qz.name+' · Score</span><span class="val"><span class="amber" id="scNum">0</span> / '+N+'</span><button class="btn amber sm reroll" id="rerollBtn">🎲 New random quiz</button>';
+  quizHost.appendChild(score);
+  document.getElementById('rerollBtn').addEventListener('click', renderQuiz);
+
+  picked.forEach((Q,qi)=>{
+    const card=document.createElement('div'); card.className='q';
+    let h='<div class="q-num">Question '+(qi+1)+' of '+N+'</div><div class="q-text">'+Q.q+'</div><div class="opts">';
+    Q._opts.forEach((opt,oi)=>{ h += '<button class="opt" data-q="'+qi+'" data-o="'+oi+'"><span class="key">'+String.fromCharCode(65+oi)+'</span><span>'+opt+'</span></button>'; });
+    h += '</div><div class="explain" id="exp'+qi+'"></div>';
+    card.innerHTML=h;
+    quizHost.appendChild(card);
+    card.querySelectorAll('.opt').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const opts = card.querySelectorAll('.opt');
+        if([...opts].some(o=>o.classList.contains('locked'))) return;
+        const chosen = parseInt(btn.dataset.o);
+        opts.forEach((o,idx)=>{ o.classList.add('locked'); if(idx===Q._ans) o.classList.add('correct'); else if(idx===chosen) o.classList.add('wrong'); else o.classList.add('dim'); });
+        const exp = card.querySelector('#exp'+qi);
+        if(chosen===Q._ans){ correct++; exp.innerHTML='<b>Correct.</b> '+Q.e; }
+        else { exp.innerHTML='<b>Not quite.</b> '+Q.e; }
+        exp.classList.add('show');
+        document.getElementById('scNum').textContent = correct;
+      });
+    });
+  });
+}
+renderQuiz();
+
+const pracPicker = document.getElementById('pracPicker');
+const pracHost = document.getElementById('pracHost');
+let activePrac = DATA.practice[0].id;
+
+function buildPracPicker(){
+  pracPicker.innerHTML='';
+  DATA.practice.forEach(P=>{
+    const b=document.createElement('button');
+    b.className='pick'+(P.id===activePrac?' active':'');
+    b.dataset.id=P.id;
+    b.innerHTML='<div class="pk-tag">'+P.tag+'</div><div class="pk-name">'+P.title+'</div>';
+    b.addEventListener('click', ()=>{ activePrac=P.id; buildPracPicker(); renderPrac(); });
+    pracPicker.appendChild(b);
+  });
+}
+buildPracPicker();
+document.getElementById('pracRandom').addEventListener('click', ()=>{
+  const others = DATA.practice.filter(p=>p.id!==activePrac);
+  activePrac = others[Math.floor(Math.random()*others.length)].id;
+  buildPracPicker(); renderPrac();
+});
+
+function normMoney(s){ return parseFloat(String(s).replace(/[^0-9.\-]/g,'')); }
+function normText(s){ return String(s).toLowerCase().replace(/[^a-z0-9 \-]/g,'').trim(); }
+function renderPrac(){
+  const P = DATA.practice.find(x=>x.id===activePrac);
+  let h='<div class="scenario"><div class="scn-tag">'+P.tag+'</div><div class="scn-title">'+P.title+'</div><div class="scn-text">'+P.scn+'</div>';
+  h+='<div class="given"><div class="given-cap">Given — sample data</div>';
+  P.given.forEach(g=>{ h+='<div class="grow"><span class="gk">'+g.k+'</span><span class="gv">'+(g.v||'')+'</span></div>'; });
+  h+='</div></div>';
+  P.fields.forEach(f=>{
+    h+='<div class="field" id="fld-'+f.id+'"><div class="field-top"><div class="field-label">'+(f.ln?'<span class="ln">'+f.ln+'</span>':'')+f.label+'</div><span class="mark" id="mk-'+f.id+'"></span></div>';
+    h+='<div class="inwrap">'+(f.pfx?'<span class="pfx">'+f.pfx+'</span>':'')+'<input type="text" id="in-'+f.id+'" placeholder="'+(f.type==='text'?'type your answer':'enter amount')+'" autocomplete="off"></div>';
+    h+='<button class="hint-btn" data-h="'+f.id+'">Need a hint?</button><div class="hint" id="hint-'+f.id+'">'+f.hint+'</div></div>';
+  });
+  h+='<div class="prac-actions"><button class="btn green" id="pCheck">✓ Check my answers</button><button class="btn ghost" id="pReset">⟲ Clear</button><button class="btn red" id="pGiveUp">Give up &amp; show answers</button></div>';
+  h+='<div class="solution" id="pSol"><h4>Worked solution</h4>'+P.sol+'</div>';
+  pracHost.innerHTML=h;
+
+  pracHost.querySelectorAll('.hint-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{ const hb=document.getElementById('hint-'+btn.dataset.h); hb.classList.toggle('show'); btn.textContent = hb.classList.contains('show')?'Hide hint':'Need a hint?'; });
+  });
+  document.getElementById('pCheck').addEventListener('click', ()=>{
+    P.fields.forEach(f=>{
+      const inp=document.getElementById('in-'+f.id);
+      const fld=document.getElementById('fld-'+f.id);
+      const mk=document.getElementById('mk-'+f.id);
+      const val=inp.value.trim();
+      if(val===''){ fld.classList.remove('ok','no'); mk.textContent=''; mk.className='mark'; return; }
+      let ok=false;
+      if(f.type==='text'){ const nv=normText(val); ok = f.accept.some(a=>nv.includes(normText(a))); }
+      else { const n=normMoney(val); ok = !isNaN(n) && Math.abs(n-f.ans)<=0.5; }
+      fld.classList.toggle('ok',ok); fld.classList.toggle('no',!ok);
+      mk.textContent = ok?'✓ correct':'✗ try again'; mk.className='mark '+(ok?'ok':'no');
+    });
+  });
+  document.getElementById('pReset').addEventListener('click', ()=>renderPrac());
+  document.getElementById('pGiveUp').addEventListener('click', ()=>{
+    P.fields.forEach(f=>{
+      const inp=document.getElementById('in-'+f.id);
+      const fld=document.getElementById('fld-'+f.id);
+      const mk=document.getElementById('mk-'+f.id);
+      if(f.type==='text'){ inp.value = f.accept[0]; }
+      else { inp.value = f.ans.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+      fld.classList.remove('no'); fld.classList.add('ok');
+      mk.textContent='answer'; mk.className='mark ok';
+    });
+    document.getElementById('pSol').classList.add('show');
+    document.getElementById('pSol').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+}
+renderPrac();
+</script>
+</body>
+</html>
